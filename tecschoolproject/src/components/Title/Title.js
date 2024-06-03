@@ -8,5 +8,27 @@ export const Title = styled.Text`
 
     text-align: center;
     margin-top: 25px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
+`
+
+export const ButtonTitle = styled.Text`
+    font-family: Poppins_600SemiBold;
+    color: #FFFDF5;
+    text-transform: uppercase;
+    font-size: 15px;
+
+    justify-content: center;
+    text-align: center;
+    padding: 18px
+`
+
+export const LinkText = styled.Text`
+    font-family: Poppins_600SemiBold;
+    color: #FFFDF5;
+    font-size: 13px;
+    text-decoration: underline;
+    
+    position: relative;
+    left: 90px;
+    bottom: 15px;
 `
