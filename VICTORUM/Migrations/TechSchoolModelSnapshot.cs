@@ -28,19 +28,14 @@ namespace VICTORUM.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("IdMateria")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("TurmaDomainIdTurma")
+                    b.Property<Guid>("IdTurma")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("IdAluno");
 
-                    b.HasIndex("IdMateria");
+                    b.HasIndex("IdTurma");
 
-                    b.HasIndex("TurmaDomainIdTurma");
-
-                    b.ToTable("Aluno");
+                    b.ToTable("Alunos");
                 });
 
             modelBuilder.Entity("VICTORUM.Domain.FaltaDomain", b =>
@@ -67,7 +62,7 @@ namespace VICTORUM.Migrations
 
                     b.HasIndex("IdMateria");
 
-                    b.ToTable("Falta");
+                    b.ToTable("Faltas");
                 });
 
             modelBuilder.Entity("VICTORUM.Domain.MateriaDomain", b =>
@@ -82,7 +77,7 @@ namespace VICTORUM.Migrations
 
                     b.HasKey("IdMateria");
 
-                    b.ToTable("Materia");
+                    b.ToTable("Materias");
                 });
 
             modelBuilder.Entity("VICTORUM.Domain.ProfessorDomain", b =>
@@ -98,7 +93,7 @@ namespace VICTORUM.Migrations
 
                     b.HasIndex("IdMateria");
 
-                    b.ToTable("Professor");
+                    b.ToTable("Professores");
                 });
 
             modelBuilder.Entity("VICTORUM.Domain.TurmaDomain", b =>
@@ -113,10 +108,10 @@ namespace VICTORUM.Migrations
 
                     b.HasKey("IdTurma");
 
-                    b.ToTable("Turma");
+                    b.ToTable("Turmas");
                 });
 
-            modelBuilder.Entity("VICTORUM.Domain.TurmaMateria", b =>
+            modelBuilder.Entity("VICTORUM.Domain.TurmaMateriaDomain", b =>
                 {
                     b.Property<Guid>("IdTurmaMateria")
                         .ValueGeneratedOnAdd()
@@ -134,7 +129,7 @@ namespace VICTORUM.Migrations
 
                     b.HasIndex("IdTurma");
 
-                    b.ToTable("TurmaMateria");
+                    b.ToTable("TurmasMaterias");
                 });
 
             modelBuilder.Entity("VICTORUM.Domain.UsuarioDomain", b =>
@@ -142,6 +137,9 @@ namespace VICTORUM.Migrations
                     b.Property<Guid>("IdUsuario")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<short?>("CodRecupSenha")
+                        .HasColumnType("SMALLINT");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -172,22 +170,18 @@ namespace VICTORUM.Migrations
 
                     b.HasIndex("IdProfessor");
 
-                    b.ToTable("Usuario");
+                    b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("VICTORUM.Domain.AlunoDomain", b =>
                 {
-                    b.HasOne("VICTORUM.Domain.MateriaDomain", "Materia")
-                        .WithMany()
-                        .HasForeignKey("IdMateria")
+                    b.HasOne("VICTORUM.Domain.TurmaDomain", "Turma")
+                        .WithMany("Alunos")
+                        .HasForeignKey("IdTurma")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("VICTORUM.Domain.TurmaDomain", null)
-                        .WithMany("Alunos")
-                        .HasForeignKey("TurmaDomainIdTurma");
-
-                    b.Navigation("Materia");
+                    b.Navigation("Turma");
                 });
 
             modelBuilder.Entity("VICTORUM.Domain.FaltaDomain", b =>
@@ -220,7 +214,7 @@ namespace VICTORUM.Migrations
                     b.Navigation("Materia");
                 });
 
-            modelBuilder.Entity("VICTORUM.Domain.TurmaMateria", b =>
+            modelBuilder.Entity("VICTORUM.Domain.TurmaMateriaDomain", b =>
                 {
                     b.HasOne("VICTORUM.Domain.MateriaDomain", "Materia")
                         .WithMany()
@@ -247,7 +241,7 @@ namespace VICTORUM.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("VICTORUM.Domain.AlunoDomain", "Professor")
+                    b.HasOne("VICTORUM.Domain.ProfessorDomain", "Professor")
                         .WithMany()
                         .HasForeignKey("IdProfessor")
                         .OnDelete(DeleteBehavior.Cascade)

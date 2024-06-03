@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VICTORUM.Domain
 {
-    [Table("Materia")]
+    [Table("Materias")]
     public class MateriaDomain
     {
         [Key]

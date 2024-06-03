@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\53282675836\\source\\repos\\VICTORUM\\VICTORUM.csproj": {}
+    "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\53282675836\\source\\repos\\VICTORUM\\VICTORUM.csproj": {
+    "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\53282675836\\source\\repos\\VICTORUM\\VICTORUM.csproj",
+        "projectUniqueName": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj",
         "projectName": "VICTORUM",
-        "projectPath": "C:\\Users\\53282675836\\source\\repos\\VICTORUM\\VICTORUM.csproj",
-        "packagesPath": "C:\\Users\\53282675836\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\53282675836\\source\\repos\\VICTORUM\\obj\\",
+        "projectPath": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj",
+        "packagesPath": "C:\\Users\\42470848873\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\53282675836\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\42470848873\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,12 +34,21 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.6, )"
@@ -84,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

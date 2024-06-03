@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VICTORUM.Domain
 {
-    [Table("Turma")]
+    [Table("Turmas")]
     public class TurmaDomain
     {
 

@@ -5,15 +5,12 @@ namespace VICTORUM.Interface
 {
     public interface IAlunoRepository
     {
-        List<AlunoDomain> Listar();
-
-           AlunoDomain BuscaPorId(Guid id);
-
-          void Cadastrar(AlunoDomain aluno);
-
-          void Atualizar(Guid id, AlunoDomain aluno);
-
-          void Deletar(Guid id);
+        public List<AlunoDomain> ListarTodos();
+        public AlunoDomain BuscaPorId(Guid Id);
+        public void AtualizarPerfil(Guid Id, AlunoDomain aluno);
+        public void Cadastrar(AlunoDomain aluno);
+        public List<AlunoDomain> ListarPorTurma(Guid Id);
+        public void Deletar(Guid id);
     }
 }
 

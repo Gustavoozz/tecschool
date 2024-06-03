@@ -3,8 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VICTORUM.Domain
 {
-    [Table("TurmaMateria")]
-    public class TurmaMateria
+    [Table("TurmasMaterias")]
+    public class TurmaMateriaDomain
     {
         [Key]
         public Guid IdTurmaMateria { get; set; } = Guid.NewGuid();

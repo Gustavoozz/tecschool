@@ -4,16 +4,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VICTORUM.Domain
 {
-    [Table("Aluno")]
+    [Table("Alunos")]
     public class AlunoDomain
     {
         [Key]
         public Guid IdAluno { get; set; } = Guid.NewGuid();
-
-        public Guid IdMateria { get; set; }
-
-        [ForeignKey("IdMateria")]
-        public MateriaDomain? Materia { get; set; }
+        [Column(TypeName = "VARCHAR(200)")]
+        public string? RA { get; set; }
+        public Guid IdTurma { get; set; }
+        [ForeignKey("IdTurma")]
+        public TurmaDomain? Turma { get; set; }
 
     }
 }

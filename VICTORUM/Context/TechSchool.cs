@@ -11,11 +11,11 @@ namespace VICTORUM.Context
         public DbSet<MateriaDomain> Materia { get; set; }
         public DbSet<FaltaDomain> Falta { get; set; }
         public DbSet<TurmaDomain> Turma { get; set; }
-        public DbSet<TurmaMateria> TurmaMateria { get; set; }
+        public DbSet<TurmaMateriaDomain> TurmaMateria { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server = NOTE12-SALA21\\SQLEXPRESS; DataBase = TechSchool; User Id = sa; Pwd = Senai@134; TrustServerCertificate = true");
+            optionsBuilder.UseSqlServer("Server = NOTE07-S21; DataBase = TechSchool; User Id = sa; Pwd = Senai@134; TrustServerCertificate = true");
             base.OnConfiguring(optionsBuilder);
         }
     }

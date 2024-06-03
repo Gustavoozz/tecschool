@@ -4,15 +4,10 @@ namespace VICTORUM.Interface
 {
     public interface ITurmaRepository
     {
-        public interface IUsuarioRepository
-        {
-            List<TurmaDomain> Listar();
-
-            TurmaDomain BuscarPorId(Guid Id);
-
-            TurmaDomain Deletar(Guid Id);
-
-            void Cadastrar(TurmaDomain turmaDomain);
-        }
+        List<TurmaDomain> Listar();
+        TurmaDomain BuscarPorId(Guid Id);
+        void AdicionarAlunoTurma(Guid IdAluno, Guid IdTurma);
+        void Deletar(Guid Id);
+        void Cadastrar(TurmaDomain turmaDomain);
     }
 }

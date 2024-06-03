@@ -8,9 +8,7 @@ using System.Globalization;
 
 namespace VICTORUM.Domain
 {
-    [Table("Falta")]
-
-
+    [Table("Faltas")]
     public class FaltaDomain
     {
         [Key]
@@ -18,14 +16,16 @@ namespace VICTORUM.Domain
 
         [Column(TypeName = "BIT")]
         public bool? Falta { get; set; }
-        public Guid IdAluno { get; set; }
 
-        [ForeignKey("IdAluno")]
-        public AlunoDomain? Aluno { get; set; }
         public Guid IdMateria { get; set; }
 
         [ForeignKey("IdMateria")]
         public MateriaDomain? Materia { get; set; }
+
+        public Guid IdAluno { get; set; }
+
+        [ForeignKey("IdAluno")]
+        public AlunoDomain? Aluno { get; set; }
 
         [Column(TypeName = "DATE")]
         public DateOnly DataFalta { get; set; }
