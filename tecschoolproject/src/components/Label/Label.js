@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Label = styled.Text`
     font-family: Poppins_600SemiBold;
-    font-size: 17px;
+    font-size: 13px;
     color: #FFFDF5;
-    margin-right: 190px;
+    margin-left: 50px;
+    width: 100%;
 `
