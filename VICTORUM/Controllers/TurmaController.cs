@@ -1,12 +1,26 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using VICTORUM.Interface;
+using VICTORUM.Ultils.Mail;
 
 namespace VICTORUM.Controllers
 {
     public class TurmaController : Controller
     {
-        public IActionResult Index()
+        private ITurmaRepository _turmaRepository;
+        private readonly EmailSendingService _emailSendingService;
+
+        [HttpGet]
+        public IActionResult Get()
         {
-            return View();
+            try
+            {
+                return Ok(_turmaRepository.Listar());
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex);
+            }
         }
     }
 }

@@ -6,8 +6,6 @@ namespace VICTORUM.Interface
     {
         public List<ProfessorDomain> ListarTodos();
         public ProfessorDomain BuscaPorId(Guid Id);
-        public void AtualizarPerfil(Guid Id, ProfessorDomain professor);
-        public void Cadastrar(ProfessorDomain professor);
-        public void Deletar(Guid Id);
+        public void Cadastrar(UsuarioDomain user);
     }
 }
