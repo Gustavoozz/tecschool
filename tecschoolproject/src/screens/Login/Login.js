@@ -1,7 +1,7 @@
 import { ContainerCream, ContainerPurple } from "../../components/Container/Style";
 import { ButtonTitle, LinkText, Title } from "../../components/Title/Title";
 import { Label } from "../../components/Label/Label";
-import { Input, Line } from "../../components/Input/Input";
+import { Input } from "../../components/Input/Input";
 import { Button } from "../../components/Button/Button";
 import { LoginImage } from "../../components/Image/Image";
 

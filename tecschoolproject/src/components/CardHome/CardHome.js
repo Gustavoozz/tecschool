@@ -4,7 +4,7 @@ import { CardContainer, IconContainer, TextContainer } from "./Style"
 
 export const CardHome = ({ icon, taskTitle, taskSubTitle, navigation }) => {
     return(
-        <CardContainer onPress={() => navigation.replace("ToDoList")}>
+        <CardContainer onPress={navigation}>
             <IconContainer>
            {icon}
             </IconContainer>

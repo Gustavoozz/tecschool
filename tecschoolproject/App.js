@@ -13,6 +13,7 @@ import { Home } from "./src/screens/Home/Home";
 import { Main } from "./src/screens/Main/Main";
 import { Profile } from "./src/screens/Profile/Profile";
 import { ToDoList } from "./src/screens/ToDoList/ToDoList";
+import { Subject } from "./src/screens/Subject/Subject";
 
 // import { Route } from "./src/routes/Routes"
 
@@ -70,6 +71,12 @@ const Stack = createNativeStackNavigator();
             name="ToDoList"
             component={ToDoList}
             options={{ title: "ToDoList" }}
+        />
+
+        <Stack.Screen
+            name="Subject"
+            component={Subject}
+            options={{ title: "Subject" }}
         />
 
         

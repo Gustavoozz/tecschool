@@ -6,6 +6,9 @@ import { Feather } from '@expo/vector-icons';
 import Home from "../Home/Home";
 import { Profile } from "../Profile/Profile";
 import { ContainerHome } from "../../components/Container/Style";
+import { Subject } from "../Subject/Subject";
+import { FontAwesome } from '@expo/vector-icons';
+
 
 const bottomTab = createBottomTabNavigator();
 
@@ -38,7 +41,7 @@ export const Main = ({ navigation, route }) => {
               </ContentIcon>
             );
 
-              } else {
+              } else if(route.name === "Profile") {
                 return (
                   <ContentIcon
                     tabBarActiveBackgroundColor={
@@ -49,6 +52,20 @@ export const Main = ({ navigation, route }) => {
                    <Feather name="user" size={22} color={focused ? "#BE9AFF" : "#4E4B59"} />
                     {focused && <TextIcon color={focused ? "#BE9AFF" : "#4E4B59"}>Perfil</TextIcon>}
                   </ContentIcon>
+                  
+                );
+              } else {
+                return (
+                  <ContentIcon
+                    tabBarActiveBackgroundColor={
+                      focused ? "#E6C8FF" : "transparent"
+                    }
+                  >
+                   
+                   <FontAwesome name="pencil" size={24} color={focused ? "#BE9AFF" : "#4E4B59"} />
+                    {focused && <TextIcon color={focused ? "#BE9AFF" : "#4E4B59"}>Subject</TextIcon>}
+                  </ContentIcon>
+                  
                 );
               }
         }
@@ -58,6 +75,7 @@ export const Main = ({ navigation, route }) => {
 
       <bottomTab.Screen name="Home" component={Home}/>
       <bottomTab.Screen name="Profile" component={Profile}/>
+      <bottomTab.Screen name="Subject" component={Subject}/>
 
       </bottomTab.Navigator>
   );

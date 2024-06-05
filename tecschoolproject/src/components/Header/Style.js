@@ -16,7 +16,7 @@ export const ContainerHeader = styled(LinearGradient).attrs({
 
   border-radius: 0px 0px 15px 15px;
   elevation: 5;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
 `
 
 export const InfoContainer = styled.View`

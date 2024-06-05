@@ -17,3 +17,11 @@ export const Input = styled.TextInput.attrs({
     justify-content: center;
 `
 
+export const InputEdit = styled(Input).attrs({
+    placeholderTextColor: "#8400F2",
+    autoCapitalize: "none"
+})`
+    background-color: #E5D6FF;
+    border: 2px solid #FFFFFF;
+`
+

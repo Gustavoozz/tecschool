@@ -1,5 +1,5 @@
 import { CardHome } from "../../components/CardHome/CardHome"
-import { Container, ContainerHome } from "../../components/Container/Style"
+import { ContainerHome } from "../../components/Container/Style"
 import { Octicons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
@@ -11,13 +11,14 @@ export const Home = ({ navigation }) => {
             <Header />
 
                 <CardHome
-                navigation={navigation}
+                navigation={() => (navigation.replace("ToDoList"))}
                 icon={<Octicons name="checklist" size={30} color="white" />}
                 taskTitle="To Do List"
                 taskSubTitle="Faça anotações de suas tarefas"
                 />
 
                 <CardHome
+                navigation={() => (navigation.replace("Subject"))}
                 icon={<Entypo name="globe" size={30} color="white"/>}
                 taskTitle="Matérias"
                 taskSubTitle="Revise suas matérias e pendências"
