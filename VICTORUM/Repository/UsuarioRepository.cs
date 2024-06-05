@@ -62,8 +62,6 @@ namespace VICTORUM.Repository
                     Email = u.Email,
                     Senha = u.Senha,
                     Nome = u.Nome,
-                    IdAluno = u.IdAluno,
-                    IdProfessor = u.IdProfessor,
                 }).FirstOrDefault(x => x.Email == email);
 
                 if (user == null) return null!;

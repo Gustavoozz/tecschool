@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using VICTORUM.Domains;
 
 namespace VICTORUM.Domain
 {
@@ -26,14 +27,11 @@ namespace VICTORUM.Domain
 
         [Column(TypeName = "VARCHAR(200)")]
         public string? Foto { get; set; }
-        public Guid IdAluno { get; set; }
-
-        [ForeignKey("IdAluno")]
         public virtual AlunoDomain? Aluno { get; set; }
-        public Guid IdProfessor { get; set; }
-
-        [ForeignKey("IdProfessor")]
         public virtual ProfessorDomain? Professor { get; set; }
+
+        public virtual TiposUsuarioDomain? TiposUsuario { get; set; }
+
 
         [Column(TypeName = "SMALLINT")]
         public int? CodRecupSenha { get; set; }

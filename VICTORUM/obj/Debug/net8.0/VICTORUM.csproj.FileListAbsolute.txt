@@ -272,3 +272,10 @@ C:\Users\42470848873\Desktop\tecschool\VICTORUM\obj\Debug\net8.0\refint\VICTORUM
 C:\Users\42470848873\Desktop\tecschool\VICTORUM\obj\Debug\net8.0\VICTORUM.pdb
 C:\Users\42470848873\Desktop\tecschool\VICTORUM\obj\Debug\net8.0\VICTORUM.genruntimeconfig.cache
 C:\Users\42470848873\Desktop\tecschool\VICTORUM\obj\Debug\net8.0\ref\VICTORUM.dll
+C:\Users\42470848873\Desktop\tecschool\VICTORUM\bin\Debug\net8.0\Azure.Storage.Blobs.dll
+C:\Users\42470848873\Desktop\tecschool\VICTORUM\bin\Debug\net8.0\Azure.Storage.Common.dll
+C:\Users\42470848873\Desktop\tecschool\VICTORUM\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\42470848873\Desktop\tecschool\VICTORUM\bin\Debug\net8.0\MailKit.dll
+C:\Users\42470848873\Desktop\tecschool\VICTORUM\bin\Debug\net8.0\MimeKit.dll
+C:\Users\42470848873\Desktop\tecschool\VICTORUM\bin\Debug\net8.0\System.ClientModel.dll
+C:\Users\42470848873\Desktop\tecschool\VICTORUM\bin\Debug\net8.0\System.IO.Hashing.dll

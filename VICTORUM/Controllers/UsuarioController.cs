@@ -4,7 +4,7 @@ using VICTORUM.Domain;
 using VICTORUM.Interface;
 using VICTORUM.Repository;
 using WebAPI.ViewModels;
-using VICTORUM.Ultils.BlobStorage;
+using VICTORUM.Utils.BlobStorage;
 
 
 namespace VICTORUM.Controllers
@@ -48,6 +48,19 @@ namespace VICTORUM.Controllers
             }
             
              
+        }
+
+        [HttpGet("BuscarPorEmailESenha")]
+        public IActionResult BuscarPorEmailESenha(string email, string senha)
+        {
+            try
+            {
+                return Ok(usuarioRepository?.BuscarPorEmailESenha(email, senha));
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         [HttpPut("AlterarFotoPerfil")]

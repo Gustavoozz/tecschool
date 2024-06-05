@@ -2,5 +2,6 @@
 {
     public class MateriaViewModel
     {
+        public string? Materia { get; set; }
     }
 }

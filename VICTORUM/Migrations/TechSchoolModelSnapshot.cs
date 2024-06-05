@@ -31,9 +31,18 @@ namespace VICTORUM.Migrations
                     b.Property<Guid>("IdTurma")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("IdUsuario")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("RA")
+                        .HasColumnType("VARCHAR(200)");
+
                     b.HasKey("IdAluno");
 
                     b.HasIndex("IdTurma");
+
+                    b.HasIndex("IdUsuario")
+                        .IsUnique();
 
                     b.ToTable("Alunos");
                 });
@@ -89,9 +98,15 @@ namespace VICTORUM.Migrations
                     b.Property<Guid>("IdMateria")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("IdUsuario")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("IdProfessor");
 
                     b.HasIndex("IdMateria");
+
+                    b.HasIndex("IdUsuario")
+                        .IsUnique();
 
                     b.ToTable("Professores");
                 });
@@ -102,7 +117,7 @@ namespace VICTORUM.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Materia")
+                    b.Property<string>("Turma")
                         .IsRequired()
                         .HasColumnType("VARCHAR(20)");
 
@@ -148,12 +163,6 @@ namespace VICTORUM.Migrations
                     b.Property<string>("Foto")
                         .HasColumnType("VARCHAR(200)");
 
-                    b.Property<Guid>("IdAluno")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("IdProfessor")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Nome")
                         .HasColumnType("VARCHAR(200)");
 
@@ -161,16 +170,32 @@ namespace VICTORUM.Migrations
                         .IsRequired()
                         .HasColumnType("VARCHAR(200)");
 
+                    b.Property<Guid?>("TiposUsuarioId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("IdUsuario");
 
                     b.HasIndex("Email")
                         .IsUnique();
 
-                    b.HasIndex("IdAluno");
-
-                    b.HasIndex("IdProfessor");
+                    b.HasIndex("TiposUsuarioId");
 
                     b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("VICTORUM.Domains.TiposUsuarioDomain", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("TipoUsuario")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("VARCHAR(200)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TiposUsuario");
                 });
 
             modelBuilder.Entity("VICTORUM.Domain.AlunoDomain", b =>
@@ -181,7 +206,15 @@ namespace VICTORUM.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("VICTORUM.Domain.UsuarioDomain", "Usuario")
+                        .WithOne("Aluno")
+                        .HasForeignKey("VICTORUM.Domain.AlunoDomain", "IdUsuario")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Turma");
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("VICTORUM.Domain.FaltaDomain", b =>
@@ -211,7 +244,15 @@ namespace VICTORUM.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("VICTORUM.Domain.UsuarioDomain", "Usuario")
+                        .WithOne("Professor")
+                        .HasForeignKey("VICTORUM.Domain.ProfessorDomain", "IdUsuario")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Materia");
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("VICTORUM.Domain.TurmaMateriaDomain", b =>
@@ -235,26 +276,28 @@ namespace VICTORUM.Migrations
 
             modelBuilder.Entity("VICTORUM.Domain.UsuarioDomain", b =>
                 {
-                    b.HasOne("VICTORUM.Domain.AlunoDomain", "Aluno")
-                        .WithMany()
-                        .HasForeignKey("IdAluno")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("VICTORUM.Domains.TiposUsuarioDomain", "TiposUsuario")
+                        .WithMany("Usuarios")
+                        .HasForeignKey("TiposUsuarioId");
 
-                    b.HasOne("VICTORUM.Domain.ProfessorDomain", "Professor")
-                        .WithMany()
-                        .HasForeignKey("IdProfessor")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Aluno");
-
-                    b.Navigation("Professor");
+                    b.Navigation("TiposUsuario");
                 });
 
             modelBuilder.Entity("VICTORUM.Domain.TurmaDomain", b =>
                 {
                     b.Navigation("Alunos");
+                });
+
+            modelBuilder.Entity("VICTORUM.Domain.UsuarioDomain", b =>
+                {
+                    b.Navigation("Aluno");
+
+                    b.Navigation("Professor");
+                });
+
+            modelBuilder.Entity("VICTORUM.Domains.TiposUsuarioDomain", b =>
+                {
+                    b.Navigation("Usuarios");
                 });
 #pragma warning restore 612, 618
         }

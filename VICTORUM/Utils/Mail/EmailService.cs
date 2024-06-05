@@ -1,5 +1,7 @@
-﻿using Microsoft.Extensions.Options;
-using System.Net.Mail;
+﻿using MailKit.Net.Smtp;
+using MailKit.Security;
+using Microsoft.Extensions.Options;
+using MimeKit;
 
 namespace VICTORUM.Utils.Mail
 {
@@ -17,43 +19,37 @@ namespace VICTORUM.Utils.Mail
         //metodo para envio de email
         public async Task SendEmailAsync(MailRequest mailRequest)
         {
-            try
-            {
                 var email = new MimeMessage();
-                //define o remetente do email
+                // Define o remetente do email
                 email.Sender = MailboxAddress.Parse(emailSettings.Email);
 
-                //define o destinatario
+                // Define o destinatário
                 email.To.Add(MailboxAddress.Parse(mailRequest.ToEmail));
 
-                //define p assunto do email
+                // Define o assunto do email
                 email.Subject = mailRequest.Subject;
 
-                //cria o corpo do email
+                // Cria o corpo do email
                 var builder = new BodyBuilder();
 
-                //define o corpo do email como html
+                // Define o corpo do email como HTML
                 builder.HtmlBody = mailRequest.Body;
 
-                //define o corpo do email no objeto MimeMessage
-                email.Body = builder.ToMessageBody();
+                // Não precisa mais definir o corpo diretamente no objeto MimeMessage,
+                // pois o BodyBuilder cuidará disso automaticamente.
 
                 using (var smtp = new SmtpClient())
                 {
-                    //conecta-se ao servidor SMTP usando os dados de emailSettings
+                    // Conecta-se ao servidor SMTP usando os dados de emailSettings
                     smtp.Connect(emailSettings.Host, emailSettings.Port, SecureSocketOptions.StartTls);
 
-                    //autentica-e no servdor smtp usando os dados de mailSettings
+                    // Autentica-se no servidor SMTP usando os dados de mailSettings
                     smtp.Authenticate(emailSettings.Email, emailSettings.Password);
 
-                    //envia o email
+                    // Envia o email
                     await smtp.SendAsync(email);
                 }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
         }
+
     }
 }

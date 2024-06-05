@@ -13,7 +13,7 @@ namespace WebAPI.ViewModels
 
         public string? Senha { get; set; }
 
-
+        public Guid Turma { get; set; }
         
         [NotMapped]
         [JsonIgnore]

@@ -2,5 +2,6 @@
 {
     public class TurmaViewModel
     {
+        public string? Turma { get; set; }
     }
 }

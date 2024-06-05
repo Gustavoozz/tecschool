@@ -14,6 +14,8 @@ namespace VICTORUM.Domain
         public Guid IdTurma { get; set; }
         [ForeignKey("IdTurma")]
         public TurmaDomain? Turma { get; set; }
-
+        public Guid IdUsuario { get; set; }
+        [ForeignKey("IdUsuario")]
+        public virtual UsuarioDomain? Usuario { get; set; }
     }
 }

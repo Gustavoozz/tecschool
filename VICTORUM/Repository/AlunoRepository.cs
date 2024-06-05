@@ -16,7 +16,7 @@ namespace VICTORUM.Repository
         {
             try
             {
-                return ctx.Aluno.Include(x =>  x.IdTurma).FirstOrDefault(x => x.IdAluno == Id)!;
+                return ctx.Aluno.FirstOrDefault(x => x.IdAluno == Id)!;
             }
             catch (Exception)
             {

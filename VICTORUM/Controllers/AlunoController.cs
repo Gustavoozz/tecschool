@@ -4,8 +4,8 @@ using System.IdentityModel.Tokens.Jwt;
 using VICTORUM.Domain;
 using VICTORUM.Interface;
 using VICTORUM.Repository;
-using VICTORUM.Ultils.BlobStorage;
-using VICTORUM.Ultils.Mail;
+using VICTORUM.Utils.BlobStorage;
+using VICTORUM.Utils.Mail;
 using WebAPI.ViewModels;
 
 namespace VICTORUM.Controllers
@@ -56,24 +56,31 @@ namespace VICTORUM.Controllers
             {
                 //objeto a ser cadastrado
                 UsuarioDomain user = new UsuarioDomain();
+                Random random = new Random();
 
                 //recebe os valores e preenche as propriedades do objeto
                 user.Nome = alunoModel.Nome;
                 user.Email = alunoModel.Email;
-                Random random = new Random();
-                int RAinNumbers = random.Next(00000000, 99999999);
-                user.Aluno!.RA = RAinNumbers.ToString();
-             
-                //define o nome do container do blob
+                user.Senha = alunoModel.Senha;
+                user.Foto = alunoModel.Foto;
+
                 var containerName = "techschoolcontainer";
 
                 //define a string de conexão
                 var connectionString = "DefaultEndpointsProtocol=https;AccountName=techschoolg05t;AccountKey=0dOGfpvNEnUQ1wJfkxtn2L61EeimbPNDV/LGoYPxdK0rRGO3CR6RuZWxgp+eYE0nExmzDdcehrqg+AStGPrZfw==;EndpointSuffix=core.windows.net\";";
-
-                //aqui vamos chamar o método para upload da imagem
                 user.Foto = await AzureBlobStorageHelper.UploadImageBlobAsync(alunoModel.Arquivo!, connectionString, containerName);
 
-                user.Senha = alunoModel.Senha;
+                user.Aluno = new AlunoDomain();
+
+                user.Aluno.IdTurma = alunoModel.Turma;
+                user.Aluno.RA = random.Next(00000000, 99999999).ToString();
+                user.Aluno.IdAluno = user.IdUsuario;
+
+                //define o nome do container do blob
+                
+
+                //aqui vamos chamar o método para upload da imagem
+                
 
                 alunoRepository!.Cadastrar(user);
 

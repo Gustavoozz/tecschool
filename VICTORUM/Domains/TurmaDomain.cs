@@ -12,7 +12,7 @@ namespace VICTORUM.Domain
 
             [Column(TypeName = "VARCHAR(20)")]
             [Required(ErrorMessage = "A Turma é obrigatória!")]
-            public string? Materia { get; set; }
+            public string? Turma { get; set; }
 
 
         public List<AlunoDomain>? Alunos { get; set; }

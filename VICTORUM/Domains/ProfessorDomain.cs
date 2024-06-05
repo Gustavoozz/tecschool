@@ -14,5 +14,13 @@ namespace VICTORUM.Domain
 
         [ForeignKey("IdMateria")]
         public MateriaDomain? Materia { get; set; }
+
+        [ForeignKey("IdUsuario")]
+        public virtual UsuarioDomain? Usuario { get; set; }
+        public Guid IdUsuario { get; set; }
+
+
+
+        
     }
 }
