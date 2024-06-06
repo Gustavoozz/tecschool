@@ -6,6 +6,5 @@ namespace VICTORUM.Interface
     {
         public List<TurmaMateriaDomain> Listar();
         public void Cadastrar(TurmaMateriaDomain turmaMateria);
-        public void Deletar(Guid Id);
     }
 }

@@ -30,9 +30,9 @@ namespace VICTORUM.Domain
         public virtual AlunoDomain? Aluno { get; set; }
         public virtual ProfessorDomain? Professor { get; set; }
 
-        public virtual TiposUsuarioDomain? TiposUsuario { get; set; }
-
-
+        public Guid? TipoUsuarioId { get; set; }
+        [ForeignKey("TipoUsuarioId")]
+        public TiposUsuarioDomain? TiposUsuario { get; set; }
         [Column(TypeName = "SMALLINT")]
         public int? CodRecupSenha { get; set; }
     }

@@ -2,6 +2,7 @@
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using VICTORUM.Domain;
+using VICTORUM.Domains;
 using VICTORUM.Interface;
 using VICTORUM.Repository;
 using VICTORUM.Utils.BlobStorage;
@@ -32,7 +33,7 @@ namespace VICTORUM.Controllers
             {
                 Guid idUsuario = Guid.Parse(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
 
-                return Ok(alunoRepository.BuscarPorId(idUsuario));
+                return Ok(alunoRepository?.BuscarPorId(idUsuario));
 
             }
             catch (Exception ex)
@@ -46,7 +47,7 @@ namespace VICTORUM.Controllers
         [HttpGet("BuscarPorId")]
         public IActionResult BuscarPorId(Guid id)
         {
-            return Ok(alunoRepository.BuscarPorId(id));
+            return Ok(alunoRepository?.BuscarPorId(id));
         }
 
         [HttpPost]
@@ -57,12 +58,15 @@ namespace VICTORUM.Controllers
                 //objeto a ser cadastrado
                 UsuarioDomain user = new UsuarioDomain();
                 Random random = new Random();
+                user.TiposUsuario = new TiposUsuarioDomain();
 
                 //recebe os valores e preenche as propriedades do objeto
                 user.Nome = alunoModel.Nome;
                 user.Email = alunoModel.Email;
                 user.Senha = alunoModel.Senha;
                 user.Foto = alunoModel.Foto;
+
+                user.TipoUsuarioId = alunoModel.IdTipoUsuario;
 
                 var containerName = "techschoolcontainer";
 
@@ -72,21 +76,24 @@ namespace VICTORUM.Controllers
 
                 user.Aluno = new AlunoDomain();
 
-                user.Aluno.IdTurma = alunoModel.Turma;
                 user.Aluno.RA = random.Next(00000000, 99999999).ToString();
+                user.Aluno.IdTurma = alunoModel.IdTurma;
+
                 user.Aluno.IdAluno = user.IdUsuario;
 
+
                 //define o nome do container do blob
-                
+
 
                 //aqui vamos chamar o método para upload da imagem
-                
+
 
                 alunoRepository!.Cadastrar(user);
 
-                await _emailSendingService!.SendWelcomeEmail(user.Email!, user.Nome!);
+                //await _emailSendingService!.SendWelcomeEmail(user.Email!, user.Nome!);
 
                 return Ok(user);
+
             }
             catch (Exception ex)
             {

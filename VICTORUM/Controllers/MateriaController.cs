@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using VICTORUM.Domain;
 using VICTORUM.Interface;
+using VICTORUM.Repository;
 using VICTORUM.ViewModels;
 
 namespace VICTORUM.Controllers
@@ -10,6 +11,11 @@ namespace VICTORUM.Controllers
     public class MateriaController : Controller
     {
         private IMateriaRepository? _materiaRepository { get; set; }
+
+        public MateriaController()
+        {
+            _materiaRepository = new MateriaRepository();
+        }
 
         [HttpGet("Listar")]
         public IActionResult Listar()
@@ -33,7 +39,7 @@ namespace VICTORUM.Controllers
                 MateriaDomain materiaDomain = new MateriaDomain();
                 materiaDomain.Materia = materiaViewModel.Materia;
                 _materiaRepository?.Cadastrar(materiaDomain);
-                return Ok();
+                return Ok(materiaDomain);
             }
             catch (Exception)
             {
@@ -56,20 +62,7 @@ namespace VICTORUM.Controllers
             }
         }
 
-        [HttpDelete("Deletar")]
-        public IActionResult Deletar(Guid Id)
-        {
-            try
-            {
-                _materiaRepository.Deletar(Id);
-                return Ok();
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
+       
 
     }
 }

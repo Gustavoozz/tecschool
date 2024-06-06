@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using VICTORUM.Domain;
 using VICTORUM.Interface;
+using VICTORUM.Repository;
 using VICTORUM.ViewModels;
 
 namespace VICTORUM.Controllers
@@ -10,6 +11,11 @@ namespace VICTORUM.Controllers
     public class FaltaController : Controller
     {
 		private IFaltaRepository _faltaRepository { get; set; }
+
+        public FaltaController()
+        {
+            _faltaRepository = new FaltaRepository();
+        }
 
         [HttpPost("Cadastrar")]
         public IActionResult Cadastrar(FaltaViewModel faltaViewModel)
@@ -30,20 +36,6 @@ namespace VICTORUM.Controllers
 
 				throw;
 			}
-        }
-
-        [HttpDelete]
-        public IActionResult Deletar(Guid Id)
-        {
-            try
-            {
-                _faltaRepository.Deletar(Id);
-                return Ok();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
         }
 
         [HttpGet("Listar")]

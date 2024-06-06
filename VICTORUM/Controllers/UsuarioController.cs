@@ -68,7 +68,7 @@ namespace VICTORUM.Controllers
         {
             try
             {
-                UsuarioDomain usuarioBuscado = usuarioRepository.BuscarPorId(id);
+                UsuarioDomain usuarioBuscado = usuarioRepository?.BuscarPorId(id)!;
 
                 if (usuarioBuscado == null)
                 {

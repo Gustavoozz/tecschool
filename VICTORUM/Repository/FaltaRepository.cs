@@ -7,24 +7,30 @@ namespace VICTORUM.Repository
     public class FaltaRepository : IFaltaRepository
     {
         TechSchool ctx = new TechSchool();
-        public FaltaDomain BuscarPorAluno(Guid IdAluno)
+        public List<FaltaDomain> BuscarPorAluno(Guid IdAluno)
         {
-            throw new NotImplementedException();
+            return ctx.Falta.ToList();
         }
 
         public void Cadastrar(FaltaDomain falta)
         {
-            throw new NotImplementedException();
-        }
+            try
+            {
+                ctx.Falta.Add(falta);
+                ctx.SaveChanges();
+            }
+            catch (Exception)
+            {
 
-        public void Deletar(Guid Id)
-        {
-            throw new NotImplementedException();
+                throw;
+            }
         }
+    
 
-        public List<FaltaDomain> ListarTodos()
+    public List<FaltaDomain> ListarTodos()
         {
-            throw new NotImplementedException();
+            return ctx.Falta.ToList();
         }
     }
 }
+

@@ -15,7 +15,7 @@ namespace VICTORUM.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server = NOTE07-S21; DataBase = TechSchool; User Id = sa; Pwd = Senai@134; TrustServerCertificate = true");
+            optionsBuilder.UseSqlServer("Server = NOTE07-S21; DataBase = DataBaseSchool; User Id = sa; Pwd = Senai@134; TrustServerCertificate = true");
             base.OnConfiguring(optionsBuilder);
         }
     }

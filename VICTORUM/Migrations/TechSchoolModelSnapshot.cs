@@ -170,7 +170,7 @@ namespace VICTORUM.Migrations
                         .IsRequired()
                         .HasColumnType("VARCHAR(200)");
 
-                    b.Property<Guid?>("TiposUsuarioId")
+                    b.Property<Guid?>("TipoUsuarioId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("IdUsuario");
@@ -178,7 +178,7 @@ namespace VICTORUM.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
-                    b.HasIndex("TiposUsuarioId");
+                    b.HasIndex("TipoUsuarioId");
 
                     b.ToTable("Usuarios");
                 });
@@ -190,8 +190,7 @@ namespace VICTORUM.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("TipoUsuario")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("VARCHAR(200)");
+                        .HasColumnType("VARCHAR(200)");
 
                     b.HasKey("Id");
 
@@ -278,7 +277,7 @@ namespace VICTORUM.Migrations
                 {
                     b.HasOne("VICTORUM.Domains.TiposUsuarioDomain", "TiposUsuario")
                         .WithMany("Usuarios")
-                        .HasForeignKey("TiposUsuarioId");
+                        .HasForeignKey("TipoUsuarioId");
 
                     b.Navigation("TiposUsuario");
                 });

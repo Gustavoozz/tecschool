@@ -7,7 +7,7 @@ namespace VICTORUM.Interface
         List<TurmaDomain> Listar();
         TurmaDomain BuscarPorId(Guid Id);
         void AdicionarAlunoTurma(Guid IdAluno, Guid IdTurma);
-        void Deletar(Guid Id);
+      
         void Cadastrar(TurmaDomain turmaDomain);
     }
 }

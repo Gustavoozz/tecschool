@@ -6,7 +6,6 @@ namespace VICTORUM.Interface
     {
         public List<MateriaDomain> ListarTodos();
         public void Cadastrar(MateriaDomain materia);
-        public void Deletar(Guid Id);
         public MateriaDomain BuscarPorId(Guid Id);
     }
 }

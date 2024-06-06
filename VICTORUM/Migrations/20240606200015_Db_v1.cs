@@ -28,7 +28,7 @@ namespace VICTORUM.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    VARCHAR200 = table.Column<string>(name: "VARCHAR(200)", type: "nvarchar(max)", nullable: true)
+                    TipoUsuario = table.Column<string>(type: "VARCHAR(200)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -56,15 +56,15 @@ namespace VICTORUM.Migrations
                     Senha = table.Column<string>(type: "VARCHAR(200)", nullable: false),
                     Nome = table.Column<string>(type: "VARCHAR(200)", nullable: true),
                     Foto = table.Column<string>(type: "VARCHAR(200)", nullable: true),
-                    TiposUsuarioId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    TipoUsuarioId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     CodRecupSenha = table.Column<short>(type: "SMALLINT", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Usuarios", x => x.IdUsuario);
                     table.ForeignKey(
-                        name: "FK_Usuarios_TiposUsuario_TiposUsuarioId",
-                        column: x => x.TiposUsuarioId,
+                        name: "FK_Usuarios_TiposUsuario_TipoUsuarioId",
+                        column: x => x.TipoUsuarioId,
                         principalTable: "TiposUsuario",
                         principalColumn: "Id");
                 });
@@ -221,9 +221,9 @@ namespace VICTORUM.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Usuarios_TiposUsuarioId",
+                name: "IX_Usuarios_TipoUsuarioId",
                 table: "Usuarios",
-                column: "TiposUsuarioId");
+                column: "TipoUsuarioId");
         }
 
         /// <inheritdoc />

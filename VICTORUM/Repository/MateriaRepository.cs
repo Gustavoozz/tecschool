@@ -2,6 +2,7 @@
 using VICTORUM.Domain;
 using VICTORUM.Interface;
 using Microsoft.EntityFrameworkCore;
+using VICTORUM.Utils;
 
 namespace VICTORUM.Repository
 {
@@ -34,11 +35,7 @@ namespace VICTORUM.Repository
             }   
         }
 
-        public void Deletar(Guid Id)
-        {
-            MateriaDomain materiaAchada = ctx.Materia.FirstOrDefault(x => x.IdMateria == Id)!;
-            ctx.Materia.Remove(materiaAchada);
-        }
+      
 
         public List<MateriaDomain> ListarTodos()
         {

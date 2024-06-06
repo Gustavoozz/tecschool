@@ -32,14 +32,7 @@ namespace VICTORUM.Repository
             
         }
 
-        public void Deletar(Guid Id)
-        {
-            TurmaDomain turma = ctx.Turma.Find(Id)!;
-            if (turma != null)
-            {
-                ctx.Remove(turma);
-            }
-        }
+       
 
         public List<TurmaDomain> Listar()
         {

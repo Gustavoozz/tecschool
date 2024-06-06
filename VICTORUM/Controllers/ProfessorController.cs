@@ -3,6 +3,7 @@
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using VICTORUM.Domain;
+using VICTORUM.Domains;
 using VICTORUM.Interface;
 using VICTORUM.Repository;
 using VICTORUM.Utils.BlobStorage;
@@ -21,7 +22,7 @@ namespace VICTORUM.Controllers
 
         public ProfessorController()
         {
-            professorRepository = new ProfessorRepository();    
+            professorRepository = new ProfessorRepository();
         }
 
         [HttpGet("PerfilLogado")]
@@ -63,6 +64,8 @@ namespace VICTORUM.Controllers
                 user.Senha = professorModel.Senha;
                 user.Foto = professorModel.Foto;
 
+                user.TipoUsuarioId = professorModel.IdTipoUsuario;
+
                 var containerName = "techschoolcontainer";
 
                 //define a string de conexão
@@ -84,7 +87,7 @@ namespace VICTORUM.Controllers
 
                 professorRepository!.Cadastrar(user);
 
-                await _emailSendingService!.SendWelcomeEmail(user.Email!, user.Nome!);
+               // await _emailSendingService!.SendWelcomeEmail(user.Email!, user.Nome!);
 
                 return Ok(user);
             }

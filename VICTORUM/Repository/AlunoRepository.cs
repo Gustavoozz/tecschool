@@ -38,16 +38,7 @@ namespace VICTORUM.Repository
             }
         }
 
-        public void Deletar(Guid id)
-        {
-            AlunoDomain AlunoBuscado = ctx.Aluno.Find(id)!;
-            if (AlunoBuscado != null)
-            {
-                ctx.Aluno.Remove(AlunoBuscado);
-            }
-
-            ctx.SaveChanges();
-        }
+      
 
         public List<AlunoDomain> ListarPorTurma(Guid Id)
         {

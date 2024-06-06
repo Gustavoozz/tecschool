@@ -1,14 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using VICTORUM.Domain;
 using VICTORUM.Interface;
-using VICTORUM.Utils.Mail;
+using VICTORUM.Repository;
 using VICTORUM.ViewModels;
 
 namespace VICTORUM.Controllers
 {
     public class TurmaController : Controller
     {
-        private ITurmaRepository? _turmaRepository;
+        private ITurmaRepository _turmaRepository { get; set; }
+
+        public TurmaController()
+        {
+            _turmaRepository = new TurmaRepository();
+        }
 
 
         [HttpGet("Listar")]
@@ -16,7 +21,7 @@ namespace VICTORUM.Controllers
         {
             try
             {
-                return Ok(_turmaRepository.Listar());
+                return Ok(_turmaRepository?.Listar());
             }
             catch (Exception ex)
             {
@@ -30,7 +35,7 @@ namespace VICTORUM.Controllers
         {
             try
             {
-                return Ok(_turmaRepository.BuscarPorId(Id));
+                return Ok(_turmaRepository?.BuscarPorId(Id));
             }
             catch (Exception ex)
             {
@@ -44,8 +49,8 @@ namespace VICTORUM.Controllers
         {
             try
             {
-                _turmaRepository.AdicionarAlunoTurma(IdAluno, IdTurma);
-                return Ok(_turmaRepository.BuscarPorId(IdTurma));
+                _turmaRepository?.AdicionarAlunoTurma(IdAluno, IdTurma);
+                return Ok(_turmaRepository?.BuscarPorId(IdTurma));
             }
             catch (Exception)
             {
@@ -60,7 +65,11 @@ namespace VICTORUM.Controllers
             {
                 TurmaDomain turmaDomain = new TurmaDomain();
                 turmaDomain.Turma = turmaViewModel.Turma;
-                _turmaRepository.Cadastrar(turmaDomain);
+                turmaDomain.Alunos = new List<AlunoDomain>();
+                if (turmaDomain != null)
+                {
+                    _turmaRepository?.Cadastrar(turmaDomain);
+                }
                 return Ok();
             }
             catch (Exception)
@@ -68,20 +77,7 @@ namespace VICTORUM.Controllers
 
                 throw;
             }
-        }
-        [HttpDelete("Deletar")]
-        public IActionResult Deletar(Guid IdTurma)
-        {
-            try
-            {
-                _turmaRepository.Deletar(IdTurma);
-                return Ok();
-            }
-            catch (Exception)
-            {
 
-                throw;
-            }
         }
     }
 }

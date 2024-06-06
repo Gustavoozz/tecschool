@@ -1,4 +1,4 @@
-﻿
+﻿  
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
@@ -13,6 +13,8 @@ namespace VICTORUM.ViewModels
         public string? Senha { get; set; }
 
         public Guid Materia { get; set; }
+
+        public Guid IdTipoUsuario { get; set; } 
 
         [NotMapped]
         [JsonIgnore]
