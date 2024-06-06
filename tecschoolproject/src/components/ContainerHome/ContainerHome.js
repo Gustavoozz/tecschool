@@ -99,7 +99,7 @@ export const FaltasImageHome = styled.SafeAreaView`
     top: 10px;
     left: 10px;
     border-radius: 25px;
-`
+    `
 
 export const ToDoListTextHome = styled.Text`
     font-size: 18px;
@@ -126,19 +126,46 @@ export const ToDoListSubTextHome = styled.Text`
     font-size: 10px;
     font-family: 'Poppins_600SemiBold';
     left: 100px;
-    bottom: 60px;
+    bottom: 65px;
 `
 
 export const MateriasSubTextHome = styled.Text`
     font-size: 10px;
     font-family: 'Poppins_600SemiBold';
     left: 100px;
-    bottom: 60px;
+    bottom: 65px;
 `
 
 export const FaltasSubTextHome = styled.Text`
     font-size: 10px;
     font-family: 'Poppins_600SemiBold';
     left: 100px;
-    bottom: 60px;
+    bottom: 65px;
+`
+
+export const ToDoListPng = styled.SafeAreaView`
+    display: block;
+    margin-left: 22px;
+    margin-right: 20px;
+    margin-top: 20px;
+`
+
+export const MateriasPng = styled.SafeAreaView`
+    display: block;
+    margin-left: 24px;
+    margin-right: 20px;
+    margin-top: 20px;
+`
+
+export const FaltasPng = styled.SafeAreaView`
+    display: block;
+    margin-left: 22px;
+    margin-right: 10px;
+    margin-top: 20px;
+`
+
+export const ArrowHead = styled.SafeAreaView`
+    display: block;
+    left: 300px;
+    bottom: 72px;
 `
