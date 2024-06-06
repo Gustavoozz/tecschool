@@ -1,3 +1,4 @@
+import { View } from "react-native"
 import { Button } from "../../components/Button/Button"
 import { ContainerCream, ContainerPurple } from "../../components/Container/Style"
 import { RegisterImage } from "../../components/Image/Image"
@@ -14,29 +15,31 @@ export const Register = ({ navigation }) => {
             <ContainerPurple style={{ height: "80%"}}>
                 <Title style={{ fontSize: 25 }}>Realize seu cadastro</Title>
 
-                <Label>Enter name</Label>
+                <Label>Insira seu nome</Label>
                 <Input style={{ marginBottom: 20 }}
-                placeholder="Name:"
+                placeholder="Nome:"
                 />
 
-                <Label>Enter your birth date:</Label>
+                <Label>Insira sua data de nascimento:</Label>
                 <Input style={{ marginBottom: 20 }}
-                placeholder="Date of birth:"
+                placeholder="Data de nascimento:"
                 />
 
-                <Label>Enter your email:</Label>
+                <Label>Insira seu email:</Label>
                 <Input style={{ marginBottom: 20 }}
                 placeholder="Email:"
                 />
 
-                <Label>Enter your password:</Label>
+                <Label>Insira sua senha:</Label>
                 <Input style={{ marginBottom: 20 }} 
-                placeholder="Password:"
+                placeholder="Senha:"
                 />  
+                
 
                 <Button style={{ marginTop: 10 }}>
                     <ButtonTitle>Cadastrar</ButtonTitle>
                 </Button>
+                
 
                 <LinkText style={{ left: 0, top: 30 }} onPress={() => navigation.replace("Login")}>Cancelar</LinkText>
             </ContainerPurple>

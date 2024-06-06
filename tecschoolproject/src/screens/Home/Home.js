@@ -21,7 +21,7 @@ export const Home = ({ navigation }) => {
                 navigation={() => (navigation.replace("Subject"))}
                 icon={<Entypo name="globe" size={30} color="white"/>}
                 taskTitle="Matérias"
-                taskSubTitle="Revise suas matérias e pendências"
+                taskSubTitle="Revise suas matérias"
                 />
 
                 <CardHome

@@ -24,7 +24,7 @@ export const IconContainer = styled.View`
 `
 
 export const TextContainer = styled.View`
-    width: auto;
+    width: 50%;
     margin-left: 10px;
     margin-top: 25px;
 `
@@ -32,6 +32,6 @@ export const TextContainer = styled.View`
 export const ArrowContainer = styled.View`
    width: 20%;
    height: 50%;
-   margin-left: 15px;
+   margin-left: 5px;
    margin-top: 30px;
 `

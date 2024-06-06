@@ -12,7 +12,7 @@ export const Subject = ({ navigation }) => {
         <ContainerHome>
             <Header />
 
-            <Title style={{ marginTop: 0, marginBottom: 10, color: '#9D67FD', fontSize: 30 }}>Subject</Title>
+            <Title style={{ marginTop: 0, marginBottom: 10, color: '#9D67FD', fontSize: 30 }}>Matérias</Title>
 
             <ViewRow>
             <CardSubject 

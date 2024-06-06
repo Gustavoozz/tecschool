@@ -21,3 +21,9 @@ export const ButtonCamera = styled.TouchableOpacity.attrs({
     left: 120px;
     width: 50%;
 `
+
+export const LogoutButton = styled.TouchableOpacity`
+    position: relative;
+    left: 150px; 
+    top: 70px;
+`

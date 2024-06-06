@@ -16,16 +16,22 @@ export const ToDoList = ({ navigation }) => {
             dataSelecionada={dataSelecionada}
             />
 
-            <Title style={{ color: '#9D67FD', fontSize: 20 }}>Tasks</Title>
+            <Title style={{ color: '#9D67FD', fontSize: 20 }}>Tarefas</Title>
             <CardTask 
-            taskName="Task one"
-            taskSubTitle="Task Subtitle"
+            taskName="Tarefa um"
+            taskSubTitle="Conteúdo da tarefa"
             />
 
             <CardTask 
-            taskName="Task two"
-            taskSubTitle="Task Subtitle"
+            taskName="Tarefa dois"
+            taskSubTitle="Conteúdo da tarefa"
             />
+
+            <CardTask 
+            taskName="Tarefa três"
+            taskSubTitle="Conteúdo da tarefa"
+            />
+
 
             <Button style={{ backgroundColor: '#BE9AFF', marginTop: 20 }}>
                 <ButtonTitle>Confirmar</ButtonTitle>

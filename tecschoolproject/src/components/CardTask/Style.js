@@ -19,11 +19,15 @@ export const IconContainer = styled.View`
     justify-content: center;
 `
 
-export const CheckButton = styled.TouchableOpacity`
+export const CheckButton = styled.TouchableOpacity.attrs({
+    activeOpacity: 0.8
+})`
     width: 45px;
     height: 45px;
-    border: 2px solid #BE9AFF;
+    border: 3px solid #BE9AFF;
     border-radius: 10px;
+    align-items: center;
+    justify-content: center
 `
 
 export const TextContainer = styled.View`

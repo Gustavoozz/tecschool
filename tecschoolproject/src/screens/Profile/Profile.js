@@ -1,5 +1,5 @@
 import { ContainerCream, ContainerPurple } from "../../components/Container/Style"
-import { ButtonCamera, CameraIcon, ProfileImage } from "./Style"
+import { ButtonCamera, LogoutButton, ProfileImage } from "./Style"
 import { ButtonTitle, SubTitle, Title } from "../../components/Title/Title"
 import { Input, InputEdit } from "../../components/Input/Input"
 import { Label } from "../../components/Label/Label"
@@ -7,22 +7,28 @@ import { Button } from "../../components/Button/Button"
 import { useState } from "react"
 import { AntDesign } from '@expo/vector-icons';
 import { View } from "react-native"
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-export const Profile = () => {
+export const Profile = ({ navigation }) => {
     const [editar, setEditar] = useState(false); 
     const [nome, setNome] = useState("")
 
     return(
         <ContainerCream>
+            <LogoutButton onPress={() => navigation.replace("Login")}>
+             <MaterialCommunityIcons name="logout" size={34} color="#A06AFF" />      
+            </LogoutButton>
+             
+           
+            
             <View>
             <ProfileImage source={require("../../assets/default-user.png")}/>
             <ButtonCamera>
             <AntDesign name="camera" size={35} color="#A06AFF" />
             </ButtonCamera>
             </View>
+            
            
-           
-
             <Title style={{ textTransform: 'none', marginBottom: 0, marginTop: 0, color: '#A06AFF', fontSize: 25}}>Nome do aluno</Title>
             <SubTitle style={{ color: '#A06AFF', fontSize: 15, fontFamily: 'Poppins_300Light', textAlign: 'center', marginBottom: 40 }}>Turma do aluno</SubTitle>
 
@@ -31,15 +37,15 @@ export const Profile = () => {
             {
                 editar != false ?
                 <InputEdit 
-                placeholder="Name..."
+                placeholder="Nome..."
                 onChangeText={(txt) => setNome(txt)}
                 value={nome}
                 />
                 :
                 <Input 
-            placeholder="Name..."
-            value={nome}
-            />
+                placeholder="Nome..."
+                value={nome}
+                />
             }
             
 
@@ -51,8 +57,8 @@ export const Profile = () => {
                 />
                 :
                 <Input 
-            placeholder="RA..."
-            />
+                placeholder="RA..."
+                />
             }
            
 
@@ -71,14 +77,13 @@ export const Profile = () => {
             {
                 editar != false ?
             <Button onPress={() => setEditar(false)} style={{ width: '70%', height: 52, color: "#E6C8FF" }}>
-                <ButtonTitle style={{ fontSize: 12 }}>Salvar</ButtonTitle>
+                <ButtonTitle style={{ fontSize: 12 }}>Salvar informações</ButtonTitle>
             </Button>
             :
             <Button onPress={() => setEditar(true)} style={{ width: '70%', height: 52}}>
                 <ButtonTitle style={{ fontSize: 12 }}>Editar</ButtonTitle>
             </Button>
             }
-
 
             
 

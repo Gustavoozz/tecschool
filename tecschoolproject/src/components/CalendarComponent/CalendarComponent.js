@@ -27,21 +27,21 @@ export const CalendarComponent = ({ setDataSelecionada, dataSelecionada }) => {
     <Calendar
       hideArrows={true}
       style={{
-        width: 350,
+        width: 330,
         alignSelf: 'center',
         backgroundColor: '#FAFAFA',
-        borderRadius: 6,
+        borderRadius: 7,
         elevation: 5
       }}
 
      onDayPress={(date) => setDataSelecionada(date.dateString)}
       minDate={startingDate.toDateString()}
-      // markedDates={{
-      //   [selected]: {
-      //     selected: true,
-      //     disableTouchEvent: true
-      //   },
-      // }}
+      markedDates={{
+        [dataSelecionada]: {
+          selected: true,
+          disableTouchEvent: true
+        },
+      }}
       theme={{
         calendarBackground: '#FAFAFA',
 
@@ -49,7 +49,7 @@ export const CalendarComponent = ({ setDataSelecionada, dataSelecionada }) => {
         textDisabledColor: '#C6C5CE',
         todayTextColor: '#5F5C6B',
         selectedDayTextColor: '#FAFAFA',
-        selectedDayBackgroundColor: '#60BFC5',
+        selectedDayBackgroundColor: '#C3A1FF',
 
         textDayFontSize: 16,
         textMonthFontSize: 25,

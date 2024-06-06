@@ -4,6 +4,7 @@ import { Label } from "../../components/Label/Label";
 import { Input } from "../../components/Input/Input";
 import { Button } from "../../components/Button/Button";
 import { LoginImage } from "../../components/Image/Image";
+import { Text, View } from "react-native";
 
 export const Login = ({ navigation }) => {
     return (
@@ -14,14 +15,14 @@ export const Login = ({ navigation }) => {
         <ContainerPurple>
             <Title>Login</Title>
 
-            <Label>Student Record</Label>
+            <Label>Registro do aluno ou Email</Label>
             <Input 
-            placeholder="RA:"
+            placeholder="RA ou Email:"
             />
 
-            <Label>Enter Password</Label>
+            <Label>Insira sua senha</Label>
             <Input 
-            placeholder="Password:"
+            placeholder="Senha:"
             />
 
             <LinkText>Esqueceu sua senha?</LinkText>
@@ -31,7 +32,19 @@ export const Login = ({ navigation }) => {
             <ButtonTitle>Login</ButtonTitle>
             </Button>
 
-            <Title style={{ fontSize: 13, textTransform: "none"}}>Não possui uma conta? <LinkText onPress={() => navigation.replace("Register")}>Crie uma agora?</LinkText></Title>
+            {/* Lines */}
+            <View style={{ flexDirection: 'row', marginTop: 20 }}>
+               <View style={{ borderTopWidth: 2, borderColor: '#BE9AFF' }}>
+                 <Text>                                       </Text>   
+            </View>
+            <Text style={{ bottom: 10, fontFamily: 'Poppins_600SemiBold', color: '#BE9AFF' }}> OU </Text>
+            <View style={{ borderTopWidth: 2, borderColor: '#BE9AFF' }}>
+                 <Text>                                       </Text>   
+            </View>
+            </View>
+            
+
+            <Title style={{ fontSize: 13, textTransform: "none", marginTop: 0 }}>Não possui uma conta? <LinkText onPress={() => navigation.replace("Register")}>Crie uma agora?</LinkText></Title>
     </ContainerPurple>
 </ContainerCream>
 )

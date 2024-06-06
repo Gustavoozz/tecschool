@@ -1,5 +1,6 @@
 import { SemiBoldText, SubTitle } from "../Title/Title";
-import { CardContainer, IconContainer, TextContainer } from "./Style"
+import { ArrowContainer, CardContainer, IconContainer, TextContainer } from "./Style"
+import { MaterialIcons } from '@expo/vector-icons';
 
 
 export const CardHome = ({ icon, taskTitle, taskSubTitle, navigation }) => {
@@ -14,6 +15,10 @@ export const CardHome = ({ icon, taskTitle, taskSubTitle, navigation }) => {
                <SubTitle>{taskSubTitle}</SubTitle>
             </TextContainer>
 
+            <ArrowContainer>
+                <MaterialIcons name="arrow-right" size={45} color="#BE9AFF" />
+            </ArrowContainer>
+            
             
         </CardContainer>
     )
