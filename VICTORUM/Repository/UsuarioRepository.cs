@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using VICTORUM.Context;
 using VICTORUM.Domain;
+using VICTORUM.Domains;
 using VICTORUM.Interface;
 using VICTORUM.Ultils;
 using VICTORUM.Utils;
@@ -56,7 +57,7 @@ namespace VICTORUM.Repository
             }
         }
 
-        public UsuarioDomain BuscarPorEmailESenha(string email, string senha)
+        public UsuarioDomain BuscarPorEmailESenha(string? email, string? senha)
         {
             try
             {
@@ -66,7 +67,13 @@ namespace VICTORUM.Repository
                     Email = u.Email,
                     Senha = u.Senha,
                     Nome = u.Nome,
-                }).FirstOrDefault(x => x.Email == email);
+                    TiposUsuario = new TiposUsuarioDomain
+                    {
+                        Id = u.TiposUsuario!.Id,
+                        TipoUsuario = u.TiposUsuario.TipoUsuario
+                    }
+                }).FirstOrDefault
+                (x => x.Email == email);
 
                 if (user == null) return null!;
 

@@ -6,8 +6,8 @@ namespace VICTORUM.Interface
     {
         void Cadastrar(UsuarioDomain usuario);
         UsuarioDomain BuscarPorId(Guid Id);
-        UsuarioDomain BuscarPorEmailESenha(string email, string senha);
         bool AlterarSenha(string email, string senhaNova);
         public void AtualizarFoto(Guid id, string novaUrlFoto);
+        UsuarioDomain BuscarPorEmailESenha(string? email, string? senha);
     }
 }

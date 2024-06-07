@@ -33,7 +33,7 @@ namespace VICTORUM.Repository
 
         public List<ProfessorDomain> ListarTodos()
         {
-            return ctx.Professor.Include(x => x.Usuario).ToList();
+            return ctx.Professor.Include(x => x.IdUsuario).ToList();
         }
     }
 }

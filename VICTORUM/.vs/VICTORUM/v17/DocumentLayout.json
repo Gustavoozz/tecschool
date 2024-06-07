@@ -3,8 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\repository\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:repository\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\repository\\alunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:repository\\alunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\interface\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:interface\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\viewmodels\\usuarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:viewmodels\\usuarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\repository\\professorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:repository\\professorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\interface\\iprofessorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:interface\\iprofessorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\domains\\professordomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,16 +51,16 @@
       "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:controllers\\alunocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\interface\\ialunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:interface\\ialunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\domains\\alunodomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:domains\\alunodomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\domains\\usuariodomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:domains\\usuariodomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Migrations\\20240606200015_Db_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240606200015_Db_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\domains\\faltadomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,10 +95,6 @@
       "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:interface\\ifaltarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\interface\\ialunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:interface\\ialunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\interface\\imateriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:interface\\imateriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -83,28 +111,12 @@
       "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:context\\techschool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\repository\\alunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:repository\\alunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\viewmodels\\usuarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:viewmodels\\usuarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\controllers\\materiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:controllers\\materiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\domains\\materiadomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:domains\\materiadomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\repository\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:repository\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\viewmodels\\materiaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -134,20 +146,12 @@
       "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:utils\\mail\\emailsendingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\viewmodels\\faltaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:viewmodels\\faltaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\interface\\iturmarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:interface\\iturmarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\interface\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:interface\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\viewmodels\\turmamateriaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -186,16 +190,12 @@
       "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:victorum.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\utils\\mail\\mailrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:utils\\mail\\mailrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\interface\\iprofessorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:interface\\iprofessorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|c:\\users\\42470848873\\desktop\\tecschool\\victorum\\migrations\\20240606200015_db_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CBC92CB-1178-44E9-9E77-815917FACA9D}|VICTORUM.csproj|solutionrelative:migrations\\20240606200015_db_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -205,271 +205,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TiposUsuarioDomain.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\TiposUsuarioDomain.cs",
-              "RelativeDocumentMoniker": "Domains\\TiposUsuarioDomain.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\TiposUsuarioDomain.cs",
-              "RelativeToolTip": "Domains\\TiposUsuarioDomain.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 6,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T19:27:44.206Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProfessorDomain.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\ProfessorDomain.cs",
-              "RelativeDocumentMoniker": "Domains\\ProfessorDomain.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\ProfessorDomain.cs",
-              "RelativeToolTip": "Domains\\ProfessorDomain.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAuwBEAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T19:04:54.986Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UsuarioDomain.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\UsuarioDomain.cs",
-              "RelativeDocumentMoniker": "Domains\\UsuarioDomain.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\UsuarioDomain.cs",
-              "RelativeToolTip": "Domains\\UsuarioDomain.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAA5wCAAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T19:24:54.34Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AlunoController.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\AlunoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AlunoController.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\AlunoController.cs",
-              "RelativeToolTip": "Controllers\\AlunoController.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAywEQAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T19:54:32.993Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProfessorController.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\ProfessorController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProfessorController.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\ProfessorController.cs",
-              "RelativeToolTip": "Controllers\\ProfessorController.cs",
-              "ViewState": "AQIAAFwAAAAAAAAAAAAEwGgAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T19:12:59.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProfessorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\ProfessorRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\ProfessorRepository.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\ProfessorRepository.cs",
-              "RelativeToolTip": "Repository\\ProfessorRepository.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAYwCMAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T18:01:35.283Z",
+              "WhenOpened": "2024-06-05T20:18:07.253Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AlunoDomain.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\AlunoDomain.cs",
-              "RelativeDocumentMoniker": "Domains\\AlunoDomain.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\AlunoDomain.cs",
-              "RelativeToolTip": "Domains\\AlunoDomain.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBEAAAAhAAAA",
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAwB8AAABzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T19:57:26.002Z",
+              "WhenOpened": "2024-06-05T19:42:13.677Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20240606200015_Db_v1.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Migrations\\20240606200015_Db_v1.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240606200015_Db_v1.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Migrations\\20240606200015_Db_v1.cs",
-              "RelativeToolTip": "Migrations\\20240606200015_Db_v1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACYAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T20:00:15.265Z",
+              "WhenOpened": "2024-06-05T17:49:09.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FaltaDomain.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\FaltaDomain.cs",
-              "RelativeDocumentMoniker": "Domains\\FaltaDomain.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\FaltaDomain.cs",
-              "RelativeToolTip": "Domains\\FaltaDomain.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAXAAAA",
+              "DocumentIndex": 0,
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\UsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\UsuarioRepository.cs",
+              "RelativeToolTip": "Repository\\UsuarioRepository.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwA0AAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T19:04:30.315Z",
+              "WhenOpened": "2024-06-04T18:09:46.402Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "Controllers\\UsuarioController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAhwBEAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T19:05:02.555Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "TurmaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\TurmaRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\TurmaRepository.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\TurmaRepository.cs",
-              "RelativeToolTip": "Repository\\TurmaRepository.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwB8AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T17:33:13.804Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IMateriaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IMateriaRepository.cs",
-              "RelativeDocumentMoniker": "Interface\\IMateriaRepository.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IMateriaRepository.cs",
-              "RelativeToolTip": "Interface\\IMateriaRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T19:29:41.457Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ITurmaMateriaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\ITurmaMateriaRepository.cs",
-              "RelativeDocumentMoniker": "Interface\\ITurmaMateriaRepository.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\ITurmaMateriaRepository.cs",
-              "RelativeToolTip": "Interface\\ITurmaMateriaRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T19:26:27.259Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "MateriaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\MateriaRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\MateriaRepository.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\MateriaRepository.cs",
-              "RelativeToolTip": "Repository\\MateriaRepository.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAQwAgAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T18:50:41.95Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IAlunoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IAlunoRepository.cs",
-              "RelativeDocumentMoniker": "Interface\\IAlunoRepository.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IAlunoRepository.cs",
-              "RelativeToolTip": "Interface\\IAlunoRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T18:09:01.85Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IFaltaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IFaltaRepository.cs",
-              "RelativeDocumentMoniker": "Interface\\IFaltaRepository.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IFaltaRepository.cs",
-              "RelativeToolTip": "Interface\\IFaltaRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T19:25:28.305Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "FaltaController.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\FaltaController.cs",
-              "RelativeDocumentMoniker": "Controllers\\FaltaController.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\FaltaController.cs",
-              "RelativeToolTip": "Controllers\\FaltaController.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAAACYAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T20:06:48.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TurmaController.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\TurmaController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TurmaController.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\TurmaController.cs",
-              "RelativeToolTip": "Controllers\\TurmaController.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAEwFIAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T18:26:49.354Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "FaltaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\FaltaRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\FaltaRepository.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\FaltaRepository.cs",
-              "RelativeToolTip": "Repository\\FaltaRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAA/wAYAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T18:21:36.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "TechSchool.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Context\\TechSchool.cs",
-              "RelativeDocumentMoniker": "Context\\TechSchool.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Context\\TechSchool.cs",
-              "RelativeToolTip": "Context\\TechSchool.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAEwA0AAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T19:24:39.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 3,
               "Title": "UsuarioViewModel.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\ViewModels\\UsuarioViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\UsuarioViewModel.cs",
@@ -482,7 +274,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 2,
+              "Title": "IUsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IUsuarioRepository.cs",
+              "RelativeDocumentMoniker": "Interface\\IUsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IUsuarioRepository.cs",
+              "RelativeToolTip": "Interface\\IUsuarioRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAcAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T19:24:52.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AlunoRepository.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\AlunoRepository.cs",
               "RelativeDocumentMoniker": "Repository\\AlunoRepository.cs",
@@ -495,7 +300,280 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProfessorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\ProfessorRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\ProfessorRepository.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\ProfessorRepository.cs",
+              "RelativeToolTip": "Repository\\ProfessorRepository.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwCMAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T18:01:35.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProfessorDomain.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\ProfessorDomain.cs",
+              "RelativeDocumentMoniker": "Domains\\ProfessorDomain.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\ProfessorDomain.cs",
+              "RelativeToolTip": "Domains\\ProfessorDomain.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwA8AAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T19:04:54.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IProfessorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IProfessorRepository.cs",
+              "RelativeDocumentMoniker": "Interface\\IProfessorRepository.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IProfessorRepository.cs",
+              "RelativeToolTip": "Interface\\IProfessorRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T18:10:49.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProfessorController.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\ProfessorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProfessorController.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\ProfessorController.cs",
+              "RelativeToolTip": "Controllers\\ProfessorController.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAvwGgAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T19:12:59.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IAlunoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IAlunoRepository.cs",
+              "RelativeDocumentMoniker": "Interface\\IAlunoRepository.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IAlunoRepository.cs",
+              "RelativeToolTip": "Interface\\IAlunoRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T18:09:01.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AlunoController.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\AlunoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AlunoController.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\AlunoController.cs",
+              "RelativeToolTip": "Controllers\\AlunoController.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAIwEIAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T19:54:32.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AlunoDomain.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\AlunoDomain.cs",
+              "RelativeDocumentMoniker": "Domains\\AlunoDomain.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\AlunoDomain.cs",
+              "RelativeToolTip": "Domains\\AlunoDomain.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T19:57:26.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UsuarioDomain.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\UsuarioDomain.cs",
+              "RelativeDocumentMoniker": "Domains\\UsuarioDomain.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\UsuarioDomain.cs",
+              "RelativeToolTip": "Domains\\UsuarioDomain.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAgwCAAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T19:24:54.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TiposUsuarioDomain.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\TiposUsuarioDomain.cs",
+              "RelativeDocumentMoniker": "Domains\\TiposUsuarioDomain.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\TiposUsuarioDomain.cs",
+              "RelativeToolTip": "Domains\\TiposUsuarioDomain.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T19:27:44.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "20240606200015_Db_v1.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Migrations\\20240606200015_Db_v1.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240606200015_Db_v1.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Migrations\\20240606200015_Db_v1.cs",
+              "RelativeToolTip": "Migrations\\20240606200015_Db_v1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T20:00:15.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FaltaDomain.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\FaltaDomain.cs",
+              "RelativeDocumentMoniker": "Domains\\FaltaDomain.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\FaltaDomain.cs",
+              "RelativeToolTip": "Domains\\FaltaDomain.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAIBJwB4AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T19:04:30.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "Controllers\\UsuarioController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAhwBEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T19:05:02.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TurmaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\TurmaRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\TurmaRepository.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\TurmaRepository.cs",
+              "RelativeToolTip": "Repository\\TurmaRepository.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwB8AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T17:33:13.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 23,
+              "Title": "IMateriaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IMateriaRepository.cs",
+              "RelativeDocumentMoniker": "Interface\\IMateriaRepository.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IMateriaRepository.cs",
+              "RelativeToolTip": "Interface\\IMateriaRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T19:29:41.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ITurmaMateriaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\ITurmaMateriaRepository.cs",
+              "RelativeDocumentMoniker": "Interface\\ITurmaMateriaRepository.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\ITurmaMateriaRepository.cs",
+              "RelativeToolTip": "Interface\\ITurmaMateriaRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T19:26:27.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MateriaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\MateriaRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\MateriaRepository.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\MateriaRepository.cs",
+              "RelativeToolTip": "Repository\\MateriaRepository.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAQwAgAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T18:50:41.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IFaltaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IFaltaRepository.cs",
+              "RelativeDocumentMoniker": "Interface\\IFaltaRepository.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IFaltaRepository.cs",
+              "RelativeToolTip": "Interface\\IFaltaRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T19:25:28.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "FaltaController.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\FaltaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FaltaController.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\FaltaController.cs",
+              "RelativeToolTip": "Controllers\\FaltaController.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAEBVwCYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T20:06:48.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TurmaController.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\TurmaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TurmaController.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\TurmaController.cs",
+              "RelativeToolTip": "Controllers\\TurmaController.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAEwFIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T18:26:49.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FaltaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\FaltaRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\FaltaRepository.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\FaltaRepository.cs",
+              "RelativeToolTip": "Repository\\FaltaRepository.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAswAYAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T18:21:36.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "TechSchool.cs",
+              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Context\\TechSchool.cs",
+              "RelativeDocumentMoniker": "Context\\TechSchool.cs",
+              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Context\\TechSchool.cs",
+              "RelativeToolTip": "Context\\TechSchool.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAEwA0AAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T19:24:39.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
               "Title": "MateriaController.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\MateriaController.cs",
               "RelativeDocumentMoniker": "Controllers\\MateriaController.cs",
@@ -508,46 +586,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "Controllers\\LoginController.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAgwDAAAABcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T19:42:13.677Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "UsuarioRepository.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\UsuarioRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\UsuarioRepository.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Repository\\UsuarioRepository.cs",
-              "RelativeToolTip": "Repository\\UsuarioRepository.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAQwBgAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T18:09:46.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "MateriaDomain.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\MateriaDomain.cs",
               "RelativeDocumentMoniker": "Domains\\MateriaDomain.cs",
               "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\MateriaDomain.cs",
               "RelativeToolTip": "Domains\\MateriaDomain.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAYAAAAUAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwAYAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-06T18:17:02.351Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "MateriaViewModel.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\ViewModels\\MateriaViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\MateriaViewModel.cs",
@@ -560,7 +612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "TurmaViewModel.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\ViewModels\\TurmaViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\TurmaViewModel.cs",
@@ -573,7 +625,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "AlunoViewModel.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\ViewModels\\AlunoViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\AlunoViewModel.cs",
@@ -586,33 +638,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "TurmaDomain.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\TurmaDomain.cs",
               "RelativeDocumentMoniker": "Domains\\TurmaDomain.cs",
               "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Domains\\TurmaDomain.cs",
               "RelativeToolTip": "Domains\\TurmaDomain.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAA8wBEAAAA2AAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAmwBEAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-04T18:26:56.283Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "EmailService.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Utils\\Mail\\EmailService.cs",
               "RelativeDocumentMoniker": "Utils\\Mail\\EmailService.cs",
               "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Utils\\Mail\\EmailService.cs",
               "RelativeToolTip": "Utils\\Mail\\EmailService.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAzwDIAAAAQAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAwDIAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-04T19:40:54.059Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "TurmaController.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\AppData\\Local\\SourceServer\\3839506b860cc0f0d89ea126df317814a00f569d68ae60350cbfa2fbb03e1f20\\VICTORUM\\Controllers\\TurmaController.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\3839506b860cc0f0d89ea126df317814a00f569d68ae60350cbfa2fbb03e1f20\\VICTORUM\\Controllers\\TurmaController.cs",
@@ -625,32 +677,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "EmailSendingService.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Utils\\Mail\\EmailSendingService.cs",
               "RelativeDocumentMoniker": "Utils\\Mail\\EmailSendingService.cs",
               "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Utils\\Mail\\EmailSendingService.cs",
               "RelativeToolTip": "Utils\\Mail\\EmailSendingService.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAYwBgAAAAxAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAA1wBgAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-04T19:40:38.511Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\ViewModels\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\ViewModels\\LoginViewModel.cs",
-              "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAYwAkAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T20:18:07.253Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "FaltaViewModel.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\ViewModels\\FaltaViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\FaltaViewModel.cs",
@@ -658,37 +698,25 @@
               "RelativeToolTip": "ViewModels\\FaltaViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T19:45:59.146Z"
+              "WhenOpened": "2024-06-04T19:45:59.146Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "ITurmaRepository.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\ITurmaRepository.cs",
               "RelativeDocumentMoniker": "Interface\\ITurmaRepository.cs",
               "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\ITurmaRepository.cs",
               "RelativeToolTip": "Interface\\ITurmaRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAASAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-04T18:54:31.6Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "IUsuarioRepository.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IUsuarioRepository.cs",
-              "RelativeDocumentMoniker": "Interface\\IUsuarioRepository.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IUsuarioRepository.cs",
-              "RelativeToolTip": "Interface\\IUsuarioRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T19:24:52.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "TurmaMateriaViewModel.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\ViewModels\\TurmaMateriaViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\TurmaMateriaViewModel.cs",
@@ -696,35 +724,34 @@
               "RelativeToolTip": "ViewModels\\TurmaMateriaViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T19:46:39.488Z"
+              "WhenOpened": "2024-06-04T19:46:39.488Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "20240605191958_Db_v1.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Migrations\\20240605191958_Db_v1.cs",
               "RelativeDocumentMoniker": "Migrations\\20240605191958_Db_v1.cs",
               "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Migrations\\20240605191958_Db_v1.cs",
               "RelativeToolTip": "Migrations\\20240605191958_Db_v1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-05T19:19:58.708Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "20240605181627_Db_v1.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Migrations\\20240605181627_Db_v1.cs",
               "RelativeDocumentMoniker": "Migrations\\20240605181627_Db_v1.cs",
               "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Migrations\\20240605181627_Db_v1.cs",
               "RelativeToolTip": "Migrations\\20240605181627_Db_v1.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-05T18:16:27.831Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "EmailSettings.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Utils\\Mail\\EmailSettings.cs",
               "RelativeDocumentMoniker": "Utils\\Mail\\EmailSettings.cs",
@@ -732,11 +759,12 @@
               "RelativeToolTip": "Utils\\Mail\\EmailSettings.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAowAAAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T19:41:04.203Z"
+              "WhenOpened": "2024-06-04T19:41:04.203Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "IEmailService.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Utils\\Mail\\IEmailService.cs",
               "RelativeDocumentMoniker": "Utils\\Mail\\IEmailService.cs",
@@ -744,11 +772,12 @@
               "RelativeToolTip": "Utils\\Mail\\IEmailService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T19:42:29.81Z"
+              "WhenOpened": "2024-06-04T19:42:29.81Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "AzureBlobStorageHelper.cs",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Utils\\BlobStorage\\AzureBlobStorageHelper.cs",
               "RelativeDocumentMoniker": "Utils\\BlobStorage\\AzureBlobStorageHelper.cs",
@@ -756,11 +785,12 @@
               "RelativeToolTip": "Utils\\BlobStorage\\AzureBlobStorageHelper.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAAwAgAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T19:35:32.006Z"
+              "WhenOpened": "2024-06-04T19:35:32.006Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "VICTORUM.http",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\VICTORUM.http",
               "RelativeDocumentMoniker": "VICTORUM.http",
@@ -768,11 +798,12 @@
               "RelativeToolTip": "VICTORUM.http",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-06-05T17:49:07.743Z"
+              "WhenOpened": "2024-06-05T17:49:07.743Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -780,31 +811,21 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-05T17:49:10.501Z"
+              "WhenOpened": "2024-06-05T17:49:10.501Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "VICTORUM.csproj",
               "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj",
               "RelativeDocumentMoniker": "VICTORUM.csproj",
               "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj",
               "RelativeToolTip": "VICTORUM.csproj",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABEAAAAAAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAABRwBEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-05T17:49:14.059Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T17:49:09.498Z"
+              "WhenOpened": "2024-06-05T17:49:14.059Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -816,19 +837,7 @@
               "RelativeToolTip": "Utils\\Mail\\MailRequest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T19:42:39.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "IProfessorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IProfessorRepository.cs",
-              "RelativeDocumentMoniker": "Interface\\IProfessorRepository.cs",
-              "ToolTip": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\Interface\\IProfessorRepository.cs",
-              "RelativeToolTip": "Interface\\IProfessorRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T18:10:49.152Z",
+              "WhenOpened": "2024-06-04T19:42:39.041Z",
               "EditorCaption": ""
             }
           ]

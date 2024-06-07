@@ -29,7 +29,7 @@ namespace VICTORUM.Controllers
             try
             {
                 //busca usuário por email e senha 
-                UsuarioDomain usuarioBuscado = _usuarioRepository.BuscarPorEmailESenha(usuario.Email!, usuario.Senha!);
+                UsuarioDomain usuarioBuscado = _usuarioRepository.BuscarPorEmailESenha(usuario.Email, usuario.Senha);
 
                 //caso não encontre
                 if (usuarioBuscado == null)
@@ -51,15 +51,15 @@ namespace VICTORUM.Controllers
                 };
 
                 //chave de segurança
-                var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("vital-webapi-chave-symmetricsecuritykey"));
+                var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("victorum-webapi-chave-symmetricsecuritykey"));
 
                 //credenciais
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
                 //token
                 var meuToken = new JwtSecurityToken(
-                        issuer: "Vital-WebAPI",
-                        audience: "Vital-WebAPI",
+                        issuer: "Victorum-WebAPI",
+                        audience: "Victorum-WebAPI",
                         claims: claims,
                         expires: DateTime.Now.AddMinutes(30),
                         signingCredentials: creds

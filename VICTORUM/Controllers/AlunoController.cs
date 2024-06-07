@@ -58,7 +58,7 @@ namespace VICTORUM.Controllers
                 //objeto a ser cadastrado
                 UsuarioDomain user = new UsuarioDomain();
                 Random random = new Random();
-                user.TiposUsuario = new TiposUsuarioDomain();
+               
 
                 //recebe os valores e preenche as propriedades do objeto
                 user.Nome = alunoModel.Nome;
