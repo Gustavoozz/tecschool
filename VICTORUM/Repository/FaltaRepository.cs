@@ -13,8 +13,8 @@ namespace VICTORUM.Repository
             return ctx.Falta.ToList();
         }
 
-        public void Cadastrar(FaltaViewModel falta)
-        {
+        public void Cadastrar(FaltaDomain falta)
+        { 
             try
             {
                 ctx.Falta.Add(falta);

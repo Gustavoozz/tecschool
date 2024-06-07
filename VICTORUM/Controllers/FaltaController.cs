@@ -31,7 +31,7 @@ namespace VICTORUM.Controllers
 
                 _faltaRepository.Cadastrar(faltaDomain);
 
-                return Ok();
+                return Ok(faltaDomain);
             }
 			catch (Exception)
 			{
