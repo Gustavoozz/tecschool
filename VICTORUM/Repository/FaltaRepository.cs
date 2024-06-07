@@ -1,6 +1,7 @@
 ﻿using VICTORUM.Context;
 using VICTORUM.Domain;
 using VICTORUM.Interface;
+using VICTORUM.ViewModels;
 
 namespace VICTORUM.Repository
 {
@@ -12,7 +13,7 @@ namespace VICTORUM.Repository
             return ctx.Falta.ToList();
         }
 
-        public void Cadastrar(FaltaDomain falta)
+        public void Cadastrar(FaltaViewModel falta)
         {
             try
             {

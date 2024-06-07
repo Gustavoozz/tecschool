@@ -3,6 +3,7 @@ using VICTORUM.Domain;
 using VICTORUM.Interface;
 using Microsoft.EntityFrameworkCore;
 using VICTORUM.Ultils;
+using VICTORUM.Domains;
 
 
 
@@ -42,7 +43,13 @@ namespace VICTORUM.Repository
 
         public List<AlunoDomain> ListarPorTurma(Guid Id)
         {
-            return ctx.Aluno.ToList();
+            return ctx.Aluno.Select(u => new AlunoDomain
+            {
+                IdUsuario = u.IdUsuario,
+                Turma = u.Turma,
+                Usuario = u.Usuario
+
+            }).ToList();
         }
 
        

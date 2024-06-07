@@ -21,14 +21,13 @@ namespace VICTORUM.Domain
 
         [ForeignKey("IdMateria")]
         public MateriaDomain? Materia { get; set; }
-
         public Guid IdAluno { get; set; }
 
         [ForeignKey("IdAluno")]
         public AlunoDomain? Aluno { get; set; }
 
         [Column(TypeName = "DATE")]
-        public DateOnly DataFalta { get; set; }
+        public DateTime DataFalta { get; set; }
    
     }
 

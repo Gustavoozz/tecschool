@@ -36,7 +36,21 @@ namespace VICTORUM.Repository
 
         public List<TurmaDomain> Listar()
         {
-            return ctx.Turma.ToList();
+            return ctx.Turma.Select(u => new TurmaDomain
+            {
+
+                IdTurma = u.IdTurma,
+                Turma = u.Turma,
+                Alunos = ctx.Aluno.Select(y => new AlunoDomain
+                {
+                    IdAluno = y.IdAluno,
+                    IdTurma = y.IdTurma,
+                    RA = y.RA,
+                    IdUsuario = y.IdUsuario,
+                    Usuario = y.Usuario,
+                }).Where(x => x.IdTurma == u.IdTurma).ToList()
+
+            }).ToList();
         }
     }
 }

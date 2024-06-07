@@ -23,10 +23,12 @@ namespace VICTORUM.Controllers
 			try
 			{
                 FaltaDomain faltaDomain = new FaltaDomain();
+
                 faltaDomain.Falta = faltaViewModel.Falta;
                 faltaDomain.DataFalta = faltaViewModel.DataFalta;
-                faltaDomain.IdAluno = faltaDomain.IdAluno;
-                faltaDomain.IdMateria = faltaDomain.IdMateria;
+                faltaDomain.IdAluno = faltaViewModel.IdAluno;
+                faltaDomain.IdMateria = faltaViewModel.IdMateria;
+
                 _faltaRepository.Cadastrar(faltaDomain);
 
                 return Ok();
