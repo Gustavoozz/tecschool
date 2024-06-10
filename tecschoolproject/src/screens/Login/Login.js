@@ -5,8 +5,31 @@ import { Input } from "../../components/Input/Input";
 import { Button } from "../../components/Button/Button";
 import { LoginImage } from "../../components/Image/Image";
 import { Text, View } from "react-native";
+import { useState } from "react";
+import api from "../../services/Service";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export const Login = ({ navigation }) => {
+    const [email, setEmail] = useState("aluno@aluno.com"); 
+    const [senha, setSenha] = useState("aluno123"); 
+
+    async function Login() {
+        await api.post('/Login', {
+            email: email,
+            senha: senha,
+        }).then(async response => {
+            console.log(response.data);
+            await AsyncStorage.setItem("token", JSON.stringify(response.data));
+
+            navigation.replace("Main");
+        }
+        ).catch(error => {
+
+            console.log(error);
+        });
+    }
+
+
     return (
     <ContainerCream>
         <LoginImage 
@@ -18,16 +41,20 @@ export const Login = ({ navigation }) => {
             <Label>Registro do aluno ou Email</Label>
             <Input 
             placeholder="RA ou Email:"
+            onChangeText={(txt) => setEmail(txt)}
+            value={email}
             />
 
             <Label>Insira sua senha</Label>
             <Input 
             placeholder="Senha:"
+            onChangeText={(txt) => setSenha(txt)}
+            value={senha}
             />
 
             <LinkText>Esqueceu sua senha?</LinkText>
 
-            <Button onPress={() => navigation.replace("Main")}
+            <Button onPress={() => Login()}
             style={{ marginTop: 20 }}>
             <ButtonTitle>Login</ButtonTitle>
             </Button>

@@ -5,8 +5,12 @@ import { RegisterImage } from "../../components/Image/Image"
 import { Input } from "../../components/Input/Input"
 import { Label } from "../../components/Label/Label"
 import { ButtonTitle, LinkText, Title } from "../../components/Title/Title"
+import { useState } from "react"
 
 export const Register = ({ navigation }) => {
+    const [email, setEmail] = useState("aluno@aluno.com"); 
+    const [senha, setSenha] = useState("aluno123"); 
+
     return(
         <ContainerCream>
             <RegisterImage
