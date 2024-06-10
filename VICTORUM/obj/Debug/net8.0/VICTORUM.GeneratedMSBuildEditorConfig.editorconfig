@@ -9,11 +9,19 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = VICTORUM
 build_property.RootNamespace = VICTORUM
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\42470848873\Desktop\tecschool\VICTORUM\
+=======
+build_property.ProjectDir = C:\Users\53844614893\Desktop\tecschool\VICTORUM\
+>>>>>>> d81b31c0c07cca5124980c1976e1857a638e2f7a
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+<<<<<<< HEAD
 build_property.MSBuildProjectDirectory = C:\Users\42470848873\Desktop\tecschool\VICTORUM
+=======
+build_property.MSBuildProjectDirectory = C:\Users\53844614893\Desktop\tecschool\VICTORUM
+>>>>>>> d81b31c0c07cca5124980c1976e1857a638e2f7a
 build_property._RazorSourceGeneratorDebug = 

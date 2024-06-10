@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\42470848873\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\53844614893\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\53844614893\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\53844614893\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj",
+        "projectName": "VICTORUM",
+        "projectPath": "C:\\Users\\53844614893\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj",
+        "packagesPath": "C:\\Users\\53844614893\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\53844614893\\Desktop\\tecschool\\VICTORUM\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\53844614893\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> d81b31c0c07cca5124980c1976e1857a638e2f7a
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,11 +51,14 @@
           "warnAsError": [
             "NU1605"
           ]
+<<<<<<< HEAD
         },
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
+=======
+>>>>>>> d81b31c0c07cca5124980c1976e1857a638e2f7a
         }
       },
       "frameworks": {
@@ -103,7 +123,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+>>>>>>> d81b31c0c07cca5124980c1976e1857a638e2f7a
         }
       }
     }

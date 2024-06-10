@@ -53,7 +53,11 @@ namespace VICTORUM.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+<<<<<<< HEAD
                     b.Property<DateOnly>("DataFalta")
+=======
+                    b.Property<DateTime>("DataFalta")
+>>>>>>> d81b31c0c07cca5124980c1976e1857a638e2f7a
                         .HasColumnType("DATE");
 
                     b.Property<bool?>("Falta")

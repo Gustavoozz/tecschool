@@ -43,11 +43,22 @@ namespace VICTORUM.Repository
 
         public List<AlunoDomain> ListarPorTurma(Guid Id)
         {
+<<<<<<< HEAD
             return ctx.Aluno.Select(u => new AlunoDomain
             {
                 IdUsuario = u.IdUsuario,
                 Turma = u.Turma,
                 Usuario = u.Usuario
+=======
+            return ctx.Aluno.Select(u => new AlunoDomain()
+            {
+                IdUsuario = u.IdUsuario,
+                Turma = u.Turma,
+                Usuario = ctx.Usuario.Select(y => new UsuarioDomain
+                {
+                    Foto = y.Foto
+                }).FirstOrDefault(x => x.IdUsuario == u.IdUsuario)
+>>>>>>> d81b31c0c07cca5124980c1976e1857a638e2f7a
 
             }).ToList();
         }

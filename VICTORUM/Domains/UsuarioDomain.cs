@@ -26,7 +26,11 @@ namespace VICTORUM.Domain
         public string? Nome { get; set; }
 
         [Column(TypeName = "VARCHAR(200)")]
+<<<<<<< HEAD
         public string? Foto { get; set; }
+=======
+        public string? Foto { get; set; }   
+>>>>>>> d81b31c0c07cca5124980c1976e1857a638e2f7a
         public virtual AlunoDomain? Aluno { get; set; }
         public virtual ProfessorDomain? Professor { get; set; }
 
