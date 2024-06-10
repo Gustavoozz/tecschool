@@ -6,8 +6,20 @@ import { FontAwesome } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { Fontisto } from '@expo/vector-icons';
+import api from "../../services/Service";
+import { useState } from "react";
 
 export const Subject = ({ navigation }) => {
+    const [materia, setMateria] = useState("")
+
+    async function SubjectList() {
+        await api.get("/Materia/Listar")
+        .then(response => {
+            setMateria(response.data)
+        }).catch(error => {
+            console.log(error);
+        })
+    }
     return(
         <ContainerHome>
             <Header />
