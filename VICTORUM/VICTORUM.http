@@ -1,6 +1,0 @@
-@VICTORUM_HostAddress = http://localhost:5058
-
-GET {{VICTORUM_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
