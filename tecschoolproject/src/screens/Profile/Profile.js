@@ -46,7 +46,6 @@ export const Profile = ({ navigation }) => {
     }
 
 
-
     async function ChangeProfilePhoto() {
         const formData = new FormData();
         formData.append("Arquivo", {

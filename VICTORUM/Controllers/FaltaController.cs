@@ -53,12 +53,26 @@ namespace VICTORUM.Controllers
             }
         }
 
-        [HttpGet("BuscarPorAluno")]
-        public IActionResult BuscarPorAluno(Guid Id)
+        [HttpGet("BuscarPorAlunoMateria")]
+        public IActionResult BuscarPorAlunoMateria(Guid IdAluno, Guid IdMateria)
         {
             try
             {
-                return Ok(_faltaRepository.BuscarPorAluno(Id));
+                return Ok(_faltaRepository.BuscarPorAlunoMateria(IdAluno, IdMateria));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        [HttpGet("BuscarPorTurmaMateria")]
+        public IActionResult BuscarPorTurmaMateria(Guid IdTurma, Guid IdMateria)
+        {
+            try
+            {
+                return Ok(_faltaRepository.BuscarPorTurmaMateria(IdTurma, IdMateria));
             }
             catch (Exception)
             {

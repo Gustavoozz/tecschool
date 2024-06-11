@@ -33,7 +33,20 @@ namespace VICTORUM.Repository
 
         public List<ProfessorDomain> ListarTodos()
         {
-            return ctx.Professor.Include(x => x.IdUsuario).ToList();
+            return ctx.Professor.Select(x => new ProfessorDomain
+            {
+                IdProfessor = x.IdProfessor,
+                IdMateria = x.IdMateria,
+                Materia = ctx.Materia.FirstOrDefault(y => y.IdMateria == x.IdMateria),
+                IdUsuario = x.IdUsuario,
+                Usuario = ctx.Usuario.Select(z => new UsuarioDomain
+                {
+                    IdUsuario = z.IdUsuario,
+                    Nome = z.Nome,
+                    Email = z.Email,
+                    Foto = z.Foto
+                }).FirstOrDefault(a => a.IdUsuario == x.IdUsuario)
+            }).ToList();
         }
     }
 }

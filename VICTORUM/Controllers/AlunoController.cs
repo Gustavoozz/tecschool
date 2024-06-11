@@ -56,43 +56,39 @@ namespace VICTORUM.Controllers
             try
             {
                 //objeto a ser cadastrado
-                UsuarioDomain user = new UsuarioDomain();
-                Random random = new Random();
-               
-
-                //recebe os valores e preenche as propriedades do objeto
-                user.Nome = alunoModel.Nome;
-                user.Email = alunoModel.Email;
-                user.Senha = alunoModel.Senha;
-                user.Foto = alunoModel.Foto;
-
-                user.TipoUsuarioId = alunoModel.IdTipoUsuario;
+                UsuarioDomain user = new UsuarioDomain
+                {
+                    Nome = alunoModel.Nome,
+                    Email = alunoModel.Email,
+                    Senha = alunoModel.Senha,
+                    Foto = alunoModel.Foto,
+                    TipoUsuarioId = alunoModel.IdTipoUsuario,
+                };
 
                 var containerName = "techschoolcontainer";
 
                 //define a string de conexão
                 var connectionString = "DefaultEndpointsProtocol=https;AccountName=techschoolg05t;AccountKey=0dOGfpvNEnUQ1wJfkxtn2L61EeimbPNDV/LGoYPxdK0rRGO3CR6RuZWxgp+eYE0nExmzDdcehrqg+AStGPrZfw==;EndpointSuffix=core.windows.net\";";
-                user.Foto = await AzureBlobStorageHelper.UploadImageBlobAsync(alunoModel.Arquivo!, connectionString, containerName);
-
-                user.Aluno = new AlunoDomain();
-
-                user.Aluno.RA = random.Next(00000000, 99999999).ToString();
-                user.Aluno.IdTurma = alunoModel.IdTurma;
-
-                user.Aluno.IdAluno = user.IdUsuario;
-
-
-                //define o nome do container do blob
-
 
                 //aqui vamos chamar o método para upload da imagem
+                user.Foto = await AzureBlobStorageHelper.UploadImageBlobAsync(alunoModel.Arquivo!, connectionString, containerName);
 
+                //define o aluno
+
+                Random random = new Random();
+                user.Aluno = new AlunoDomain
+                {
+                    RA = random.Next(00000000, 99999999).ToString(),
+                    IdTurma = alunoModel.IdTurma,
+                    IdAluno = user.IdUsuario,
+                    IdUsuario = user.IdUsuario
+                };
 
                 alunoRepository!.Cadastrar(user);
 
                 //await _emailSendingService!.SendWelcomeEmail(user.Email!, user.Nome!);
 
-                return Ok(user);
+                return Ok("Aluno cadastrado com sucesso");
 
             }
             catch (Exception ex)

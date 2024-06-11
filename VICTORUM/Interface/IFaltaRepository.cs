@@ -6,6 +6,7 @@ namespace VICTORUM.Interface
     {
         public void Cadastrar(FaltaDomain falta);
         public List<FaltaDomain> ListarTodos();
-        public List<FaltaDomain> BuscarPorAluno(Guid IdAluno);
+        public List<FaltaDomain> BuscarPorAlunoMateria(Guid IdAluno, Guid IdMateria);
+        public List<FaltaDomain> BuscarPorTurmaMateria(Guid IdTurma,Guid IdMateria);
     }
 }

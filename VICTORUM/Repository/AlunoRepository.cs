@@ -17,7 +17,28 @@ namespace VICTORUM.Repository
         {
             try
             {
-                return ctx.Aluno.FirstOrDefault(x => x.IdAluno == Id)!;
+                return ctx.Aluno.Select(u => new AlunoDomain()
+                {
+                    IdAluno = u.IdAluno,
+                    Turma = ctx.Turma.Select(z => new TurmaDomain
+                    {
+                        IdTurma = z.IdTurma,
+                        Turma = z.Turma
+                    }).FirstOrDefault(x => x.IdTurma == u.IdTurma),
+                    RA = u.RA,
+                    IdUsuario = u.IdUsuario,
+                    IdTurma = u.IdTurma,
+                    Usuario = ctx.Usuario.Select(y => new UsuarioDomain
+                    {
+                        IdUsuario = y.IdUsuario,
+                        Foto = y.Foto,
+                        Email = y.Email,
+                        Nome = y.Nome,
+                        TipoUsuarioId = y.TipoUsuarioId,
+                        CodRecupSenha = y.CodRecupSenha
+                    }).FirstOrDefault(x => x.IdUsuario == u.IdUsuario)
+
+                }).FirstOrDefault(x => x.IdAluno == Id)!;
             }
             catch (Exception)
             {
@@ -46,13 +67,10 @@ namespace VICTORUM.Repository
             return ctx.Aluno.Select(u => new AlunoDomain()
             {
                 IdUsuario = u.IdUsuario,
-                Turma = u.Turma,
-                Usuario = ctx.Usuario.Select(y => new UsuarioDomain
-                {
-                    Foto = y.Foto
-                }).FirstOrDefault(x => x.IdUsuario == u.IdUsuario)
-
-            }).ToList();
+                RA = u.RA,
+                IdTurma = u.IdTurma,
+                Usuario = ctx.Usuario.FirstOrDefault(x => x.IdUsuario == u.IdUsuario)
+            }).Where(x => x.IdTurma == Id).ToList();
         }
 
        

@@ -5,34 +5,54 @@ import { RegisterImage } from "../../components/Image/Image"
 import { Input } from "../../components/Input/Input"
 import { Label } from "../../components/Label/Label"
 import { ButtonTitle, LinkText, Title } from "../../components/Title/Title"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import api from "../../services/Service"
+import { UserDecodeToken } from "../../utils/Auth"
 
 export const Register = ({ navigation }) => {
-    const [nome, setNome] = useState("Pedro"); 
-    const [email, setEmail] = useState("pedro@gmail.com"); 
-    const [senha, setSenha] = useState("pedro124"); 
+    const [nome, setNome] = useState(""); 
+    const [email, setEmail] = useState(""); 
+    const [senha, setSenha] = useState(""); 
+    const [user, setUser] = useState(""); 
     // const [turma, setTurma] = useState("4B0E8519-0989-4C5C-92D1-76A671DFBF8E"); 
 
     const tipoUsuario = "187E30D9-6ECD-4CAD-B26C-6B0993C8D8A1";
     const turma = "4B0E8519-0989-4C5C-92D1-76A671DFBF8E"
 
     async function Register() {
-        await api.post("/Aluno", {
-            nome: nome,
-            email: email,
-            senha: senha,
-            idTipoUsuario: tipoUsuario,
-            idTurma: turma,
-            arquivo: "",
-            foto: ""
-            }).then(() => {
-            navigation.replace("Login");
+        const formData = new FormData();
+
+        formData.append({
+            nome: "nome",
+            senha: "senha",
+        })
+        
+        await api.put(`/Usuario/AtualizarPerfil?Id=003BF1A9-AF1A-42D3-A5F5-692065841BED`, formData, {
+            headers: {
+                "Content-Type": "multipart/form-data"
+            }
+        }
+            ).then((response) => {
+            console.log(response.data);
+                
 
             }).catch(error => {
             console.log(error);
             })
         }
+
+
+        async function profileLoad() {
+            const token = await UserDecodeToken();
+            setUser(token.user)
+
+            console.log(token);
+            
+          }
+          
+          useEffect(() => {
+            profileLoad();
+          })
             
     return(
         <ContainerCream>
@@ -40,7 +60,7 @@ export const Register = ({ navigation }) => {
             source={require("../../assets/RegisterImage.png")}
             />
             <ContainerPurple style={{ height: "80%"}}>
-                <Title style={{ fontSize: 25 }}>Realize seu cadastro</Title>
+                <Title style={{ fontSize: 25 }}>Altere suas informações</Title>
 
                 <Label>Insira seu nome</Label>
                 <Input style={{ marginBottom: 20 }}
@@ -50,12 +70,12 @@ export const Register = ({ navigation }) => {
                 />
 
 
-                {/* <Label>Insira seu email:</Label>
+                <Label>Insira seu email:</Label>
                 <Input style={{ marginBottom: 20 }}
                 placeholder="Email:"
                 onChangeText={txt => setEmail(txt)}
                 value={email}
-                /> */}
+                />
 
                 <Label>Insira sua senha:</Label>
                 <Input style={{ marginBottom: 20 }} 

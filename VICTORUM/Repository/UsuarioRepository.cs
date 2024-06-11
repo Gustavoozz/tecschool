@@ -5,6 +5,7 @@ using VICTORUM.Domains;
 using VICTORUM.Interface;
 using VICTORUM.Ultils;
 using VICTORUM.Utils;
+using WebAPI.ViewModels;
 
 
 
@@ -53,6 +54,29 @@ namespace VICTORUM.Repository
             }
             catch (Exception)
             {
+                throw;
+            }
+        }
+
+        public void AtualizarUsuario(Guid id, UsuarioViewModel usuario)
+        {
+            try
+            {
+                UsuarioDomain usuarioBuscado = ctx.Usuario.FirstOrDefault(x => x.IdUsuario == id)!;
+
+                if (usuario.Nome != null)
+                    usuarioBuscado.Nome = usuario.Nome;
+
+                if (usuario.Senha != null)
+                {
+                     usuarioBuscado.Senha = Criptografia.GerarHash(usuario.Senha);
+                }
+
+                ctx.SaveChanges();
+            }
+            catch (Exception)
+            {
+
                 throw;
             }
         }

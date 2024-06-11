@@ -70,7 +70,7 @@ namespace VICTORUM.Controllers
                 {
                     _turmaRepository?.Cadastrar(turmaDomain);
                 }
-                return Ok();
+                return Ok(turmaDomain);
             }
             catch (Exception)
             {

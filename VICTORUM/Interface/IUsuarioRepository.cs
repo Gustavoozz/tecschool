@@ -1,4 +1,5 @@
 ﻿using VICTORUM.Domain;
+using WebAPI.ViewModels;
 
 namespace VICTORUM.Interface
 {
@@ -9,5 +10,6 @@ namespace VICTORUM.Interface
         bool AlterarSenha(string email, string senhaNova);
         public void AtualizarFoto(Guid id, string novaUrlFoto);
         UsuarioDomain BuscarPorEmailESenha(string? email, string? senha);
+        public void AtualizarUsuario(Guid id, UsuarioViewModel usuario);
     }
 }

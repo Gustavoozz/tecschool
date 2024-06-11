@@ -55,16 +55,14 @@ namespace VICTORUM.Controllers
             try
             {
                 //objeto a ser cadastrado
-                UsuarioDomain user = new UsuarioDomain();
-                Random random = new Random();
-
-                //recebe os valores e preenche as propriedades do objeto
-                user.Nome = professorModel.Nome;
-                user.Email = professorModel.Email;
-                user.Senha = professorModel.Senha;
-                user.Foto = professorModel.Foto;
-
-                user.TipoUsuarioId = professorModel.IdTipoUsuario;
+                UsuarioDomain user = new UsuarioDomain
+                {
+                    Nome = professorModel.Nome,
+                    Email = professorModel.Email,
+                    Senha = professorModel.Senha,
+                    Foto = professorModel.Foto,
+                    TipoUsuarioId = professorModel.IdTipoUsuario
+                };
 
                 var containerName = "techschoolcontainer";
 
@@ -72,24 +70,16 @@ namespace VICTORUM.Controllers
                 var connectionString = "DefaultEndpointsProtocol=https;AccountName=techschoolg05t;AccountKey=0dOGfpvNEnUQ1wJfkxtn2L61EeimbPNDV/LGoYPxdK0rRGO3CR6RuZWxgp+eYE0nExmzDdcehrqg+AStGPrZfw==;EndpointSuffix=core.windows.net\";";
                 user.Foto = await AzureBlobStorageHelper.UploadImageBlobAsync(professorModel.Arquivo!, connectionString, containerName);
 
-                user.Professor = new ProfessorDomain();
-
-                user.Professor.IdMateria = professorModel.Materia;
-
-                user.Professor.IdProfessor = user.IdUsuario;
-
-                //define o nome do container do blob
-
-
-
-                //aqui vamos chamar o método para upload da imagem
+                user.Professor = new ProfessorDomain
+                {
+                    IdMateria = professorModel.Materia,
+                    IdProfessor = user.IdUsuario
+                };
 
 
                 professorRepository!.Cadastrar(user);
 
-               // await _emailSendingService!.SendWelcomeEmail(user.Email!, user.Nome!);
-
-                return Ok(user);
+                return Ok("Usuario cadastrado com sucesso");
             }
             catch (Exception ex)
             {

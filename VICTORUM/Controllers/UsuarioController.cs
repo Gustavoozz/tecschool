@@ -96,6 +96,21 @@ namespace VICTORUM.Controllers
                 return BadRequest(ex.Message);
             }
 
-        }  
+        }
+
+        [HttpPut("AtualizarPerfil")]
+        public async Task<IActionResult> AtualizarPerfil(Guid Id, [FromForm] UsuarioViewModel usuario)
+        {
+            try
+            {
+                usuarioRepository.AtualizarUsuario(Id, usuario);
+                return Ok(usuario);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }
