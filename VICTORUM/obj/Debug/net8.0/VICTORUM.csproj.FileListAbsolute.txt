@@ -429,3 +429,14 @@ C:\Users\53844614893\Desktop\tecschool\VICTORUM\obj\Debug\net8.0\VICTORUM.genrun
 C:\Users\53844614893\Desktop\tecschool\VICTORUM\obj\Debug\net8.0\ref\VICTORUM.dll
 C:\Users\53844614893\Desktop\tecschool\VICTORUM\obj\Debug\net8.0\VICTORUM.sourcelink.json
 >>>>>>> d81b31c0c07cca5124980c1976e1857a638e2f7a
+C:\Users\pedro\OneDrive\Desktop\tecschool\VICTORUM\obj\Debug\net8.0\VICTORUM.csproj.AssemblyReference.cache
+C:\Users\pedro\OneDrive\Desktop\tecschool\VICTORUM\obj\Debug\net8.0\VICTORUM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pedro\OneDrive\Desktop\tecschool\VICTORUM\obj\Debug\net8.0\VICTORUM.AssemblyInfoInputs.cache
+C:\Users\pedro\OneDrive\Desktop\tecschool\VICTORUM\obj\Debug\net8.0\VICTORUM.AssemblyInfo.cs
+C:\Users\pedro\OneDrive\Desktop\tecschool\VICTORUM\obj\Debug\net8.0\VICTORUM.csproj.CoreCompileInputs.cache
+C:\Users\pedro\OneDrive\Desktop\tecschool\VICTORUM\obj\Debug\net8.0\VICTORUM.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\pedro\OneDrive\Desktop\tecschool\VICTORUM\obj\Debug\net8.0\VICTORUM.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\pedro\OneDrive\Desktop\tecschool\VICTORUM\obj\Debug\net8.0\VICTORUM.sourcelink.json
+C:\Users\pedro\OneDrive\Desktop\tecschool\VICTORUM\obj\Debug\net8.0\VICTORUM.dll
+C:\Users\pedro\OneDrive\Desktop\tecschool\VICTORUM\obj\Debug\net8.0\refint\VICTORUM.dll
+C:\Users\pedro\OneDrive\Desktop\tecschool\VICTORUM\obj\Debug\net8.0\VICTORUM.pdb

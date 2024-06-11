@@ -1,37 +1,20 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj": {}
+    "C:\\Users\\pedro\\OneDrive\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj": {
+    "C:\\Users\\pedro\\OneDrive\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj",
+        "projectUniqueName": "C:\\Users\\pedro\\OneDrive\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj",
         "projectName": "VICTORUM",
-        "projectPath": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj",
-        "packagesPath": "C:\\Users\\42470848873\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\42470848873\\Desktop\\tecschool\\VICTORUM\\obj\\",
+        "projectPath": "C:\\Users\\pedro\\OneDrive\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj",
+        "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pedro\\OneDrive\\Desktop\\tecschool\\VICTORUM\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\42470848873\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-    "C:\\Users\\53844614893\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\53844614893\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\53844614893\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj",
-        "projectName": "VICTORUM",
-        "projectPath": "C:\\Users\\53844614893\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj",
-        "packagesPath": "C:\\Users\\53844614893\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\53844614893\\Desktop\\tecschool\\VICTORUM\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\53844614893\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> d81b31c0c07cca5124980c1976e1857a638e2f7a
+          "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -51,14 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
-<<<<<<< HEAD
         },
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-=======
->>>>>>> d81b31c0c07cca5124980c1976e1857a638e2f7a
         }
       },
       "frameworks": {
@@ -123,11 +104,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
->>>>>>> d81b31c0c07cca5124980c1976e1857a638e2f7a
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
