@@ -31,4 +31,21 @@ export const LinkText = styled.Text`
     position: relative;
     left: 90px;
     bottom: 15px;
+<<<<<<< HEAD
+=======
+`
+
+export const SemiBoldText = styled.Text`
+    font-family: Poppins_600SemiBold;
+    color: black;
+    width: 50%;
+    font-size: 15px;
+`
+
+export const SubTitle = styled.Text`
+    font-family: Poppins_500Medium;
+    color: black;
+    width: 100%;
+    font-size: 10px;
+>>>>>>> e2231685f69145967e4a61eea09e6dfb56ceba82
 `
