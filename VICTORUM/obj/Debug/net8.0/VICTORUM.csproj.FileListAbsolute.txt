@@ -721,3 +721,7 @@ C:\Users\pedro\OneDrive\Desktop\tecschool\VICTORUM\bin\Debug\net8.0\Microsoft.As
 C:\Users\pedro\OneDrive\Desktop\tecschool\VICTORUM\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\pedro\OneDrive\Desktop\tecschool\VICTORUM\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\pedro\OneDrive\Desktop\tecschool\VICTORUM\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\42470848873\Desktop\tecschool\VICTORUM\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\42470848873\Desktop\tecschool\VICTORUM\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\42470848873\Desktop\tecschool\VICTORUM\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\42470848873\Desktop\tecschool\VICTORUM\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace VICTORUM.Migrations
 {
     /// <inheritdoc />
-    public partial class Db_V1 : Migration
+    public partial class Db_v1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -121,6 +121,35 @@ namespace VICTORUM.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Atividade",
+                columns: table => new
+                {
+                    IdAtividade = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Titulo = table.Column<string>(type: "VARCHAR(200)", nullable: true),
+                    Descricao = table.Column<string>(type: "VARCHAR(200)", nullable: true),
+                    IdUsuario = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    IdMateria = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    DataAtividade = table.Column<DateTime>(type: "DATE", nullable: false),
+                    Status = table.Column<bool>(type: "BIT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Atividade", x => x.IdAtividade);
+                    table.ForeignKey(
+                        name: "FK_Atividade_Materias_IdMateria",
+                        column: x => x.IdMateria,
+                        principalTable: "Materias",
+                        principalColumn: "IdMateria",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Atividade_Usuarios_IdUsuario",
+                        column: x => x.IdUsuario,
+                        principalTable: "Usuarios",
+                        principalColumn: "IdUsuario",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Professores",
                 columns: table => new
                 {
@@ -184,6 +213,16 @@ namespace VICTORUM.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Atividade_IdMateria",
+                table: "Atividade",
+                column: "IdMateria");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Atividade_IdUsuario",
+                table: "Atividade",
+                column: "IdUsuario");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Faltas_IdAluno",
                 table: "Faltas",
                 column: "IdAluno");
@@ -229,6 +268,9 @@ namespace VICTORUM.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Atividade");
+
             migrationBuilder.DropTable(
                 name: "Faltas");
 

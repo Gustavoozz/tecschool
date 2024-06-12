@@ -7,49 +7,54 @@ namespace VICTORUM.Utils.Mail
 {
     public class EmailService : IEmailService
     {
-        //variavel que armazena as configs de email settings
-        private readonly EmailSettings emailSettings;
+        
+            private readonly EmailSettings emailSettings;
 
-        //construtor que recebe a dependency injections de EmailSettings
-        public EmailService(IOptions<EmailSettings> options)
-        {
-            emailSettings = options.Value;
-        }
-
-        //metodo para envio de email
-        public async Task SendEmailAsync(MailRequest mailRequest)
-        {
-                var email = new MimeMessage();
-                // Define o remetente do email
-                email.Sender = MailboxAddress.Parse(emailSettings.Email);
-
-                // Define o destinatário
-                email.To.Add(MailboxAddress.Parse(mailRequest.ToEmail));
-
-                // Define o assunto do email
-                email.Subject = mailRequest.Subject;
-
-                // Cria o corpo do email
-                var builder = new BodyBuilder();
-
-                // Define o corpo do email como HTML
-                builder.HtmlBody = mailRequest.Body;
-
-                // Não precisa mais definir o corpo diretamente no objeto MimeMessage,
-                // pois o BodyBuilder cuidará disso automaticamente.
-
-                using (var smtp = new SmtpClient())
+            public EmailService(IOptions<EmailSettings> options)
+            {
+                emailSettings = options.Value;
+            }
+            public async Task SendEmailAsync(MailRequest mailRequest)
+            {
+                try
                 {
-                    // Conecta-se ao servidor SMTP usando os dados de emailSettings
-                    smtp.Connect(emailSettings.Host, emailSettings.Port, SecureSocketOptions.StartTls);
+                    // objeto que representa o email
+                    var email = new MimeMessage();
 
-                    // Autentica-se no servidor SMTP usando os dados de mailSettings
-                    smtp.Authenticate(emailSettings.Email, emailSettings.Password);
+                    // definimos o remetente
+                    email.Sender = MailboxAddress.Parse(emailSettings.Email);
 
-                    // Envia o email
-                    await smtp.SendAsync(email);
+                    // definimos o destinatario do email
+                    email.To.Add(MailboxAddress.Parse(mailRequest.ToEmail));
+
+                    // define o assunto do email
+                    email.Subject = mailRequest.Subject;
+
+                    // cria o corpo do email
+                    var builder = new BodyBuilder();
+
+                    // define o corpo do email como html
+                    builder.HtmlBody = mailRequest.Body;
+
+                    // define o corpo do email no obj MimeMessage
+                    email.Body = builder.ToMessageBody();
+
+                    // cria um client SMT para envio de email
+                    using (var smtp = new SmtpClient())
+                    {
+                        smtp.Connect(emailSettings.Host, emailSettings.Port, MailKit.Security.SecureSocketOptions.StartTls);
+
+                        smtp.Authenticate(emailSettings.Email, emailSettings.Password);
+
+                        await smtp.SendAsync(email);
+                    }
                 }
-        }
+                catch (Exception)
+                {
 
-    }
+                    throw;
+                }
+            }
+        }
+    
 }
