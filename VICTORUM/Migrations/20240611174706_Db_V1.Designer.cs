@@ -12,8 +12,8 @@ using VICTORUM.Context;
 namespace VICTORUM.Migrations
 {
     [DbContext(typeof(TechSchool))]
-    [Migration("20240611112727_Db_v1")]
-    partial class Db_v1
+    [Migration("20240611174706_Db_V1")]
+    partial class Db_V1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

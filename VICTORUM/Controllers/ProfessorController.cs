@@ -79,7 +79,7 @@ namespace VICTORUM.Controllers
 
                 professorRepository!.Cadastrar(user);
 
-                return Ok("Usuario cadastrado com sucesso");
+                return Ok("Usuário cadastrado com sucesso");
             }
             catch (Exception ex)
             {

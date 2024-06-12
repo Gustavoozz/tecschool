@@ -5,7 +5,7 @@ using MimeKit;
 
 namespace VICTORUM.Utils.Mail
 {
-    public class EmailService
+    public class EmailService : IEmailService
     {
         //variavel que armazena as configs de email settings
         private readonly EmailSettings emailSettings;

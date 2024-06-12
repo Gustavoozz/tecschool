@@ -99,12 +99,12 @@ namespace VICTORUM.Controllers
         }
 
         [HttpPut("AtualizarPerfil")]
-        public async Task<IActionResult> AtualizarPerfil(Guid Id, UsuarioViewModel usuario)
+        public async Task<IActionResult> AtualizarPerfil(Guid Id, [FromForm] UsuarioViewModel usuario)
         {
             try
             {
                 usuarioRepository.AtualizarUsuario(Id, usuario);
-                return Ok("Usuario atualizado com sucesso");
+                return Ok(usuario);
             }
             catch (Exception)
             {

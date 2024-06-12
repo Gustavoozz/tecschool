@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pedro\\OneDrive\\Desktop\\VICTORUM\\VICTORUM.csproj": {}
+    "C:\\Users\\pedro\\OneDrive\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pedro\\OneDrive\\Desktop\\VICTORUM\\VICTORUM.csproj": {
+    "C:\\Users\\pedro\\OneDrive\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pedro\\OneDrive\\Desktop\\VICTORUM\\VICTORUM.csproj",
+        "projectUniqueName": "C:\\Users\\pedro\\OneDrive\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj",
         "projectName": "VICTORUM",
-        "projectPath": "C:\\Users\\pedro\\OneDrive\\Desktop\\VICTORUM\\VICTORUM.csproj",
+        "projectPath": "C:\\Users\\pedro\\OneDrive\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj",
         "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pedro\\OneDrive\\Desktop\\VICTORUM\\obj\\",
+        "outputPath": "C:\\Users\\pedro\\OneDrive\\Desktop\\tecschool\\VICTORUM\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -62,6 +62,10 @@
               "target": "Package",
               "version": "[8.0.6, )"
             },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.6, )"
@@ -75,6 +79,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.6, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

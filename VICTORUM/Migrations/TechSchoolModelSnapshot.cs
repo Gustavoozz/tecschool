@@ -202,13 +202,13 @@ namespace VICTORUM.Migrations
                     b.HasOne("VICTORUM.Domain.TurmaDomain", "Turma")
                         .WithMany("Alunos")
                         .HasForeignKey("IdTurma")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("VICTORUM.Domain.UsuarioDomain", "Usuario")
                         .WithOne("Aluno")
                         .HasForeignKey("VICTORUM.Domain.AlunoDomain", "IdUsuario")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Turma");
@@ -221,13 +221,13 @@ namespace VICTORUM.Migrations
                     b.HasOne("VICTORUM.Domain.AlunoDomain", "Aluno")
                         .WithMany()
                         .HasForeignKey("IdAluno")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("VICTORUM.Domain.MateriaDomain", "Materia")
                         .WithMany()
                         .HasForeignKey("IdMateria")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Aluno");
@@ -240,13 +240,13 @@ namespace VICTORUM.Migrations
                     b.HasOne("VICTORUM.Domain.MateriaDomain", "Materia")
                         .WithMany()
                         .HasForeignKey("IdMateria")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("VICTORUM.Domain.UsuarioDomain", "Usuario")
                         .WithOne("Professor")
                         .HasForeignKey("VICTORUM.Domain.ProfessorDomain", "IdUsuario")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Materia");
@@ -259,13 +259,13 @@ namespace VICTORUM.Migrations
                     b.HasOne("VICTORUM.Domain.MateriaDomain", "Materia")
                         .WithMany()
                         .HasForeignKey("IdMateria")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("VICTORUM.Domain.TurmaDomain", "Turma")
                         .WithMany()
                         .HasForeignKey("IdTurma")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Materia");

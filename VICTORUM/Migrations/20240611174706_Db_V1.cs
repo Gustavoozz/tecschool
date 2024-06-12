@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace VICTORUM.Migrations
 {
     /// <inheritdoc />
-    public partial class Db_v1 : Migration
+    public partial class Db_V1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -85,13 +85,13 @@ namespace VICTORUM.Migrations
                         column: x => x.IdMateria,
                         principalTable: "Materias",
                         principalColumn: "IdMateria",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_TurmasMaterias_Turmas_IdTurma",
                         column: x => x.IdTurma,
                         principalTable: "Turmas",
                         principalColumn: "IdTurma",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -111,13 +111,13 @@ namespace VICTORUM.Migrations
                         column: x => x.IdTurma,
                         principalTable: "Turmas",
                         principalColumn: "IdTurma",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Alunos_Usuarios_IdUsuario",
                         column: x => x.IdUsuario,
                         principalTable: "Usuarios",
                         principalColumn: "IdUsuario",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -136,13 +136,13 @@ namespace VICTORUM.Migrations
                         column: x => x.IdMateria,
                         principalTable: "Materias",
                         principalColumn: "IdMateria",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Professores_Usuarios_IdUsuario",
                         column: x => x.IdUsuario,
                         principalTable: "Usuarios",
                         principalColumn: "IdUsuario",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -163,13 +163,13 @@ namespace VICTORUM.Migrations
                         column: x => x.IdAluno,
                         principalTable: "Alunos",
                         principalColumn: "IdAluno",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Faltas_Materias_IdMateria",
                         column: x => x.IdMateria,
                         principalTable: "Materias",
                         principalColumn: "IdMateria",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

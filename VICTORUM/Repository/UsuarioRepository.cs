@@ -66,8 +66,11 @@ namespace VICTORUM.Repository
 
                 if (usuario.Nome != null)
                     usuarioBuscado.Nome = usuario.Nome;
-                if (usuario.Email != null)
-                    usuarioBuscado.Email = usuario.Email;
+
+                if (usuario.Senha != null)
+                {
+                     usuarioBuscado.Senha = Criptografia.GerarHash(usuario.Senha);
+                }
 
                 ctx.SaveChanges();
             }
