@@ -1,4 +1,6 @@
 ﻿using VICTORUM.Utils.Mail;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace VICTORUM.Utils.Mail
 {
@@ -56,8 +58,6 @@ namespace VICTORUM.Utils.Mail
             string Response = @"
 <div style=""width:100%; background-color:rgba(96, 191, 197, 1); padding: 20px;"">
     <div style=""max-width: 600px; margin: 0 auto; background-color:#FFFFFF; border-radius: 10px; padding: 20px;"">
-        <img src=""https://blobvitalhub.blob.core.windows.net/containervitalhub/logotipo.png"" alt="" Logotipo da Aplicação"" style="" display: block; margin: 0 auto; max-width: 200px;"" />
-        <h1 style=""color: #333333;text-align: center;"">Recuperação de senha</h1>
         <p style=""color: #666666;font-size: 24px; text-align: center;"">Código de confirmação <strong>" + codigo + @"</strong></p>
     </div>
 </div>";
@@ -71,7 +71,7 @@ namespace VICTORUM.Utils.Mail
             string Response = @"
         <div style=""width:100%; background-color:rgba(96, 191, 197, 1); padding: 20px;"">
             <div style=""max-width: 600px; margin: 0 auto; background-color:#FFFFFF; border-radius: 10px; padding: 20px;"">
-                <img src=""https://blobvitalhub.blob.core.windows.net/containervitalhub/logotipo.png"" alt="" Logotipo da Aplicação"" style="" display: block; margin: 0 auto; max-width: 200px;"" />
+
                 <h1 style=""color: #333333; text-align: center;"">Bem-vindo ao VitalHub!</h1>
                 <p style=""color: #666666; text-align: center;"">Olá <strong>" + userName + @"</strong>,</p>
                 <p style=""color: #666666;text-align: center"">Estamos muito felizes por você ter se inscrito na plataforma VitalHub.</p>

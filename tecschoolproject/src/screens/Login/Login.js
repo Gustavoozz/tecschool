@@ -11,7 +11,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export const Login = ({ navigation }) => {
     const [email, setEmail] = useState("aluno@jonas.com"); 
-    const [senha, setSenha] = useState("jonas123"); 
+    const [senha, setSenha] = useState("carlao123"); 
 
     async function Login() {
         await api.post('/Login', {
@@ -21,7 +21,7 @@ export const Login = ({ navigation }) => {
             console.log(response.data);
             await AsyncStorage.setItem("token", JSON.stringify(response.data));
 
-            navigation.replace("Register");
+            navigation.replace("Main");
         }
         ).catch(error => {
 

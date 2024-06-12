@@ -19,9 +19,10 @@ namespace VICTORUM.Controllers
         private IAlunoRepository? alunoRepository { get; set; }
         private EmailSendingService? _emailSendingService;
 
-        public AlunoController()
+        public AlunoController(EmailSendingService emailSendingService)
         {
             alunoRepository = new AlunoRepository();
+            _emailSendingService = emailSendingService;
         }
 
 
@@ -86,9 +87,9 @@ namespace VICTORUM.Controllers
 
                 alunoRepository!.Cadastrar(user);
 
-                //await _emailSendingService!.SendWelcomeEmail(user.Email!, user.Nome!);
+                await _emailSendingService!.SendWelcomeEmail(user.Email!, user.Nome!);
 
-                return Ok("Aluno cadastrado com sucesso");
+                return Ok("Usuário cadastrado com sucesso");
 
             }
             catch (Exception ex)

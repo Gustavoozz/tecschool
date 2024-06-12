@@ -21,7 +21,7 @@ namespace VICTORUM.Controllers
         }
 
         [HttpPut("AlterarSenha")]
-        public IActionResult AtualizarSenha(string email, string senha)
+        public IActionResult AtualizarSenha(string email, [FromForm] string senha)
         {
             try
             {

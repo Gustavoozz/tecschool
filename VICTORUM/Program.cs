@@ -1,11 +1,21 @@
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json;
+using VICTORUM.Utils.Mail;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+//    .AddNewtonsoftJson(options =>
+//{
+//    // Ignora os loopings nas consultas
+//    options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+    // Ignora valores nulos ao fazer junções nas consultas
+//    options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+//});
 
 builder.Services.AddAuthentication(options =>
 {
@@ -86,6 +96,12 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 builder.Services.AddSwaggerGen();
+
+// Configure EmailSettings
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection(nameof(EmailSettings)));
+// Registrando o serviço de e-mail como uma instância transitória, que é criada cada vez que é solicitada
+builder.Services.AddTransient<IEmailService, EmailService>();
+builder.Services.AddScoped<EmailSendingService>();
 
 var app = builder.Build();
 

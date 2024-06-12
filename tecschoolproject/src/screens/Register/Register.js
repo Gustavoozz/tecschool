@@ -46,7 +46,6 @@ export const Register = ({ navigation }) => {
             const token = await UserDecodeToken();
             setUser(token.user)
 
-            console.log(token);
             
           }
           
