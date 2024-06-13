@@ -56,10 +56,12 @@ namespace VICTORUM.Repository
                     AtividadeDomain novaAtividade = new AtividadeDomain
                     {
                         Titulo = atividade.Titulo,
+                        Descricao = atividade.Descricao,
                         IdMateria = atividade.IdMateria,
                         Materia = ctx.Materia.FirstOrDefault(x => x.IdMateria == atividade.IdMateria),
                         Usuario = ctx.Usuario.FirstOrDefault(x => x.IdUsuario == aluno.IdAluno),
-                        DataAtividade = atividade.DataAtividade
+                        DataAtividade = atividade.DataAtividade,
+                        Status = atividade.Status
                     };
                     ctx.Atividade.Add(novaAtividade);
                 }
