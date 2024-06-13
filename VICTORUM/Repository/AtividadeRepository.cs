@@ -51,7 +51,6 @@ namespace VICTORUM.Repository
                     IdTurma = z.IdTurma,
                     Turma = ctx.Turma.FirstOrDefault(y => y.IdTurma == z.IdTurma),
                     IdUsuario = z.IdUsuario,
-                    Usuario = ctx.Usuario.FirstOrDefault(y => y.IdUsuario == z.IdUsuario)
                 }).Where(x => x.IdTurma == IdTurma).ToList()) 
                 {
                     AtividadeDomain novaAtividade = new AtividadeDomain
@@ -59,11 +58,7 @@ namespace VICTORUM.Repository
                         Titulo = atividade.Titulo,
                         IdMateria = atividade.IdMateria,
                         Materia = ctx.Materia.FirstOrDefault(x => x.IdMateria == atividade.IdMateria),
-                        Usuario = ctx.Usuario.Select(y => new UsuarioDomain
-                        {
-                            IdUsuario = y.IdUsuario,
-                            Aluno = ctx.Aluno.FirstOrDefault(z => z.IdAluno == y.IdUsuario)
-                        }).FirstOrDefault(x => x.IdUsuario == aluno.IdAluno),
+                        Usuario = ctx.Usuario.FirstOrDefault(x => x.IdUsuario == aluno.IdAluno),
                         DataAtividade = atividade.DataAtividade
                     };
                     ctx.Atividade.Add(novaAtividade);
