@@ -8,7 +8,7 @@ import { useEffect, useState } from "react"
 import { AntDesign } from '@expo/vector-icons';
 import { View } from "react-native"
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { UserDecodeToken } from "../../utils/Auth"
+import { UserDecodeToken, UserLogout } from "../../utils/Auth"
 import CameraComponenet from "../../components/CameraComponent/CameraComponent"
 import api from "../../services/Service"
 
@@ -19,6 +19,7 @@ export const Profile = ({ navigation }) => {
     const [nome, setNome] = useState("")
     const [email, setEmail] = useState("")
     const [user, setUser] = useState("")
+    const [tipoUsuario, setTipoUsuario] = useState("")
     const [idUsuario, setIdUsuario] = useState("");
 
     async function profileLoad() {
@@ -28,6 +29,7 @@ export const Profile = ({ navigation }) => {
             setNome(token.name);
             setEmail(token.email);
             setIdUsuario(token.user);
+            setTipoUsuario(token.role)
 
             await UserLoad(token);
         }
@@ -35,14 +37,26 @@ export const Profile = ({ navigation }) => {
       
       
       async function UserLoad(token) {
-       
+
+        if (token.role === 'Aluno') {
         await api.get(`/Aluno/BuscarPorId?id=${token.user}`)
         .then(response => {
+            
+            setUser(response.data)
+        }).catch(error => {
+            console.log(error);
+        })
+        } else {
+        await api.get(`/Professor/BuscaPorId?id=${token.user}`)
+        .then(response => {
+          
+           
             setUser(response.data)
         })
         .catch(error => {
             console.log(error);
         })
+        }
     }
 
 
@@ -54,26 +68,18 @@ export const Profile = ({ navigation }) => {
             type: `image/${photo.split(".").pop()}`,
         })
 
-        await api.put(`/Usuario/AlterarFotoDePerfil?id=${idUsuario.id}`, formData, {
+        await api.put(`/Usuario/AlterarFotoPerfil?id=${user.idUsuario}`, formData, {
             headers: {
                 "Content-Type": "multipart/form-data",
             },
-        }).then(async response => {
-            console.log("Batatinha doce");
-            console.log(response.data);
-            setUser({
-                user: {
-                    foto: photo
-                }
-            })
-        }).catch(error => {
+        })
+        .catch(error => {
             console.log(error);
         })
     }
       
       useEffect(() => {
         profileLoad();
-
       }, [user])
 
       
@@ -83,16 +89,19 @@ export const Profile = ({ navigation }) => {
         }
     }, [photo])
 
+  
+
+
    
-    return(
+    return user.usuario ? (
         <ContainerCream>
-            <LogoutButton onPress={() => navigation.replace("Login")}>
+            <LogoutButton onPress={() => UserLogout() && navigation.replace("Login")}>
              <MaterialCommunityIcons name="logout" size={34} color="#A06AFF" />      
             </LogoutButton>
                  
             
             <View>
-            <ProfileImage source={{ uri: user.foto }}/>
+            <ProfileImage source={{ uri: user.usuario.foto }}/>
             
             <ButtonCamera onPress={() => setShowCamera(true)}>
             <AntDesign name="camera" size={35} color="#A06AFF" />
@@ -119,35 +128,41 @@ export const Profile = ({ navigation }) => {
                 />
             }
             
-
-            <Label>RA</Label>
             {
-                editar != false ?
-                <InputEdit 
-                placeholder="RA..."
-                value={user.ra}
-                />
-                :
+                tipoUsuario == 'Aluno' ?
+                <>
+                 <Label>RA</Label>
                 <Input 
                 placeholder="RA..."
                 value={user.ra}
                 />
+                </>
+                :
+                <>
+                <Label>Materia</Label>
+                <Input
+                placeholder="Materia..."
+                value={user.materia.materia}
+                />
+                </>
+            }
+               
+    
+           
+            {
+                tipoUsuario == 'Aluno' ?
+                <>
+                <Label>Turma</Label> 
+                <Input
+                placeholder="Turma..."
+                value={user.turma.turma}
+                />
+            </>
+            :
+            null
             }
            
-
-            <Label>Turma</Label>
-            {
-                editar != false ?
-                <InputEdit 
-                placeholder="Turma..."
-                value={user.turma}
-                />
-                :
-                <Input 
-                placeholder="Turma..."
-                value={user.turma}
-            />
-            }
+           
            
             {
                 editar != false ?
@@ -171,5 +186,10 @@ export const Profile = ({ navigation }) => {
 
             </ContainerPurple>
         </ContainerCream>
+    )
+    :
+    (
+        <>
+        </>
     )
 }

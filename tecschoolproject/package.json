@@ -28,6 +28,7 @@
     "react-native": "0.74.1",
     "react-native-calendar-strip": "^2.2.6",
     "react-native-calendars": "^1.1286.0",
+    "react-native-circular-progress-indicator": "^4.4.2",
     "react-native-swiper-flatlist": "^3.2.4",
     "styled-components": "^6.1.5-rc.0"
   },

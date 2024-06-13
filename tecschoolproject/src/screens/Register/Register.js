@@ -23,18 +23,16 @@ export const Register = ({ navigation }) => {
         const formData = new FormData();
 
         formData.append({
-            nome: "nome",
-            senha: "senha",
+            nome: nome,
+            senha: senha,
         })
-        
-        await api.put(`/Usuario/AtualizarPerfil?Id=003BF1A9-AF1A-42D3-A5F5-692065841BED`, formData, {
+        await api.put(`/Usuario/AtualizarPerfil?id=${user.id}`, formData, {
             headers: {
                 "Content-Type": "multipart/form-data"
             }
         }
             ).then((response) => {
-            console.log(response.data);
-                
+            console.log(response.data);  
 
             }).catch(error => {
             console.log(error);
@@ -44,9 +42,7 @@ export const Register = ({ navigation }) => {
 
         async function profileLoad() {
             const token = await UserDecodeToken();
-            setUser(token.user)
-
-            
+            setUser(token.user)  
           }
           
           useEffect(() => {
@@ -59,7 +55,7 @@ export const Register = ({ navigation }) => {
             source={require("../../assets/RegisterImage.png")}
             />
             <ContainerPurple style={{ height: "80%"}}>
-                <Title style={{ fontSize: 25 }}>Altere suas informações</Title>
+                <Title style={{ fontSize: 22, width: '100%', marginBottom: 30, marginTop: 40 }}>Atualize suas informações</Title>
 
                 <Label>Insira seu nome</Label>
                 <Input style={{ marginBottom: 20 }}
@@ -69,12 +65,12 @@ export const Register = ({ navigation }) => {
                 />
 
 
-                <Label>Insira seu email:</Label>
+                {/* <Label>Insira seu email:</Label>
                 <Input style={{ marginBottom: 20 }}
                 placeholder="Email:"
                 onChangeText={txt => setEmail(txt)}
                 value={email}
-                />
+                /> */}
 
                 <Label>Insira sua senha:</Label>
                 <Input style={{ marginBottom: 20 }} 
@@ -91,7 +87,7 @@ export const Register = ({ navigation }) => {
                 />   */}
                 
 
-                <Button onPress={() => Register()} style={{ marginTop: 10 }}>
+                <Button onPress={() => Register()} style={{ marginTop: 150 }}>
                     <ButtonTitle>Cadastrar</ButtonTitle>
                 </Button>
                 

@@ -5,6 +5,7 @@ using VICTORUM.Interface;
 using VICTORUM.Repository;
 using WebAPI.ViewModels;
 using VICTORUM.Utils.BlobStorage;
+using VICTORUM.ViewModels;
 
 
 namespace VICTORUM.Controllers
@@ -64,7 +65,7 @@ namespace VICTORUM.Controllers
         }
 
         [HttpPut("AlterarFotoPerfil")]
-        public async Task<IActionResult> CarregarFotoUsuario(Guid id, [FromForm] UsuarioViewModel user)
+        public async Task<IActionResult> CarregarFotoUsuario(Guid id, [FromForm] UsuarioFotoViewModel user)
         {
             try
             {

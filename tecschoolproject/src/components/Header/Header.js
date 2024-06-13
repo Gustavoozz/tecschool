@@ -23,7 +23,7 @@ export const Header = () => {
             <BoxUser>
                 <ImageUser source={require("../../assets/default-user.png")}/>
                 <InfoContainer>
-                <SemiBoldText style={{ color: 'white', fontSize: 20 }}>{nome}</SemiBoldText>
+                <SemiBoldText style={{ color: 'white', fontSize: 20, width: '70%' }}>{nome}</SemiBoldText>
                 <SubTitle style={{ color: "white", fontSize: 13 }}>{role}</SubTitle>
                 </InfoContainer>
             </BoxUser>

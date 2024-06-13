@@ -17,6 +17,7 @@ import { Subject } from "./src/screens/Subject/Subject";
 import { RedefinirSuaSenha } from "./src/screens/RedefinirSenha/RedefinirSenha";
 import { VerificarEmail } from "./src/screens/VerificarEmail/VerificarEmail";
 import { VerificarCodigo } from "./src/screens/VerificarCodigo/VerificarCodigo";
+import { FaltasProfessor } from "./src/screens/FaltasProfessor/FaltasProfessor";
 
 // import { Route } from "./src/routes/Routes"
 
@@ -88,7 +89,7 @@ const Stack = createNativeStackNavigator();
             options={{ title: "VerificarSenha" }}
         />
 
-<Stack.Screen
+      <Stack.Screen
             name="VerificarCodigo"
             component={VerificarCodigo}
             options={{ title: "VerificarCodigo" }}
@@ -96,10 +97,16 @@ const Stack = createNativeStackNavigator();
 
 
 
-      <Stack.Screen
+        <Stack.Screen
             name="RedefinirSenha"
             component={RedefinirSuaSenha}
             options={{ title: "RedefinirSenha" }}
+        />
+
+      <Stack.Screen
+            name="FaltasProfessor"
+            component={FaltasProfessor}
+            options={{ title: "FaltasProfessor" }}
         />
 
         

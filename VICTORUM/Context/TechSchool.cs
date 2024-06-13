@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using VICTORUM.Domain;
+using VICTORUM.Domains;
 
 namespace VICTORUM.Context
 {
@@ -12,6 +13,7 @@ namespace VICTORUM.Context
         public DbSet<FaltaDomain> Falta { get; set; }
         public DbSet<TurmaDomain> Turma { get; set; }
         public DbSet<TurmaMateriaDomain> TurmaMateria { get; set; }
+        public DbSet<AtividadeDomain> Atividade { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -15,7 +15,14 @@ namespace VICTORUM.Repository
         {
             try
             {
-                return ctx.Professor.Include(x => x.IdMateria).FirstOrDefault(x => x.IdProfessor == Id)!;
+                return ctx.Professor.Select(y => new ProfessorDomain
+                {
+                    IdProfessor = y.IdProfessor,
+                    IdMateria = y.IdMateria,
+                    Materia = ctx.Materia.FirstOrDefault(z => z.IdMateria == y.IdMateria),
+                    IdUsuario = y.IdUsuario,
+                    Usuario = ctx.Usuario.FirstOrDefault(z => z.IdUsuario == y.IdUsuario)
+                }).FirstOrDefault(x => x.IdProfessor == Id)!;
             }
             catch (Exception)
             {

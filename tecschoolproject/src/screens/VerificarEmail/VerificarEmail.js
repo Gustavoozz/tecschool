@@ -9,7 +9,8 @@ export const VerificarEmail = ({ navigation }) => {
     const [email, setEmail] = useState("gustavonascimento928@gmail.com");
 
     async function SendEmail() {
-        await api.post(`/RecuperarSenha?email=${email}`).then(() => {
+        await api.post(`/RecuperarSenha?email=${email}`)
+        .then(() => {
     
             navigation.replace("VerificarCodigo", { emailRecuperacao: email })
         }).catch(error => {
@@ -23,7 +24,7 @@ export const VerificarEmail = ({ navigation }) => {
         <ContainerPurple style={{ backgroundColor: '#A164E8', flex: 1, justifyContent: 'center', alignItems: 'center' }}>
             <LoginImage
                 source={require('../../assets/verificar.png')}
-                style={{ width: 220, height: 180, marginTop: 70 }}
+                style={{ width: 220, height: 180, marginTop: 100 }}
             />
             <ContainerPurple style={{ padding: 20, borderRadius: 10, alignItems: 'center' }}>
                 <Title style={{ fontSize: 24, color: '#fff', marginBottom: 10 }}>VERIFIQUE SEU EMAIL</Title>
@@ -40,7 +41,7 @@ export const VerificarEmail = ({ navigation }) => {
 
                 <Button 
                     onPress={() => navigation.replace("VerificarCodigo")}
-                    style={{ backgroundColor: '#4B0082', paddingVertical: 0, paddingHorizontal: 20, borderRadius: 5, width: '100%' }} >
+                    style={{ backgroundColor: '#4B0082', paddingVertical: 0, paddingHorizontal: 20, borderRadius: 5, width: '100%', marginTop: 30 }} >
 
                     <ButtonTitle onPress={() => SendEmail()} style={{ color: '#fff' }}>Confirmar</ButtonTitle>
                 </Button>

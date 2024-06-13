@@ -183,6 +183,39 @@ namespace VICTORUM.Migrations
                     b.ToTable("Usuarios");
                 });
 
+            modelBuilder.Entity("VICTORUM.Domains.AtividadeDomain", b =>
+                {
+                    b.Property<Guid>("IdAtividade")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("DataAtividade")
+                        .HasColumnType("DATE");
+
+                    b.Property<string>("Descricao")
+                        .HasColumnType("VARCHAR(200)");
+
+                    b.Property<Guid>("IdMateria")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("IdUsuario")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool?>("Status")
+                        .HasColumnType("BIT");
+
+                    b.Property<string>("Titulo")
+                        .HasColumnType("VARCHAR(200)");
+
+                    b.HasKey("IdAtividade");
+
+                    b.HasIndex("IdMateria");
+
+                    b.HasIndex("IdUsuario");
+
+                    b.ToTable("Atividade");
+                });
+
             modelBuilder.Entity("VICTORUM.Domains.TiposUsuarioDomain", b =>
                 {
                     b.Property<Guid>("Id")
@@ -202,13 +235,13 @@ namespace VICTORUM.Migrations
                     b.HasOne("VICTORUM.Domain.TurmaDomain", "Turma")
                         .WithMany("Alunos")
                         .HasForeignKey("IdTurma")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("VICTORUM.Domain.UsuarioDomain", "Usuario")
                         .WithOne("Aluno")
                         .HasForeignKey("VICTORUM.Domain.AlunoDomain", "IdUsuario")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Turma");
@@ -221,13 +254,13 @@ namespace VICTORUM.Migrations
                     b.HasOne("VICTORUM.Domain.AlunoDomain", "Aluno")
                         .WithMany()
                         .HasForeignKey("IdAluno")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("VICTORUM.Domain.MateriaDomain", "Materia")
                         .WithMany()
                         .HasForeignKey("IdMateria")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Aluno");
@@ -240,13 +273,13 @@ namespace VICTORUM.Migrations
                     b.HasOne("VICTORUM.Domain.MateriaDomain", "Materia")
                         .WithMany()
                         .HasForeignKey("IdMateria")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("VICTORUM.Domain.UsuarioDomain", "Usuario")
                         .WithOne("Professor")
                         .HasForeignKey("VICTORUM.Domain.ProfessorDomain", "IdUsuario")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Materia");
@@ -259,13 +292,13 @@ namespace VICTORUM.Migrations
                     b.HasOne("VICTORUM.Domain.MateriaDomain", "Materia")
                         .WithMany()
                         .HasForeignKey("IdMateria")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("VICTORUM.Domain.TurmaDomain", "Turma")
                         .WithMany()
                         .HasForeignKey("IdTurma")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Materia");
@@ -280,6 +313,25 @@ namespace VICTORUM.Migrations
                         .HasForeignKey("TipoUsuarioId");
 
                     b.Navigation("TiposUsuario");
+                });
+
+            modelBuilder.Entity("VICTORUM.Domains.AtividadeDomain", b =>
+                {
+                    b.HasOne("VICTORUM.Domain.MateriaDomain", "Materia")
+                        .WithMany()
+                        .HasForeignKey("IdMateria")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("VICTORUM.Domain.UsuarioDomain", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("IdUsuario")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Materia");
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("VICTORUM.Domain.TurmaDomain", b =>

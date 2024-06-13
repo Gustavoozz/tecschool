@@ -8,12 +8,30 @@ import { Profile } from "../Profile/Profile";
 import { ContainerHome } from "../../components/Container/Style";
 import { Subject } from "../Subject/Subject";
 import { FontAwesome } from '@expo/vector-icons';
-
+import { useEffect, useState } from "react";
+import { UserDecodeToken } from "../../utils/Auth";
 
 const bottomTab = createBottomTabNavigator();
 
 export const Main = ({ navigation, route }) => {
   const routeParams = route.params
+
+  const [tipoUsuario, setTipoUsuario] = useState("");
+
+
+    
+    // FUNCTIONS
+    const ProfileLoad = async () => {
+
+        const token = await UserDecodeToken();
+
+        setTipoUsuario(token.role);
+    }
+
+    useEffect(() => {
+      ProfileLoad();
+  }, [])
+
   
 
   return (

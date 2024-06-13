@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\53844614893\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj": {}
+    "C:\\Users\\53844614893\\Desktop\\a\\tecschool\\VICTORUM\\VICTORUM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\53844614893\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj": {
+    "C:\\Users\\53844614893\\Desktop\\a\\tecschool\\VICTORUM\\VICTORUM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\53844614893\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj",
+        "projectUniqueName": "C:\\Users\\53844614893\\Desktop\\a\\tecschool\\VICTORUM\\VICTORUM.csproj",
         "projectName": "VICTORUM",
-        "projectPath": "C:\\Users\\53844614893\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj",
+        "projectPath": "C:\\Users\\53844614893\\Desktop\\a\\tecschool\\VICTORUM\\VICTORUM.csproj",
         "packagesPath": "C:\\Users\\53844614893\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\53844614893\\Desktop\\tecschool\\VICTORUM\\obj\\",
+        "outputPath": "C:\\Users\\53844614893\\Desktop\\a\\tecschool\\VICTORUM\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\53844614893\\AppData\\Roaming\\NuGet\\NuGet.Config",

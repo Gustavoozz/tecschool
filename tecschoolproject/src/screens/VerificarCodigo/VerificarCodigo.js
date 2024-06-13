@@ -58,7 +58,7 @@ export const VerificarCodigo = ({ navigation, route }) => {
                     Digite o código de 4 dígitos enviado para:
                 </Txt>
 
-                <Txt style={{ color: '#7C31FF', textAlign: 'center', marginBottom: 20, fontWeight: 'bold', fontFamily: 'Poppins_600SemiBold' }}>
+                <Txt style={{ color: '#7C31FF', textAlign: 'center', marginBottom: 20, fontSize: 14, fontFamily: 'Poppins_600SemiBold' }}>
                 {route.params.emailRecuperacao}
                 </Txt>
 
