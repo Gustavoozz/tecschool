@@ -10,8 +10,8 @@ import api from "../../services/Service";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export const Login = ({ navigation }) => {
-    const [email, setEmail] = useState("aluno@aluno.com"); 
-    const [senha, setSenha] = useState("aluno123"); 
+    const [email, setEmail] = useState("mateus@gmail.com"); 
+    const [senha, setSenha] = useState("mateus123"); 
 
     async function Login() {
         await api.post('/Login', {
@@ -52,7 +52,7 @@ export const Login = ({ navigation }) => {
             value={senha}
             />
 
-            <LinkText>Esqueceu sua senha?</LinkText>
+            <LinkText onPress={() => navigation.replace("VerificarSenha")}>Esqueceu sua senha?</LinkText>
 
             <Button onPress={() => Login()}
             style={{ marginTop: 20 }}>

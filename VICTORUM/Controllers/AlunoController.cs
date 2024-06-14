@@ -66,10 +66,10 @@ namespace VICTORUM.Controllers
                     TipoUsuarioId = alunoModel.IdTipoUsuario,
                 };
 
-                var containerName = "techschoolcontainer";
+                var connectionString = "DefaultEndpointsProtocol=https;AccountName=techschool;AccountKey=QI78t+uLjT1Ncl2pJZrd+ZDLHSa5UXzINnftb1dnUgataSzCArskVAqIHZXp4qMe8HjXs8ZjXWMO+AStb7Fx3w==;EndpointSuffix=core.windows.net";
 
-                //define a string de conexão
-                var connectionString = "DefaultEndpointsProtocol=https;AccountName=techschoolg05t;AccountKey=0dOGfpvNEnUQ1wJfkxtn2L61EeimbPNDV/LGoYPxdK0rRGO3CR6RuZWxgp+eYE0nExmzDdcehrqg+AStGPrZfw==;EndpointSuffix=core.windows.net\";";
+                // Nome do Blob
+                var containerName = "techschool";
 
                 //aqui vamos chamar o método para upload da imagem
                 user.Foto = await AzureBlobStorageHelper.UploadImageBlobAsync(alunoModel.Arquivo!, connectionString, containerName);

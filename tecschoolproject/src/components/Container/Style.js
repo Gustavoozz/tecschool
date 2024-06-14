@@ -50,3 +50,36 @@ export const ViewRow = styled.View`
   background-color: #FFFBEB;
 `
 
+export const DigitContainer = styled.View`
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+`;
+
+export const CodeInput = styled.TextInput`
+  width: 62px;
+  text-align: center;
+  height: 62px;
+  font-size: 20px;
+  color: #FFFFFF;
+  background-color: #A06AFF;
+  border-radius: 10px;
+  margin: 0 10px;
+`;
+
+export const DigitInput = ({ value, onChangeText }) => {
+    return (
+      <DigitContainer>
+        {Array(4).fill().map((_, index) => (
+          <CodeInput
+            key={index}
+            value={value[index]}
+            onChangeText={(text) => onChangeText(text, index)}
+            maxLength={1}
+            keyboardType="numeric"
+          />
+        ))}
+      </DigitContainer>
+    );
+  };

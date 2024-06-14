@@ -35,7 +35,6 @@ export const CalendarComponent = ({ setDataSelecionada, dataSelecionada }) => {
       }}
 
      onDayPress={(date) => setDataSelecionada(date.dateString)}
-      minDate={startingDate.toDateString()}
       markedDates={{
         [dataSelecionada]: {
           selected: true,
