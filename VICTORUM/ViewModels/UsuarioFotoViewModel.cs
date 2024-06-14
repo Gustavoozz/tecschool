@@ -7,7 +7,7 @@ namespace VICTORUM.ViewModels
     {
         [NotMapped]
         [JsonIgnore]
-        public IFormFile? Arquivo {  get; set; }
-        public string Foto { get; set; }
+        public IFormFile? Arquivo { get; set; }
+        public string? Foto { get; set; }
     }
 }

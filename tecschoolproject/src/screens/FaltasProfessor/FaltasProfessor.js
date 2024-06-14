@@ -1,87 +1,130 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { ContainerHome } from "../../components/Container/Style";
-import { Header } from "../../components/Header/Header";
+import React, { useEffect, useState } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Title } from "../../components/Title/Title";
-import CircularProgress from 'react-native-circular-progress-indicator';
+import { AntDesign } from '@expo/vector-icons';
+import { ContainerWhite } from './Style';
+import api from '../../services/Service';
+import { CardAluno } from '../../components/CardAluno/CardAluno';
+
+
+
 
 export const FaltasProfessor = ({ navigation }) => {
-    const [percentage, setPercentage] = useState(50);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const data = await new Promise(resolve => setTimeout(() => resolve(75), 2000));
-            setPercentage(data);
-        };
+    const [turma, setTurma] = useState("")
+    const [aluno, setAluno] = useState([]); 
+    const [alunoId, setAlunoId] = useState([]); 
 
-        fetchData();
-    }, []);
+    // async function ListarTurmas() {
+    //     await api.get(`/Listar`)
+    //     .then(response => {
+    //         console.log(response.data);
+    //         setTurma(response.data)
+    //     }).catch(error => {
+    //         console.log(error);
+    //     })
+
+
+    // async function ListarPorTurma() {
+    //     await api.get(`/Aluno/ListarPorTurma?IdTurma=${}`)
+    //     .then(response => {
+
+    //     })
+    // }
+
+    // useEffect(() => {
+    //     ListarTurmas();
+    // }, [])
+
+
+
+
 
     return (
-        <ContainerHome>
-            <Header />
+        <ContainerWhite>
+            <TouchableOpacity style={styles.backButton} onPress={() => navigation.navigate('Main')}>
+                <AntDesign name="left" size={30} color="black" />
+            </TouchableOpacity>
             <Title style={styles.title}>FALTAS</Title>
-            <View style={styles.cardContainer}>
-                <View style={styles.card}>
-                    <Text style={styles.subject}>Geografia</Text>
-                    <CircularProgress
-                        value={percentage}
-                        radius={60}
-                        duration={2000}
-                        progressValueColor={'#000'}
-                        maxValue={100}
-                        title={'%'}
-                        titleColor={'#000'}
-                        titleStyle={{ fontWeight: 'bold' }}
-                        activeStrokeColor={'#9D67FD'}
-                        inActiveStrokeColor={'#e0e0e0'}
-                        inActiveStrokeOpacity={0.2}
-                        inActiveStrokeWidth={10}
-                        activeStrokeWidth={10}
+            <View style={styles.listContainer}>
+                {Array(5).fill().map((_, index) => (
+                    <View key={index} style={styles.listItem}>
+                        <Text style={styles.studentName}>Nome do Aluno</Text>
+                        <View style={styles.iconContainer}>
+                            <TouchableOpacity>
+                                <AntDesign name="checksquare" size={30} color="#29AF40" />
+                            </TouchableOpacity>
+                            <TouchableOpacity>
+                                <AntDesign name="closesquare" size={30} color="#AF2929" />
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                ))}
+
+                    {/* <ListComponent 
+                     data={aluno}
+                     keyExtractor={(item) => item.id}
+                     renderItem={({ item }) => (
+                     <CardAluno 
+                     aluno={item}
+                     setAlunoId={setAlunoId}
+                     />
+                        )}
                     />
-                </View>
+                     */}
+              
             </View>
-        </ContainerHome>
+        </ContainerWhite>
     );
-};
+}
 
 const styles = StyleSheet.create({
-    title: {
-        marginTop: 0,
-        marginBottom: 10,
-        color: '#9D67FD',
-        fontSize: 30,
-        textAlign: 'center',
-    },
-    cardContainer: {
+    container: {
+        backgroundColor: '#A164E8',
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
-        marginTop: -50, 
+        paddingTop: 50,
     },
-    card: {
-        width: 200,
-        height: 300,
-        backgroundColor: '#fff',
-        borderRadius: 10,
-        justifyContent: 'center',
+    backButton: {
+        position: 'absolute',
+        top: 30,
+        left: 10,
+        padding: 10,
+    },
+    title: {
+        marginBottom: 35,
+        marginTop: 50,
+        color: '#7D5BA6',
+        fontSize: 32
+    },
+    listContainer: {
+        width: '100%',
+        backgroundColor: '#FFFBEB',
+        padding: 20,
+        borderRadius: 20,
+    },
+    listItem: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         alignItems: 'center',
+        padding: 15,
+        backgroundColor: '#FFF',
+        borderRadius: 15,
+        marginVertical: 10,
         shadowColor: '#000',
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 5,
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.3,
+        shadowRadius: 2,
+        elevation: 2,
     },
-    subject: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        marginBottom: 20,
+    studentName: {
+        fontSize: 18,
+        color: '#333',
+        fontFamily: 'Poppins_300Light'
     },
-    percentage: {
-        fontSize: 20,
-        color: '#000',
-    },
-});
+    iconContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    }
+})

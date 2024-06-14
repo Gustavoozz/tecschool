@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace VICTORUM.Migrations
 {
     /// <inheritdoc />
-    public partial class DB_V1 : Migration
+    public partial class BD_V1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

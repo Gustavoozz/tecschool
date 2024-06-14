@@ -25,11 +25,14 @@
     "expo-status-bar": "~1.12.1",
     "jwt-decode": "^4.0.0",
     "react": "18.2.0",
-    "react-native": "0.74.1",
+    "react-native": "^0.74.2",
     "react-native-calendar-strip": "^2.2.6",
     "react-native-calendars": "^1.1286.0",
     "react-native-circular-progress-indicator": "^4.4.2",
+    "react-native-reanimated": "^3.10.1",
+    "react-native-svg-circular-progress": "^1.0.4",
     "react-native-swiper-flatlist": "^3.2.4",
+    "react-reanimated": "^0.0.0",
     "styled-components": "^6.1.5-rc.0"
   },
   "devDependencies": {

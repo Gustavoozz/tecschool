@@ -22,7 +22,7 @@ namespace VICTORUM.Controllers
         }
 
         [HttpPut("AlterarSenha")]
-        public IActionResult AtualizarSenha(string email, [FromForm] string senha)
+        public IActionResult AtualizarSenha(string email, string senha)
         {
             try
             {
@@ -78,7 +78,7 @@ namespace VICTORUM.Controllers
 
                 // Lógica para o upload de imagem
                 // String de conexão com o serviço Azure
-                var connectionString = "DefaultEndpointsProtocol=https;AccountName=techschoolg05t;AccountKey=0dOGfpvNEnUQ1wJfkxtn2L61EeimbPNDV/LGoYPxdK0rRGO3CR6RuZWxgp+eYE0nExmzDdcehrqg+AStGPrZfw==;EndpointSuffix=core.windows.net";
+                var connectionString = "DefaultEndpointsProtocol=https;AccountName=techschool;AccountKey=QI78t+uLjT1Ncl2pJZrd+ZDLHSa5UXzINnftb1dnUgataSzCArskVAqIHZXp4qMe8HjXs8ZjXWMO+AStb7Fx3w==;EndpointSuffix=core.windows.net";
 
                 // Nome do Blob
                 var containerName = "techschoolcontainer";
@@ -104,6 +104,7 @@ namespace VICTORUM.Controllers
         {
             try
             {
+
                 usuarioRepository.AtualizarUsuario(Id, usuario);
                 return Ok(usuario);
             }

@@ -13,11 +13,9 @@ namespace VICTORUM.Repository
         {
             try
             {
-                AtividadeDomain atividadeBuscado = ctx.Atividade.FirstOrDefault(x => x.IdAtividade == Id)!;
-
+                AtividadeDomain atividadeBuscado = ctx.Atividade.FirstOrDefault(x => x.IdAtividade == Id)!; 
                 atividadeBuscado.Status = atividade.Status;
-                atividadeBuscado.DataAtividade = atividade.DataAtividade;
-
+                ctx.Update(atividadeBuscado);
                 ctx.SaveChanges();
             }
             catch (Exception)
@@ -56,10 +54,12 @@ namespace VICTORUM.Repository
                     AtividadeDomain novaAtividade = new AtividadeDomain
                     {
                         Titulo = atividade.Titulo,
+                        Descricao = atividade.Descricao,
                         IdMateria = atividade.IdMateria,
                         Materia = ctx.Materia.FirstOrDefault(x => x.IdMateria == atividade.IdMateria),
                         Usuario = ctx.Usuario.FirstOrDefault(x => x.IdUsuario == aluno.IdAluno),
-                        DataAtividade = atividade.DataAtividade
+                        DataAtividade = atividade.DataAtividade,
+                        Status = false
                     };
                     ctx.Atividade.Add(novaAtividade);
                 }

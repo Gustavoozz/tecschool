@@ -17,7 +17,10 @@ import { Subject } from "./src/screens/Subject/Subject";
 import { RedefinirSuaSenha } from "./src/screens/RedefinirSenha/RedefinirSenha";
 import { VerificarEmail } from "./src/screens/VerificarEmail/VerificarEmail";
 import { VerificarCodigo } from "./src/screens/VerificarCodigo/VerificarCodigo";
+import { FaltasAluno } from "./src/screens/FaltasAluno/FaltasAluno";
 import { FaltasProfessor } from "./src/screens/FaltasProfessor/FaltasProfessor";
+
+
 
 // import { Route } from "./src/routes/Routes"
 
@@ -103,13 +106,23 @@ const Stack = createNativeStackNavigator();
             options={{ title: "RedefinirSenha" }}
         />
 
-      <Stack.Screen
+        
+
+
+<Stack.Screen
+            name="FaltasAluno"
+            component={FaltasAluno}
+            options={{ title: "FaltasAluno" }}
+        />
+
+        
+<Stack.Screen
             name="FaltasProfessor"
             component={FaltasProfessor}
             options={{ title: "FaltasProfessor" }}
         />
 
-        
+
 
 
 

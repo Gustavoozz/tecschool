@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dMad4+GzhpcpxFfO/NaG13HWNRnCaO0oqpQCMs8QePVWAG6eEHotLaIvR6stK+h++t51NBLPxppC1i80hxDJfw==",
+  "dgSpecHash": "jJeF8UVGAc1/hWkgMBtCHOLc6NTADDh46x85dcpqJW6O6g7dV85k+6jIP6n1uN7CM9UuKtywFqh72qC5ZFR10w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\53844614893\\Desktop\\a\\tecschool\\VICTORUM\\VICTORUM.csproj",
+  "projectFilePath": "C:\\Users\\53844614893\\Desktop\\tecschool\\VICTORUM\\VICTORUM.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\53844614893\\.nuget\\packages\\azure.core\\1.39.0\\azure.core.1.39.0.nupkg.sha512",
     "C:\\Users\\53844614893\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

@@ -91,8 +91,7 @@ export const Profile = ({ navigation }) => {
 
   
 
-
-   
+ 
     return user.usuario ? (
         <ContainerCream>
             <LogoutButton onPress={() => UserLogout() && navigation.replace("Login")}>
@@ -101,6 +100,7 @@ export const Profile = ({ navigation }) => {
                  
             
             <View>
+
             <ProfileImage source={{ uri: user.usuario.foto }}/>
             
             <ButtonCamera onPress={() => setShowCamera(true)}>

@@ -10,8 +10,8 @@ import api from "../../services/Service";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export const Login = ({ navigation }) => {
-    const [email, setEmail] = useState("aluno@aluno.com"); 
-    const [senha, setSenha] = useState("aluno123"); 
+    const [email, setEmail] = useState("professor@gmail.com"); 
+    const [senha, setSenha] = useState("professor123"); 
 
     async function Login() {
         await api.post('/Login', {

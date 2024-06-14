@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.TouchableOpacity`
-    width: 90%;
+    width: 85%;
     height: 90px;
     background-color: #FFFFFF;
+    margin-left: 20px;
     elevation: 5;
     flex-direction: row;
     border-radius: 25px;

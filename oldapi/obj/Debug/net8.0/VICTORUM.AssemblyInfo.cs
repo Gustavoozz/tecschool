@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VICTORUM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+922d22943d819db8fd7b5cefed148bb37e5ca13c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f71acb24b4b7ef367fba668d51321e6d4a7247fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("VICTORUM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VICTORUM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

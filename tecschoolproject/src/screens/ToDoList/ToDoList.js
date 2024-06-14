@@ -5,64 +5,75 @@ import { ButtonTitle, LinkText, SemiBoldText, Title } from "../../components/Tit
 import { CardTask } from "../../components/CardTask/CardTask";
 import { Button } from "../../components/Button/Button";
 import { UserDecodeToken } from "../../utils/Auth";
+import api from "../../services/Service";
+import { FlatList, SafeAreaView, ScrollView, TouchableOpacity } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
-import { View } from "react-native";
 
 export const ToDoList = ({ navigation }) => {
     const [dataSelecionada, setDataSelecionada] = useState('');
-    const [tipoUsuario, setTipoUsuario] = useState("");
+    const [token, setToken] = useState('');
+    const [ListaDeAtividades, setListaDeAtividades] = useState('');
 
-    // FUNCTIONS
-    const ProfileLoad = async () => {
+    async function profileLoad() {
         const token = await UserDecodeToken();
-        setTipoUsuario(token.role);
+
+        if (token !== null) {
+
+            setToken(token);
+        }
     }
 
     useEffect(() => {
-      ProfileLoad();
-  }, [])
+        profileLoad();
+    }, [])
+
+    useEffect(() => {
+        BuscarAtividades();
+    }, [dataSelecionada])
+
+    console.log(ListaDeAtividades)
+
+    async function BuscarAtividades() {
+        if (dataSelecionada != null && token.user != null) {
+            await api.get(`/Atividade/BuscarPorData?data=${dataSelecionada}&IdUsuario=${token.user}`).then((response) => setListaDeAtividades(response.data))
+        }
+    }
+
+    return (
+        <ContainerScroll style={{ color: '#FFFBEB'}}>
+            <SafeAreaView style={{ alignItems: 'center' }}>
+                <SemiBoldText style={{ color: '#BE9AFF', fontSize: 25, textAlign: 'center', marginTop: 80, marginBottom: 20 }}>Calendar</SemiBoldText>
+                <CalendarComponent
+                    setDataSelecionada={setDataSelecionada}
+                    dataSelecionada={dataSelecionada}
+                />
+                {
+                    token.role == 'Professor' ?
+                    <>
+                    
+                    <TouchableOpacity>
+                        <AntDesign style={{ left: 120, top: 50}} name="pluscircleo" size={30} color="#BE9AFF" />
+                    </TouchableOpacity>
+                    </>
+                    :
+                    <Title style={{ color: '#9D67FD', fontSize: 20 }}>Tarefas</Title>
+                }
+                <Title style={{ color: '#9D67FD', fontSize: 20 }}>Tarefas</Title>
+
+                <FlatList showsHorizontalScrollIndicator={false} data={ListaDeAtividades} renderItem={({ item }) =>
+                (
+                    <CardTask
+                        idAtividade={item.idAtividade}
+                        taskName={item.titulo}
+                        taskSubTitle={item.descricao}
+                    />
+                )}
+                />
 
 
-    return(
-        <ContainerScroll contentContainerStyle={{ flexGrow: 1, alignItems: 'center' }}>
-            <SemiBoldText style={{ color: '#BE9AFF', fontSize: 25, textAlign: 'center', marginTop: 80, marginBottom: 20}}>Calendar</SemiBoldText>
-            <CalendarComponent 
-            setDataSelecionada={setDataSelecionada}
-            dataSelecionada={dataSelecionada}
-            />
-            {
-                tipoUsuario === 'Professor' ?
-                <View style={{ left: 140, top: 50}}>
-                    <AntDesign name="pluscircle" size={24} color='#BE9AFF' />
-                </View>
-                :
-                null  
-                
-            }
-            
 
-            <Title style={{ color: '#9D67FD', fontSize: 20 }}>Tarefas</Title>
-            <CardTask 
-            taskName="Tarefa um"
-            taskSubTitle="Conteúdo da tarefa"
-            />
-
-            <CardTask 
-            taskName="Tarefa dois"
-            taskSubTitle="Conteúdo da tarefa"
-            />
-
-            <CardTask 
-            taskName="Tarefa três"
-            taskSubTitle="Conteúdo da tarefa"
-            />
-
-
-            <Button style={{ backgroundColor: '#BE9AFF', marginTop: 20 }}>
-                <ButtonTitle>Confirmar</ButtonTitle>
-            </Button>
-
-            <LinkText onPress={() => (navigation.replace("Main"))}style={{ left: 0, marginTop: 25, color: '#BE9AFF' }}>Cancelar</LinkText>
+                <LinkText onPress={() => (navigation.replace("Main"))} style={{ left: 0, marginTop: 25, color: '#BE9AFF' }}>Cancelar</LinkText>
+            </SafeAreaView>
         </ContainerScroll>
     )
 }
