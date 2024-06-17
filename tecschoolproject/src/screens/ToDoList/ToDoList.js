@@ -1,18 +1,23 @@
 import { useEffect, useState } from "react";
 import { CalendarComponent } from "../../components/CalendarComponent/CalendarComponent"
-import { Container, ContainerScroll } from "../../components/Container/Style"
-import { ButtonTitle, LinkText, SemiBoldText, Title } from "../../components/Title/Title"
+import { ContainerScroll } from "../../components/Container/Style"
+import { LinkText, SemiBoldText, Title } from "../../components/Title/Title"
 import { CardTask } from "../../components/CardTask/CardTask";
-import { Button } from "../../components/Button/Button";
 import { UserDecodeToken } from "../../utils/Auth";
 import api from "../../services/Service";
-import { FlatList, SafeAreaView, ScrollView, TouchableOpacity } from "react-native";
+import { FlatList, SafeAreaView, TouchableOpacity } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
+import { TaskModal } from "../../components/TaskModal/TaskModal";
+import { CardTurma } from "../../components/CardTurma/CardTurma";
+import { TurmaModal } from "../../components/TurmaModal/TurmaModal";
 
 export const ToDoList = ({ navigation }) => {
     const [dataSelecionada, setDataSelecionada] = useState('');
     const [token, setToken] = useState('');
     const [ListaDeAtividades, setListaDeAtividades] = useState('');
+    const [showModalTask, setShowModalTask] = useState(false)
+    const [showModalTurma, setShowModalTurma] = useState(true)
+    const [idTurma, setIdTurma] = useState();
 
     async function profileLoad() {
         const token = await UserDecodeToken();
@@ -23,6 +28,10 @@ export const ToDoList = ({ navigation }) => {
         }
     }
 
+    async function ListarTurmas() {
+        await api.get("/Turma/Listar").then((response) => console.log(response.data)).catch((error) => console.log(error));
+    }
+
     useEffect(() => {
         profileLoad();
     }, [])
@@ -30,6 +39,10 @@ export const ToDoList = ({ navigation }) => {
     useEffect(() => {
         BuscarAtividades();
     }, [dataSelecionada])
+
+    useEffect(() => {
+        console.log(idTurma);
+    }, [idTurma])
 
     console.log(ListaDeAtividades)
 
@@ -39,8 +52,12 @@ export const ToDoList = ({ navigation }) => {
         }
     }
 
+    useEffect(() => {
+        ListarTurmas();
+    })
+
     return (
-        <ContainerScroll style={{ color: '#FFFBEB'}}>
+        <ContainerScroll style={{ color: '#FFFBEB' }}>
             <SafeAreaView style={{ alignItems: 'center' }}>
                 <SemiBoldText style={{ color: '#BE9AFF', fontSize: 25, textAlign: 'center', marginTop: 80, marginBottom: 20 }}>Calendar</SemiBoldText>
                 <CalendarComponent
@@ -49,25 +66,35 @@ export const ToDoList = ({ navigation }) => {
                 />
                 {
                     token.role == 'Professor' ?
-                    <>
-                    
-                    <TouchableOpacity>
-                        <AntDesign style={{ left: 120, top: 50}} name="pluscircleo" size={30} color="#BE9AFF" />
-                    </TouchableOpacity>
-                    </>
-                    :
-                    <Title style={{ color: '#9D67FD', fontSize: 20 }}>Tarefas</Title>
+                        <>
+                            <TouchableOpacity onPress={() => setShowModalTurma(true)}>
+                                <AntDesign style={{ left: 120, top: 50 }} name="pluscircleo" size={30} color="#BE9AFF" />
+                            </TouchableOpacity>
+                        </>
+                        :
+                        <Title style={{ color: '#9D67FD', fontSize: 20 }}>Tarefas</Title>
                 }
                 <Title style={{ color: '#9D67FD', fontSize: 20 }}>Tarefas</Title>
 
                 <FlatList showsHorizontalScrollIndicator={false} data={ListaDeAtividades} renderItem={({ item }) =>
                 (
-                    <CardTask
-                        idAtividade={item.idAtividade}
-                        taskName={item.titulo}
-                        taskSubTitle={item.descricao}
+                    <CardTurma
+
                     />
                 )}
+
+                />
+                <TaskModal
+                    visible={showModalTask}
+                    setShowModalTask={setShowModalTask}
+                />
+
+                <TurmaModal
+                    visible={showModalTurma}
+                    setShowModalTurma={setShowModalTurma}
+                    setShowModalTask={setShowModalTask}
+                    setIdTurma={setIdTurma}
+                    idTurma={idTurma}
                 />
 
 

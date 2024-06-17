@@ -28,6 +28,7 @@ export const LinkText = styled.Text`
     font-size: 13px;
     text-decoration: underline;
     
+    
     position: relative;
     left: 90px;
     bottom: 15px;

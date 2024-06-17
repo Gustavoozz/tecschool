@@ -6,6 +6,8 @@ using VICTORUM.ViewModels;
 
 namespace VICTORUM.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class TurmaController : Controller
     {
         private ITurmaRepository _turmaRepository { get; set; }
