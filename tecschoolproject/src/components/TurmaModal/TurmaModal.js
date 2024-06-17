@@ -24,34 +24,26 @@ import { Icon } from "react-native-elements"
 export const TurmaModal = ({
     visible,
     setShowModalTurma,
-    idTurma,
     setIdTurma,
     setShowModalTask,
+    idTurma,
     ...rest
 }) => {
 
-    const [ListaDeTurmas, setListaDeTurmas] = useState(null);
     const [items, setItems] = useState(null);
 
-
-    async function ListarTurmas() {
-        await api.get("/Turma/Listar").then((response) => setListaDeTurmas("teste" + response.data)).catch((error) => console.log(error));
-    }
-
-    useEffect(() => {
-        if (ListaDeTurmas == null) {
-            ListarTurmas();
-        }
-    }, [])
-
     function SyncValues(turmas) {
+        console.log(turmas)
         turmas.forEach(element => {
-            console.log(element)
             setItems([
-                { key: `${element.IdTurma}`, value: `${element.turma}` }
+                { key: `${element.idTurma}`, value: `${element.turma}` }
             ])
         });
     }
+    
+    useEffect(() => {
+        console.log("IdTurma: " + idTurma)
+    }, [idTurma])
 
     async function TurmaLoad() {
         await api.get("/Turma/Listar")
@@ -61,61 +53,9 @@ export const TurmaModal = ({
 
     useEffect(() => {
         if (items == null) {
-            ListarTurmas()
+            TurmaLoad()
         }
     }, [])
-
-    // CONSTS 
-    //const [materia , setMateria] = useState("");
-
-    // async function ListarTurmas() {
-    //     await api.get(`/Listar`)
-    //     .then(response => {
-    //         console.log(response.data);
-    //         setTurma(response.data)
-    //     }).catch(error => {
-    //         console.log(error);
-    //     })
-
-
-    // FUNCTIONS
-    // const HandleCallNotifications = async () => {
-    //     const { status } = await Notifications.getPermissionsAsync()
-
-    //     if (status !== "granted") {
-    //         alert("As notificações do usuário não estão ativas!")
-    //         return;
-    //     }
-
-    //     await Notifications.scheduleNotificationAsync({
-    //         content: {
-    //             title: "Sua consulta foi cancelada!",
-    //             body: "Consulta cancelada..."
-    //         },
-    //         trigger: null
-    //     });
-    // }
-
-    // const Cancelamento = async () => {
-
-
-    //     await api.put(`/Consultas/Status?idConsulta=${consulta.id}&status=${status}`)
-    //         .then(response => {
-    //         })
-    //         .catch(error => {
-    //             console.log(error);
-    //         });
-
-    //     HandleCallNotifications();
-
-    //     setShowSpinner(false);
-
-    //     setUpdateData(false);
-    //     setUpdateData(true);
-
-    //     setShowModalCancel(false);
-    // }
-
 
 
     return (
@@ -127,10 +67,10 @@ export const TurmaModal = ({
 
                     <SelectList
                         onPress={() => TurmaLoad()}
-                        setSelected={(val) => setValue(val)}
-                        data={ListaDeTurmas}
+                        setSelected={(key) => setIdTurma(key)}
+                        data={items}
                         boxStyle={{ colorText: "blue" }}
-                        save="value"
+                        save="key"
                         placeholder="Informe a turma..."
                         fontFamily="Poppins_600SemiBold"
                         boxStyles={{ borderColor: "#A06AFF", borderWidth: 2, width: '100%', marginBottom: 30 }}
@@ -156,15 +96,15 @@ export const TurmaModal = ({
                                 color='#A06AFF'
                             />
                         }
-                        dropdownStyles={{ borderColor: "#A06AFF", borderWidth: 2, height: '23%' }}
+                        dropdownStyles={{ borderColor: "#A06AFF", borderWidth: 2, height: '50%' }}
                         dropdownTextStyles={{ color: "#A06AFF" }}
                     />
 
-                    <ModalButton onPress={() => { setShowModalTask(true), setShowModalTurma(false) }}>
+                    <ModalButton disabled={idTurma == null} onPress={() => {setShowModalTask(true), setShowModalTurma(false) }}>
                         <ButtonTitle>Confirmar</ButtonTitle>
                     </ModalButton>
 
-                    <LinkText style={{ color: "#A06AFF", left: 0, bottom: 0 }} onPress={() => setShowModalTurma(false)}>Cancelar</LinkText>
+                    <LinkText style={{ color: "#A06AFF", left: 0, bottom: 0 }} onPress={() => {setShowModalTurma(false), setIdTurma(null)}}>Cancelar</LinkText>
 
                 </ModalContent>
             </PatientModal>

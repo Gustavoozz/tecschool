@@ -44,7 +44,7 @@ export const Home = ({ navigation }) => {
                 />
 
                 <CardHome
-                navigation={tipoUsuario == 'Aluno' ? () => (navigation.replace("FaltasAluno")) : () => (navigation.replace("FaltasProfessor"))}
+                navigation={tipoUsuario == 'Aluno' ? () => (navigation.replace("FaltasAluno")) : () => (navigation.replace("SelecionarTurma"))}
                 icon={<Feather name="x" size={35} color="white" />}
                 taskTitle="Faltas"
                 taskSubTitle="Confira suas faltas em cada aula"

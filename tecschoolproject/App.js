@@ -19,6 +19,7 @@ import { VerificarEmail } from "./src/screens/VerificarEmail/VerificarEmail";
 import { VerificarCodigo } from "./src/screens/VerificarCodigo/VerificarCodigo";
 import { FaltasAluno } from "./src/screens/FaltasAluno/FaltasAluno";
 import { FaltasProfessor } from "./src/screens/FaltasProfessor/FaltasProfessor";
+import { SelecionarTurma } from "./src/screens/SelecionarTurma/SelecionarTurma";
 
 
 
@@ -66,6 +67,12 @@ const Stack = createNativeStackNavigator();
             name="Register"
             component={Register}
             options={{ title: "Register" }}
+        />
+
+        <Stack.Screen
+            name="SelecionarTurma"
+            component={SelecionarTurma}
+            options={{ title: "SelecionarTurma" }}
         />
 
         <Stack.Screen

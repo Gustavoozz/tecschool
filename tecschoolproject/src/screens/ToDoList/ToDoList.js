@@ -16,8 +16,8 @@ export const ToDoList = ({ navigation }) => {
     const [token, setToken] = useState('');
     const [ListaDeAtividades, setListaDeAtividades] = useState('');
     const [showModalTask, setShowModalTask] = useState(false)
-    const [showModalTurma, setShowModalTurma] = useState(true)
-    const [idTurma, setIdTurma] = useState();
+    const [showModalTurma, setShowModalTurma] = useState(false)
+    const [idTurma, setIdTurma] = useState(null);
 
     async function profileLoad() {
         const token = await UserDecodeToken();
@@ -41,7 +41,7 @@ export const ToDoList = ({ navigation }) => {
     }, [dataSelecionada])
 
     useEffect(() => {
-        console.log(idTurma);
+        console.log("IdTurma: "+ idTurma);
     }, [idTurma])
 
     console.log(ListaDeAtividades)
@@ -68,7 +68,7 @@ export const ToDoList = ({ navigation }) => {
                     token.role == 'Professor' ?
                         <>
                             <TouchableOpacity onPress={() => setShowModalTurma(true)}>
-                                <AntDesign style={{ left: 120, top: 50 }} name="pluscircleo" size={30} color="#BE9AFF" />
+                                <AntDesign style={{ left: 120, top: 50 }} name="pluscircleo" size={30} color="#BE9AFF"  />
                             </TouchableOpacity>
                         </>
                         :
@@ -87,6 +87,8 @@ export const ToDoList = ({ navigation }) => {
                 <TaskModal
                     visible={showModalTask}
                     setShowModalTask={setShowModalTask}
+                    idTurma={idTurma}
+                    setIdTurma={setIdTurma}
                 />
 
                 <TurmaModal

@@ -10,18 +10,11 @@ import { Icon } from "react-native-elements"
 import api from "../../services/Service"
 
 
-
-// Notifications.setNotificationHandler({
-//     handleNotification: async () => ({
-//         shouldShowAlert: true,
-//         shouldPlaySound: true,
-//         shouldSetBadge: true
-//     })
-// })
-
 export const TaskModal = ({
     visible,
     setShowModalTask,
+    idTurma,
+    setIdTurma,
     ...rest
 }) => {
     // CONSTS 
@@ -32,30 +25,17 @@ export const TaskModal = ({
     const [tarefa , setTarefa] = useState("");
     const [descricao , setDescricao] = useState("");
     const [dataAtividade , setDataAtividade] = useState("");
-    //const [materia , setMateria] = useState("");
-
-    // async function ListarTurmas() {
-    //     await api.get(`/Listar`)
-    //     .then(response => {
-    //         console.log(response.data);
-    //         setTurma(response.data)
-    //     }).catch(error => {
-    //         console.log(error);
-    //     })
-
 
     async function CadastrarAtividade() {
-        console.log(tarefa);
-        console.log(descricao);
-        await api.post("/Atividade/Cadastrar?IdTurma=622aa33c-ef37-4e09-ba8d-c9cd77cec38a", {
+        console.log(value)
+        await api.post(`/Atividade/Cadastrar?IdTurma=${idTurma}`, {
             titulo: tarefa,
             descricao: descricao,
             idMateria: value,
             dataAtividade: dataAtividade,
             status: false,
         })
-        .then((response) => 
-        console.log(response.data))
+        .then((response) => setShowModalTask(false))
         .catch(error => {
             console.log(error);
         })
@@ -145,10 +125,10 @@ export const TaskModal = ({
 
                     <SelectList
                         onPress={() => ClinicaLoad()}
-                        setSelected={(val) => setValue(val)}
+                        setSelected={(key) => setValue(key)}
                         data={items}
                         boxStyle={{ colorText: "blue" }}
-                        save="value"
+                        save="key"
                         placeholder="Informe a materia..."
                         fontFamily="Poppins_600SemiBold"
                         boxStyles={{ borderColor: "#A06AFF", borderWidth: 2, width: '100%', marginBottom: 30 }}
