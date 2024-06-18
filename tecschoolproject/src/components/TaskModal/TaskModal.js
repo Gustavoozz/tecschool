@@ -15,6 +15,7 @@ export const TaskModal = ({
     setShowModalTask,
     idTurma,
     setIdTurma,
+    dataSelecionada,
     ...rest
 }) => {
     // CONSTS 
@@ -32,7 +33,7 @@ export const TaskModal = ({
             titulo: tarefa,
             descricao: descricao,
             idMateria: value,
-            dataAtividade: dataAtividade,
+            dataAtividade: dataSelecionada,
             status: false,
         })
         .then((response) => setShowModalTask(false))
@@ -156,13 +157,6 @@ export const TaskModal = ({
                         }
                         dropdownStyles={{ borderColor: "#A06AFF", borderWidth: 2, height: '23%'}}
                         dropdownTextStyles={{ color: "#A06AFF" }}
-                    />
-
-
-                    <Input style={{ width: '100%' }}
-                        placeholder="Insira a data da tarefa..."
-                        onChangeText={(txt) => setDataAtividade(txt)}
-                        value={dataAtividade}
                     />
 
                     <ModalButton onPress={() => CadastrarAtividade()}>

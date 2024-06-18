@@ -33,22 +33,24 @@ export const SelecionarTurma = ({ navigation }) => {
     return (
         <ContainerWhite>
             <ScrollView horizontal={true} style={{ flexDirection: "column" }}>
-                <TouchableOpacity>Teste</TouchableOpacity>
+
                 <SafeAreaView style={{ width: "100%" }}>
 
                     <FlatList showsHorizontalScrollIndicator={false} data={turma} renderItem={({ item }) =>
+
                     (
-                        <TouchableOpacity onPress={() => console.log("teste teste")}>
-                            <CardTurma
-                                taskName={item.turma}
-                            />
-                        </TouchableOpacity>
-                    )}
+                        <CardTurma
+                            onPress={() => setIdTurma(item.idTurma)}
+                            style={{ backgroundColor: "blue" }}
+                            taskName={item.turma}
+                        />
+                    )
+                    }
                     />
                 </SafeAreaView>
             </ScrollView>
             <Button
-                onPress={() => navigation.navigate("FaltasProfessor", { idTurma: turma })}
+                onPress={() => navigation.navigate("FaltasProfessor", { idTurma: idTurma })}
                 style={{ backgroundColor: '#4B0082', paddingVertical: 0, paddingHorizontal: 20, borderRadius: 5 }}
             >
                 <ButtonTitle style={{ color: '#fff', width: '100%' }}>CONFIRMAR</ButtonTitle>

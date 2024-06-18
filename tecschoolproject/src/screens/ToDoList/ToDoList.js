@@ -5,7 +5,7 @@ import { LinkText, SemiBoldText, Title } from "../../components/Title/Title"
 import { CardTask } from "../../components/CardTask/CardTask";
 import { UserDecodeToken } from "../../utils/Auth";
 import api from "../../services/Service";
-import { FlatList, SafeAreaView, TouchableOpacity } from "react-native";
+import { FlatList, SafeAreaView, ScrollView, TouchableOpacity } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 import { TaskModal } from "../../components/TaskModal/TaskModal";
 import { CardTurma } from "../../components/CardTurma/CardTurma";
@@ -41,7 +41,7 @@ export const ToDoList = ({ navigation }) => {
     }, [dataSelecionada])
 
     useEffect(() => {
-        console.log("IdTurma: "+ idTurma);
+        console.log("IdTurma: " + idTurma);
     }, [idTurma])
 
     console.log(ListaDeAtividades)
@@ -58,51 +58,58 @@ export const ToDoList = ({ navigation }) => {
 
     return (
         <ContainerScroll style={{ color: '#FFFBEB' }}>
-            <SafeAreaView style={{ alignItems: 'center' }}>
-                <SemiBoldText style={{ color: '#BE9AFF', fontSize: 25, textAlign: 'center', marginTop: 80, marginBottom: 20 }}>Calendar</SemiBoldText>
-                <CalendarComponent
-                    setDataSelecionada={setDataSelecionada}
-                    dataSelecionada={dataSelecionada}
-                />
-                {
-                    token.role == 'Professor' ?
-                        <>
-                            <TouchableOpacity onPress={() => setShowModalTurma(true)}>
-                                <AntDesign style={{ left: 120, top: 50 }} name="pluscircleo" size={30} color="#BE9AFF"  />
-                            </TouchableOpacity>
-                        </>
-                        :
-                        <Title style={{ color: '#9D67FD', fontSize: 20 }}>Tarefas</Title>
-                }
-                <Title style={{ color: '#9D67FD', fontSize: 20 }}>Tarefas</Title>
+            <ScrollView horizontal={true} style={{ flexDirection: "column" }}>
+                <SafeAreaView style={{ alignItems: 'center', width: "100%" }}>
+                    <SemiBoldText style={{ color: '#BE9AFF', fontSize: 25, textAlign: 'center', marginTop: 80, marginBottom: 20 }}>Calendar</SemiBoldText>
+                    <CalendarComponent
+                        setDataSelecionada={setDataSelecionada}
+                        dataSelecionada={dataSelecionada}
+                    />
+                    {
+                        token.role == 'Professor' ?
+                            <>
+                                <TouchableOpacity onPress={() => setShowModalTurma(true)}>
+                                    <AntDesign style={{ left: 120, top: 50 }} name="pluscircleo" size={30} color="#BE9AFF" />
+                                </TouchableOpacity>
+                            </>
+                            :
+                            <>
+                            </>
+                    }
+                    <Title style={{ color: '#9D67FD', fontSize: 20 }}>Tarefas</Title>
 
-                <FlatList showsHorizontalScrollIndicator={false} data={ListaDeAtividades} renderItem={({ item }) =>
-                (
-                    <CardTurma
+                    <FlatList showsHorizontalScrollIndicator={false} data={ListaDeAtividades} renderItem={({ item }) =>
+                    (
+                        <CardTask
+                            taskName={item.titulo}
+                            taskSubTitle={item.descricao}
+                            check={item.status}
+                            idAtividade={item.idAtividade}
+                        />
+                    )}
 
                     />
-                )}
+                    <TaskModal
+                        visible={showModalTask}
+                        setShowModalTask={setShowModalTask}
+                        idTurma={idTurma}
+                        setIdTurma={setIdTurma}
+                        dataSelecionada={dataSelecionada}
+                    />
 
-                />
-                <TaskModal
-                    visible={showModalTask}
-                    setShowModalTask={setShowModalTask}
-                    idTurma={idTurma}
-                    setIdTurma={setIdTurma}
-                />
-
-                <TurmaModal
-                    visible={showModalTurma}
-                    setShowModalTurma={setShowModalTurma}
-                    setShowModalTask={setShowModalTask}
-                    setIdTurma={setIdTurma}
-                    idTurma={idTurma}
-                />
+                    <TurmaModal
+                        visible={showModalTurma}
+                        setShowModalTurma={setShowModalTurma}
+                        setShowModalTask={setShowModalTask}
+                        setIdTurma={setIdTurma}
+                        idTurma={idTurma}
+                    />
 
 
 
-                <LinkText onPress={() => (navigation.replace("Main"))} style={{ left: 0, marginTop: 25, color: '#BE9AFF' }}>Cancelar</LinkText>
-            </SafeAreaView>
+                    <LinkText onPress={() => (navigation.replace("Main"))} style={{ left: 0, marginTop: 25, color: '#BE9AFF' }}>Cancelar</LinkText>
+                </SafeAreaView>
+            </ScrollView>
         </ContainerScroll>
     )
 }

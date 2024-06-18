@@ -1,65 +1,95 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { Title } from "../../components/Title/Title";
+import { View, Text, TouchableOpacity, StyleSheet, ActivityIndicator, FlatList } from 'react-native';
+import { ButtonTitle, Title } from "../../components/Title/Title";
 import { AntDesign } from '@expo/vector-icons';
 import { ContainerWhite } from './Style';
 import api from '../../services/Service';
 import { CardAluno } from '../../components/CardAluno/CardAluno';
+import { UserDecodeToken } from '../../utils/Auth';
+import { ModalButton } from '../../components/TaskModal/Style';
 
-export const FaltasProfessor = ({ navigation }) => {
+export const FaltasProfessor = ({ navigation, route }) => {
 
-    const [turma, setTurma] = useState("")
+    const [turma, setTurma] = useState(null)
     const [aluno, setAluno] = useState([]);
     const [alunoId, setAlunoId] = useState([]);
+    const [materia, setMateria] = useState([]);
+
+
+
+    // FUNCTIONS
+    const ProfileLoad = async () => {
+
+        const token = await UserDecodeToken();
+
+        FindUser(token.user)
+    }
+
+    useEffect(() => {
+        ProfileLoad();
+    }, [])
+
+    async function FindUser(idProfessor) {
+        await api.get(`/Professor/BuscaPorId?id=${idProfessor}`).then((response) => setMateria(response.data.materia.idMateria)).catch((error) => console.log(error))
+    }
 
     async function ListarTurmas() {
-        await api.get(`/Listar`)
+        await api.get(`Turma/BuscarPorId?Id=${route.params.idTurma}`)
             .then(response => {
-                console.log(response.data);
-                setTurma(response.data)
+                setTurma(response.data.alunos)
             }).catch(error => {
                 console.log(error);
             })
-
     }
-    // async function ListarPorTurma() {
-    //     await api.get(`/Aluno/ListarPorTurma?IdTurma=${}`)
-    //     .then(response => {
-
-    //     })
-    // }
 
     useEffect(() => {
-        ListarTurmas();
-    }, [])
+        if (turma == null) {
+            ListarTurmas();
+        }
+    })
+
+    async function Falta(status, idAluno) {
+        await api.post(`/Falta/Cadastrar`, {
+            falta: status,
+            idMateria: materia,
+            idAluno: idAluno,
+            dataFalta: new Date()
+        }).then((response) => console.log(response.data))
+        setTurma(turma.filter(aluno => aluno.idAluno !== idAluno));
+    }
 
 
 
 
-
-    return (
+    return turma != null ? (
         <ContainerWhite>
-            <TouchableOpacity style={styles.backButton} onPress={() => navigation.navigate('Main')}>
+            <TouchableOpacity style={styles.backButton} onPress={() => navigation.replace('SelecionarTurma')}>
                 <AntDesign name="left" size={30} color="black" />
             </TouchableOpacity>
             <Title style={styles.title}>FALTAS</Title>
             <View style={styles.listContainer}>
-                {Array(5).fill().map((_, index) => (
-                    <View key={index} style={styles.listItem}>
-                        <Text style={styles.studentName}>Nome do Aluno</Text>
+                <FlatList showsHorizontalScrollIndicator={false} data={turma} renderItem={({ item }) =>
+                (
+                    <View key={item.idAluno} style={styles.listItem}>
+                        <Text style={styles.studentName}>{item.usuario.nome}</Text>
                         <View style={styles.iconContainer}>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => Falta(false, item.idAluno)}>
                                 <AntDesign name="checksquare" size={30} color="#29AF40" />
                             </TouchableOpacity>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => Falta(true, item.idAluno)}>
                                 <AntDesign name="closesquare" size={30} color="#AF2929" />
                             </TouchableOpacity>
                         </View>
                     </View>
-                ))}
+                )} />
+                <ModalButton disabled={turma.length > 0} onPress={() => navigation.navigate("Main")}>
+                    <ButtonTitle>Confirmar</ButtonTitle>
+                </ModalButton>
             </View>
-        </ContainerWhite>
-    );
+        </ContainerWhite >
+    ) : (<>
+        <ActivityIndicator />
+    </>)
 }
 
 const styles = StyleSheet.create({

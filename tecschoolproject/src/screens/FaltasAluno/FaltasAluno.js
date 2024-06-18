@@ -3,90 +3,59 @@ import { View, Text, StyleSheet, Animated, PanResponder, AppRegistry } from 'rea
 import { ContainerHome } from "../../components/Container/Style";
 import { Header } from "../../components/Header/Header";
 import { LinkText, Title } from "../../components/Title/Title";
-import CircularProgress from 'react-native-circular-progress-indicator'; 
+import CircularProgress from 'react-native-circular-progress-indicator';
 import api from '../../services/Service';
+import { UserDecodeToken } from '../../utils/Auth';
 
 export const FaltasAluno = ({ navigation }) => {
-    
-const [tipoUsuario, setTipoUsuario] = useState("")
-const [idUsuario, setIdUsuario] = useState("");
 
-const [currentSubjectIndex, setCurrentSubjectIndex] = useState(0);
-const [percentage, setPercentage] = useState(subjects[0].percentage);
-const pan = useRef(new Animated.ValueXY()).current;
+    const [tipoUsuario, setTipoUsuario] = useState("")
+    const [idUsuario, setIdUsuario] = useState("");
 
-const subjects = [
-    { name: 'Geografia', percentage: 50 },
-    { name: 'Matemática', percentage: 75 },
-    { name: 'História', percentage: 60 },
-]; // Divide a quantidade de faltas pela quantidade de dias letivos e multiplica por 100
+    const [currentSubjectIndex, setCurrentSubjectIndex] = useState(0);
+    const [percentage, setPercentage] = useState(50);
+    const pan = useRef(new Animated.ValueXY()).current;
 
-async function profileLoad() {
-    const token = await UserDecodeToken();
+    const subjects = [
+        { name: 'Geografia', percentage: 50 },
+        { name: 'Matemática', percentage: 75 },
+        { name: 'História', percentage: 60 },
+    ]; // Divide a quantidade de faltas pela quantidade de dias letivos e multiplica por 100
 
-    if (token !== null) {
-        setIdUsuario(token.user);
-        setTipoUsuario(token.role)
-       
+    async function profileLoad() {
+        const token = await UserDecodeToken();
 
-        await UserLoad(token);
+        if (token !== null) {
+            await setIdUsuario(token.user);
+        }
     }
-  }   
-  
-  
-//   async function UserLoad(token) {
 
-//     if (token.role === 'Aluno') {
-//     await api.get(`/Aluno/BuscarPorId?id=${token.user}`)
-//     .then(response => {
-//         console.log(token.user);
-//         setUser(response.data)
-//     }).catch(error => {
-//         console.log(error);
-//     })
-//     } else {
-//     await api.get(`/Professor/BuscaPorId?id=${token.user}`)
-//     .then(response => {
-      
-       
-//         setUser(response.data)
-//     })
-//     .catch(error => {
-//         console.log(error);
-//     })
-//     }
-// }
+    useEffect(() => {
+        profileLoad()
+    }, [])
 
-async function ListarFaltas() {
-    await api.get("/Falta/Listar")
-    .then(response => {
-        console.log(response.data);
-    })
-    .catch(error => {
-        console.log(error);
-    })
-}
-  
+    useEffect(() => {
+        ListarFaltaPorMateria()
+    }, [])
+
+    async function ListarFaltaPorMateria() {
+        await api.get(`/Falta/BuscarPorAlunoMateria?IdAluno=${idUsuario}&IdMateria=22D67EB8-14DE-49CF-9F8E-9F39AA1DF938`)
+            .then(response => {
+                console.log(response.data)
+            }).catch(error => {
+                console.log(error);
+            })
+    }
 
 
-async function ListarFaltaPorMateria() {
-    await api.get(`/Falta/BuscarPorAlunoMateria?IdAluno=${user.id}&IdMateria=E2119FB2-AC3A-4628-9179-23E25DC7E944`)
-    .then(response => {
-
-    }).catch(error => {
-        console.log(error);
-    })
-}
+    useEffect(() => {
+        setPercentage(subjects[currentSubjectIndex].percentage);
+    }, [currentSubjectIndex]);
 
 
-useEffect(() => {
-    setPercentage(subjects[currentSubjectIndex].percentage);
-}, [currentSubjectIndex]);
-
-
-useEffect(() => {
-    ListarFaltas()
-}, [])
+    useEffect(() => {
+        ListarFaltaPorMateria()
+    }, [])
 
     const panResponder = useRef(
         PanResponder.create({
@@ -113,7 +82,7 @@ useEffect(() => {
 
     return (
         <ContainerHome style={styles.lis}>
-            <Header/>
+            <Header />
             <Title style={styles.title}>FALTAS</Title>
             <View style={styles.cardContainer}>
                 <Animated.View
@@ -139,7 +108,7 @@ useEffect(() => {
                 </Animated.View>
             </View>
 
-            <LinkText style={{ color: '#9D67FD', left: 0, bottom: 50}} onPress={() => navigation.replace("Main")}>Retornar</LinkText>
+            <LinkText style={{ color: '#9D67FD', left: 0, bottom: 50 }} onPress={() => navigation.replace("Main")}>Retornar</LinkText>
         </ContainerHome>
     );
 };
@@ -180,5 +149,5 @@ const styles = StyleSheet.create({
         marginBottom: 30,
     },
 
-    
+
 });
