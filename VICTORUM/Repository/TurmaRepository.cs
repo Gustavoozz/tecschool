@@ -21,7 +21,19 @@ namespace VICTORUM.Repository
 
         public TurmaDomain BuscarPorId(Guid Id)
         {
-            return ctx.Turma.FirstOrDefault(x => x.IdTurma == Id)!;
+            return ctx.Turma.Select(x => new TurmaDomain
+            {
+                IdTurma = x.IdTurma,
+                Turma = x.Turma,
+                Alunos = ctx.Aluno.Select(y => new AlunoDomain
+                {
+                    IdAluno = y.IdAluno,
+                    IdTurma = y.IdTurma,
+                    RA = y.RA,
+                    IdUsuario = y.IdUsuario,
+                    Usuario = y.Usuario,
+                }).Where(z => z.IdTurma == x.IdTurma).ToList()
+            }).FirstOrDefault(x => x.IdTurma == Id)!;
         }
 
         public void Cadastrar(TurmaDomain turmaDomain)

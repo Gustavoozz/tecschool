@@ -10,7 +10,16 @@ namespace VICTORUM.Repository
         TechSchool ctx = new TechSchool();
         public List<FaltaDomain> BuscarPorAlunoMateria(Guid IdAluno, Guid IdMateria)
         {
-            return ctx.Falta.Where(x => x.IdAluno == IdAluno).Where(x => x.IdMateria == IdMateria).ToList();
+            return ctx.Falta.Where(x => x.IdAluno == IdAluno).Where(x => x.IdMateria == IdMateria).Select(x => new FaltaDomain
+            {
+                IdFalta = x.IdFalta,
+                Falta = x.Falta,
+                IdMateria = x.IdMateria,
+                Materia = ctx.Materia.FirstOrDefault(y => y.IdMateria == x.IdMateria),
+                IdAluno = x.IdAluno,
+                Aluno = ctx.Aluno.FirstOrDefault(y => y.IdAluno == x.IdAluno),
+                DataFalta = x.DataFalta
+            }).ToList();
         }
 
         public List<FaltaDomain> BuscarPorTurmaMateria(Guid IdTurma, Guid IdMateria)
