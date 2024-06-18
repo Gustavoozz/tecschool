@@ -14,6 +14,7 @@ export const FaltasAluno = ({ navigation }) => {
 
     const [currentSubjectIndex, setCurrentSubjectIndex] = useState(0);
     const [percentage, setPercentage] = useState(50);
+    // const [subjects, setSubjects] = useState(50);
     const pan = useRef(new Animated.ValueXY()).current;
 
     const subjects = [
@@ -30,6 +31,14 @@ export const FaltasAluno = ({ navigation }) => {
         }
     }
 
+    function SyncValues(materias) {
+        materias.forEach(element => {
+            console.log([
+                { percentage: `${element.idMateria}`, name: `${element.materia}` }
+            ])
+        });
+    }
+
     useEffect(() => {
         profileLoad()
     }, [])
@@ -39,9 +48,10 @@ export const FaltasAluno = ({ navigation }) => {
     }, [])
 
     async function ListarFaltaPorMateria() {
-        await api.get(`/Falta/BuscarPorAlunoMateria?IdAluno=${idUsuario}&IdMateria=22D67EB8-14DE-49CF-9F8E-9F39AA1DF938`)
+        await api.get(`/Falta/BuscarPorAlunoMateria?IdAluno=${idUsuario}&IdMateria=IdMateria
+22D67EB8-14DE-49CF-9F8E-9F39AA1DF938`)
             .then(response => {
-                console.log(response.data)
+                SyncValues(response.data)
             }).catch(error => {
                 console.log(error);
             })

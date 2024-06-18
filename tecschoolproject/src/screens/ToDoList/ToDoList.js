@@ -68,15 +68,15 @@ export const ToDoList = ({ navigation }) => {
                     {
                         token.role == 'Professor' ?
                             <>
-                                <TouchableOpacity onPress={() => setShowModalTurma(true)}>
-                                    <AntDesign style={{ left: 120, top: 50 }} name="pluscircleo" size={30} color="#BE9AFF" />
+                                <TouchableOpacity onPress={() => setShowModalTurma(true)} style={{margin: 75}}>
+                                    <AntDesign  name="pluscircleo" size={75} color="#BE9AFF" />
                                 </TouchableOpacity>
                             </>
                             :
                             <>
+                                <Title style={{ color: '#9D67FD', fontSize: 20 }}>Tarefas</Title>
                             </>
                     }
-                    <Title style={{ color: '#9D67FD', fontSize: 20 }}>Tarefas</Title>
 
                     <FlatList showsHorizontalScrollIndicator={false} data={ListaDeAtividades} renderItem={({ item }) =>
                     (

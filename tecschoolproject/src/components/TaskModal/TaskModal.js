@@ -8,6 +8,7 @@ import { SelectList } from "react-native-dropdown-select-list"
 import { useEffect, useState } from "react"
 import { Icon } from "react-native-elements"
 import api from "../../services/Service"
+import { UserDecodeToken } from "../../utils/Auth"
 
 
 export const TaskModal = ({
@@ -23,33 +24,51 @@ export const TaskModal = ({
     const [value, setValue] = useState(null);
     const [items, setItems] = useState(null);
     const [turma, setTurma] = useState("")
-    const [tarefa , setTarefa] = useState("");
-    const [descricao , setDescricao] = useState("");
-    const [dataAtividade , setDataAtividade] = useState("");
+    const [tarefa, setTarefa] = useState("");
+    const [descricao, setDescricao] = useState("");
+    const [dataAtividade, setDataAtividade] = useState("");
+    const [user, setUser] = useState("");
 
     async function CadastrarAtividade() {
-        console.log(value)
         await api.post(`/Atividade/Cadastrar?IdTurma=${idTurma}`, {
             titulo: tarefa,
             descricao: descricao,
-            idMateria: value,
+            idMateria: user.materia.idMateria,
             dataAtividade: dataSelecionada,
             status: false,
         })
-        .then((response) => setShowModalTask(false))
-        .catch(error => {
-            console.log(error);
-        })
+            .then(() => {
+                setShowModalTask(false);
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
+
+    async function profileLoad() {
+        const token = await UserDecodeToken();
+
+        await api.get(`/Professor/BuscaPorId?id=${token.user}`)
+            .then(response => {
+                setUser(response.data)
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
+    useEffect(() => {
+        profileLoad()
+    }, [])
 
 
     async function ClinicaLoad() {
         await api.get("/Materia/Listar")
-        .then((response) => SyncValues(response.data))
-        .catch((error) => console.log(error))
+            .then((response) => SyncValues(response.data))
+            .catch((error) => console.log(error))
     }
 
-    
+
 
 
     function SyncValues(materias) {
@@ -65,44 +84,6 @@ export const TaskModal = ({
             ClinicaLoad()
         }
     }, [])
-
-    // FUNCTIONS
-    // const HandleCallNotifications = async () => {
-    //     const { status } = await Notifications.getPermissionsAsync()
-
-    //     if (status !== "granted") {
-    //         alert("As notificações do usuário não estão ativas!")
-    //         return;
-    //     }
-
-    //     await Notifications.scheduleNotificationAsync({
-    //         content: {
-    //             title: "Sua consulta foi cancelada!",
-    //             body: "Consulta cancelada..."
-    //         },
-    //         trigger: null
-    //     });
-    // }
-
-    // const Cancelamento = async () => {
-
-
-    //     await api.put(`/Consultas/Status?idConsulta=${consulta.id}&status=${status}`)
-    //         .then(response => {
-    //         })
-    //         .catch(error => {
-    //             console.log(error);
-    //         });
-
-    //     HandleCallNotifications();
-
-    //     setShowSpinner(false);
-
-    //     setUpdateData(false);
-    //     setUpdateData(true);
-
-    //     setShowModalCancel(false);
-    // }
 
     return (
         <Modal {...rest} visible={visible} transparent={true} animationType="fade">
@@ -123,43 +104,7 @@ export const TaskModal = ({
                         value={descricao}
                     />
 
-
-                    <SelectList
-                        onPress={() => ClinicaLoad()}
-                        setSelected={(key) => setValue(key)}
-                        data={items}
-                        boxStyle={{ colorText: "blue" }}
-                        save="key"
-                        placeholder="Informe a materia..."
-                        fontFamily="Poppins_600SemiBold"
-                        boxStyles={{ borderColor: "#A06AFF", borderWidth: 2, width: '100%', marginBottom: 30 }}
-                        inputStyles={{ color: "#A06AFF" }}
-                        dropdownItemStyles={{ color: "#60BFC5" }}
-                        arrowicon={<Icon
-                            size={22}
-                            name='caret-down'
-                            type='font-awesome'
-                            color='#A06AFF'
-                        />}
-                        closeicon={<Icon
-                            size={22}
-                            name='close'
-                            type='antDesign'
-                            color='#A06AFF'
-                        />}
-                        searchicon={
-                            <Icon
-                                size={22}
-                                name='search'
-                                type='antDesign'
-                                color='#A06AFF'
-                            />
-                        }
-                        dropdownStyles={{ borderColor: "#A06AFF", borderWidth: 2, height: '23%'}}
-                        dropdownTextStyles={{ color: "#A06AFF" }}
-                    />
-
-                    <ModalButton onPress={() => CadastrarAtividade()}>
+                    <ModalButton onPress={CadastrarAtividade}>
                         <ButtonTitle>Confirmar</ButtonTitle>
                     </ModalButton>
 

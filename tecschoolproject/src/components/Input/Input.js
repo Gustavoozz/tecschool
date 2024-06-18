@@ -13,8 +13,6 @@ export const Input = styled.TextInput.attrs({
     
     margin-bottom: 30px;
     padding-left: 15px;
-    align-items: center;
-    justify-content: center;
 `
 
 export const InputEdit = styled(Input).attrs({
